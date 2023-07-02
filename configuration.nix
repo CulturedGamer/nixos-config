@@ -17,17 +17,8 @@
     # System packages
     environment.systemPackages = with pkgs; [
         curl
-        gcc
         git
-        gnumake
-        htop
-        neofetch
         neovim
-        syncthing
-        tmux
-        unzip
-        xterm
         wget
-        zip
     ];
 }

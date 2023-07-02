@@ -19,16 +19,25 @@
         firefox
         flameshot
         fzf
+        gcc
+        gnumake
+        htop
         lxappearance
         mpv
+        neofetch
         pass
         rofi
         starship
+        syncthing
         xfce.thunar
+        tmux
         trash-cli
-        xgd-user-dirs
+        unzip
         xdotool
+        xgd-user-dirs
+        xterm
         xwallpaper
+        zip
     ];
 
     programs.git = {
@@ -52,6 +61,12 @@
             env.TERM = xterm-256color;
             shell.program = fish;
             window.opacity = 1;
+            font = {
+                size = 12;
+                normal.family = JetBrainsMonoNerdFont;
+                bold.family = JetBrainsMonoNerdFont;
+                italic.family = JetBrainsMonoNerdFont;
+            };
         };
     };
     
