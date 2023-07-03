@@ -4,8 +4,13 @@
     home.username = "donny";
     home.homeDirectory = "/home/donny";
 
-    programs.git = {
+    fonts.fontconfig.enable = true;
+
+    home.file.".config/rofi" = {
         enable = true;
+        source = ./rofi;
+        recursive = true;
+        executable = false;
     };
 
     home.packages = [
@@ -15,6 +20,8 @@
         cava
         clang
         cmus
+        dejavu_fonts
+        noto-fonts-emoji
         emacs
         firefox
         flameshot
@@ -38,6 +45,9 @@
         xterm
         xwallpaper
         zip
+        
+        # nerdfonts
+        (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     ];
 
     programs.git = {
@@ -55,6 +65,13 @@
         };
     };
 
+    home.file.".config/alacritty/themes" = {
+        enable = true;
+        source = ./alacritty/themes/;
+        recursive = true;
+        executable = false;
+    };
+    
     programs.alacritty = {
         enable = true;
         settings = {
@@ -73,14 +90,14 @@
     programs.bash = {
         enable = true;
         settings = {
-            
+              
         };
     };
 
     programs.neovim = {
         defaultEditor = true;
         settings = {
-              
+            
         };
     };
 

@@ -1,2 +1,4 @@
 # ignore flake.lock
 flake.lock
+alacritty
+progress.txt
