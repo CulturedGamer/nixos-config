@@ -1,4 +1,3 @@
 # ignore flake.lock
 flake.lock
-alacritty
-progress.txt
+progress.org
