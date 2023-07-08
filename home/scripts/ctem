@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo 'Name of project:'
+read NAME
+echo 'Location:'
+read PROJECT_PATH
+cp -r ~/Templates/c_template/ $PROJECT_PATH
+mv c_template $NAME

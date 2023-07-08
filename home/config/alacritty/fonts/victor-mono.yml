@@ -1,0 +1,10 @@
+font:
+  size: 7.0
+  normal:
+    family: VictorMonoNerdFont
+
+  bold:
+    family: VictorMonoNerdFont
+
+  italic:
+    family: VictorMonoNerdFont
