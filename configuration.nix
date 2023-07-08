@@ -42,23 +42,31 @@
         };
     };
 
-    programs.dconf.enable = true;
-
+    networking.hostName = "nixos";
+    # networking.wireless.enable = true;
     networking.networkmanager.enable = true;
-    networking.firewall.enable = false;
+
+    services.xserver.enable = true;
+    services.xserver.displayManager.sddm.enable = true;
+    services.xserver.windowManager.qtile.enable = true;
+    services.xserver = {
+        layout = "us";
+        xkbVariant = "";
+    };
 
     sound.enable = true;
     hardware.pulseaudio.enable = false;
-    services.power-profiles-daemon = {
+    security.rtkit.enable = true;
+    services.pipewire = {
         enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
     };
-    security.polkit.enable = true;
 
     services = {
         dbus.packages = [ pkgs.gcr ];
-
         geoclue2.enable = true;
-
         pipewire = {
             enable = true;
             alsa.enable = true;
@@ -84,4 +92,6 @@
         neovim
         wget
     ];
+
+    system.stateVersion = "23.05";
 }
