@@ -9,8 +9,6 @@
         cava
         clang
         cmus
-        dejavu_fonts
-        noto-fonts-emoji
         firefox
         fish
         flameshot
