@@ -12,5 +12,6 @@
         ./bookmarks
         ./qtile
         ./sxhkd
+        ./tmux
     ];
 }
