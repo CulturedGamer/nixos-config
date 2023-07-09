@@ -80,11 +80,12 @@
 
     environment.systemPackages = with pkgs; [
         curl
+	    firefox
+        gcc
         git
         neovim
         wget
-	firefox
-	xclip
+	    xclip
     ];
 
     system.stateVersion = "23.05";
