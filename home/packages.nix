@@ -23,6 +23,7 @@
         rofi
         starship
         streamlink
+        sxhkd
         xfce.thunar
         tmux
         trash-cli
