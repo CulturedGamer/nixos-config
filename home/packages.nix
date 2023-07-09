@@ -13,13 +13,13 @@
         fish
         flameshot
         fzf
-        gcc
         gnumake
         htop
         mpv
         neofetch
         nsxiv
         pass
+        ripgrep
         rofi
         starship
         streamlink
@@ -28,7 +28,7 @@
         trash-cli
         unzip
         xdotool
-        xgd-user-dirs
+        xdg-user-dirs
         xterm
         xwallpaper
         yewtube
