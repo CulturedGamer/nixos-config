@@ -7,7 +7,6 @@
         ".config/alacritty/colors" = {
             source = ./colors;
             recursive = true;
-            executuble = false;
         };
 
         ".config/alacritty/fonts" = {
