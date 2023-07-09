@@ -4,37 +4,32 @@
     home.file = {
         ".config/rofi/config.rasi".source = ./config.rasi;
 
-        "./config/rofi/applets" = {
+        ".config/rofi/applets" = {
             source = ./applets;
             recursive = true;
-            executable = false;
         };
 
-        "./config/rofi/colors" = {
+        ".config/rofi/colors" = {
             source = ./colors;
             recursive = true;
-            executable = false;
         };
 
-        "./config/rofi/images" = {
+        ".config/rofi/images" = {
             source = ./images;
             recursive = true;
-            executable = false;
         };
 
-        "./config/rofi/launchers" = {
+        ".config/rofi/launchers" = {
             source = ./launchers;
             recursive = true;
-            executable = false;
         };
 
-        "./config/rofi/powermenu" = {
+        ".config/rofi/powermenu" = {
             source = ./powermenu;
             recursive = true;
-            executable = false;
         };
 
-        "./config/rofi/scripts" = {
+        ".config/rofi/scripts" = {
             source = ./scripts;
             recursive = true;
             executable = true;
