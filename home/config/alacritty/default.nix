@@ -12,7 +12,6 @@
         ".config/alacritty/fonts" = {
             source = ./fonts;
             recursive = true;
-            executuble = false;
         };
     };
 }
