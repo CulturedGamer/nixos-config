@@ -11,5 +11,6 @@
         ./starship
         ./bookmarks
         ./qtile
+        ./sxhkd
     ];
 }
