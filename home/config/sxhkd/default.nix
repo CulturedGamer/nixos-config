@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ config, pkgs, ... }:
 
 {
     home.file.".config/sxhkd/sxhkdrc" = {

@@ -11,6 +11,7 @@
     imports = [
         ./packages.nix
         ./config
+        ./programming_templates
     ];
 
     home.file.".local/bin" = {
