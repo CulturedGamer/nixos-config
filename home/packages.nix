@@ -16,6 +16,7 @@
         gnumake
         htop
         mpv
+        mypy
         neofetch
         nsxiv
         pass
