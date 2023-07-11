@@ -86,7 +86,6 @@
         neovim
         wget
 	    xclip
-        xorg-xinit
     ];
 
     system.stateVersion = "23.05";
