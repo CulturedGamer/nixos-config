@@ -10,5 +10,5 @@
             exec xset r rate 210 110
             qtile start
         '';
-    }
+    };
 }
