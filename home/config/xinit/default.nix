@@ -7,7 +7,7 @@
 
             exec sxhkd &
             exec picom --backend=glx &
-            exec xset r rate 210 110
+            exec xset r rate 210 110 &
             qtile start
         '';
         executable = true;
