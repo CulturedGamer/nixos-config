@@ -13,5 +13,6 @@
         ./qtile
         ./sxhkd
         ./tmux
+        ./xinit
     ];
 }
