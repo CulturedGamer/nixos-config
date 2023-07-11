@@ -51,7 +51,7 @@
     networking.networkmanager.enable = true;
 
     services.xserver.enable = true;
-    services.xserver.displayManager.sddm.enable = true;
+    services.xserver.displayManager.startx.enable = true;
     services.xserver.windowManager.qtile.enable = true;
     services.xserver = {
         layout = "us";
