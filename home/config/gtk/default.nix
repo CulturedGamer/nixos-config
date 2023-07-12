@@ -8,5 +8,9 @@
             name = "SolArc-Dark";
             package = pkgs.solarc-gtk-theme;
         };
+        iconTheme = {
+            name = "PaperIconTheme";
+            package = pkgs.paper-icon-theme;
+        };
     };
 }
