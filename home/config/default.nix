@@ -15,5 +15,6 @@
         ./tmux
         ./xinit
         ./wallpaper
+        ./gtk
     ];
 }
