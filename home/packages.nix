@@ -9,7 +9,6 @@
         cava
         clang
         cmus
-        firefox
         fish
         flameshot
         fzf
