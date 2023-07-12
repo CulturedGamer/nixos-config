@@ -78,8 +78,6 @@
 
     nixpkgs.config.allowUnfree = true;
 
-    services.dbus.packages = with pkgs; [ gnome3.dconf ];
-
     environment.systemPackages = with pkgs; [
         curl
 	    firefox
