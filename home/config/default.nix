@@ -16,5 +16,6 @@
         ./xinit
         ./wallpaper
         ./gtk
+        ./firefox
     ];
 }
