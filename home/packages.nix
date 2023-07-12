@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
-# TODO: add more packages if needed
+
 {
     home.packages = with pkgs; [
         alacritty
@@ -20,6 +20,7 @@
         neofetch
         nsxiv
         pass
+        playerctl
         ripgrep
         rofi
         starship
