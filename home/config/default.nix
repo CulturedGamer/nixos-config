@@ -14,5 +14,6 @@
         ./sxhkd
         ./tmux
         ./xinit
+        ./wallpaper
     ];
 }
