@@ -198,6 +198,7 @@
                     "browser.bookmarks.openInTabClosesMenu" = false;
                     "layout.css.has-selector.enabled" = true;
                 };
+                isDefault = true;
             };
         };
     };
