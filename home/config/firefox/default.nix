@@ -3,6 +3,11 @@
 {
     programs.firefox = {
         enable = true;
+        package = pkgs.firefox-unwrapped {
+            extraPolicies = {
+                ExtensionSettings = {};
+            };
+        };
         profiles = {
             options = {
                 name = "betterfox";
