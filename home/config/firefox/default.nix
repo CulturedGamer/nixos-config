@@ -42,7 +42,7 @@
                     "network.http.max-persistent-connections-per-server" = 10;
                     "network.ssl_tokens_cache_capacity" = 32768;
 
-                    "browser.contentblocking.category" = "strict";
+                    "browser.contentblocking.category" = "srict";
                     "privacy.trackingprotection.emailtracking.enabled" = true;
                     "urlclassifier.trackingSkipURLs" = "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com";
                     "urlclassifier.features.socialtracking.skipURLs" = "*.instagram.com, *.twitter.com, *.twimg.com";
