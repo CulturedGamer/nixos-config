@@ -3,7 +3,7 @@
 {
     programs.firefox = {
         enable = true;
-        package = pkgs.firefox-unwrapped {
+        package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
             extraPolicies = {
                 ExtensionSettings = {};
             };
