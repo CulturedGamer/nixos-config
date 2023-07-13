@@ -17,6 +17,5 @@
         ./wallpaper
         ./gtk
         ./firefox
-        ./xdg
     ];
 }
