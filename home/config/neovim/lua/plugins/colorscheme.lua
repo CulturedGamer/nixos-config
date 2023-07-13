@@ -22,7 +22,28 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'NeoSolarized'
+            -- vim.cmd.colorscheme 'NeoSolarized'
         end
     },
+
+    {
+        'navarasu/onedark.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require('onedark').setup {
+                style = 'darker'
+            }
+            -- vim.cmd.colorscheme 'onedark'
+        end
+    },
+    
+    {
+        'aktersnurra/no-clown-fiesta.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme 'no-clown-fiesta'
+        end,
+    }
 }
