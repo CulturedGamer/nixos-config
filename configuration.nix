@@ -82,7 +82,6 @@
 
     environment.systemPackages = with pkgs; [
         curl
-	    firefox
         gcc
         git
         neovim
