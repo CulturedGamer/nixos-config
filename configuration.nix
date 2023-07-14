@@ -76,14 +76,7 @@
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
-    nixpkgs.config = {
-        allowUnfree = true;
-        packageOverrides = pkgs: {
-            nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-                inherit pkgs;
-            };
-        };
-    };
+    nixpkgs.config.allowUnfree = true;
 
     programs.dconf.enable = true;
 
@@ -95,6 +88,13 @@
         wget
 	    xclip
     ];
+
+    # enable the NUR
+    nixpkgs.config.packageOverrides = pkgs: {
+        nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+            inherit pkgs;
+        };
+    };
 
     system.stateVersion = "23.05";
 }
