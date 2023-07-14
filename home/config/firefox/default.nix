@@ -201,8 +201,9 @@
                 ublock-origin
                 decentraleyes
                 privacy-badger
-                vimium-ff
-                return-youtube-dislike
+                istilldontcareaboutcookies
+                vimium
+                return-youtube-dislikes
             ];
         };
     };
