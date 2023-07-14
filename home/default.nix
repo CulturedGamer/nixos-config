@@ -20,6 +20,13 @@
         executable = true;
     };
 
+    # enable the NUR
+    nixpkgs.config.packageOverrides = pkgs: {
+        nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+            inherit pkgs;
+        };
+    };
+
     programs.home-manager.enable = true;
     home.stateVersion = "23.05";
 }

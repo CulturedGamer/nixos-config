@@ -89,12 +89,5 @@
 	    xclip
     ];
 
-    # enable the NUR
-    nixpkgs.config.packageOverrides = pkgs: {
-        nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-            inherit pkgs;
-        };
-    };
-
     system.stateVersion = "23.05";
 }
