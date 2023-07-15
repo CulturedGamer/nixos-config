@@ -34,7 +34,7 @@ return {
             require('onedark').setup {
                 style = 'darker'
             }
-            -- vim.cmd.colorscheme 'onedark'
+            vim.cmd.colorscheme 'onedark'
         end
     },
     
@@ -43,7 +43,16 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme 'no-clown-fiesta'
-        end,
+            -- vim.cmd.colorscheme 'no-clown-fiesta'
+        end
+    },
+
+    { 
+        'lunarvim/darkplus.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+           -- vim.cmd.colorscheme 'darkplus' 
+        end
     }
 }
