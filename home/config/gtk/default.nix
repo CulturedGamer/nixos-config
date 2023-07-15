@@ -12,5 +12,9 @@
             name = "PaperIconTheme";
             package = pkgs.paper-icon-theme;
         };
+        cursorTheme= {
+            name = "Vanilla-DMZ";
+            package = pkgs.vanilla-dmz;
+        };
     };
 }
