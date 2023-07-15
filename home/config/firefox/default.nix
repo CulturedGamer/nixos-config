@@ -1,10 +1,6 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, nur, ... }:
 
-let
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {};
-in
 {
-    imports = lib.attrValues nur.rycee.firefox-addons;
     programs.firefox = {
         enable = true;
         package = pkgs.firefox-unwrapped;
