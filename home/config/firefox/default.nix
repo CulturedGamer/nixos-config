@@ -76,6 +76,7 @@
                 "browser.search.separatePrivateDefault.ui.enabled" = true;
                 "browser.urlbar.update2.engineAliasRefresh" = true;
                 "browser.search.suggest.enabled" = false;
+                "browser.search.hiddenOneOffs" = "Google,Yahoo,Bing,Amazon.com,Twitter";
                 "browser.urlbar.suggest.quicksuggest.sponsored" = false;
                 "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
                 "security.insecure_connection_text.enabled" = true;
@@ -196,6 +197,15 @@
                 "browser.tabs.loadBookmarksInTabs" = true;
                 "browser.bookmarks.openInTabClosesMenu" = false;
                 "layout.css.has-selector.enabled" = true;
+            };
+            search = {
+                engines = {
+                    "Brave" = {
+                        urls = [{
+                            template = "https://search.brave.com";
+                        }];
+                    };
+                };
             };
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 ublock-origin
