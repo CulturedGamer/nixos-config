@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nur, ... }:
 
 {
     imports = [
@@ -80,11 +80,7 @@
 
     programs.dconf.enable = true;
 
-    nixpkgs.config.packageOverrides = pkgs: {
-        nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-            inherit pkgs;
-        };
-    };
+    nixpkgs.overlays = [ nur.overlay ];
 
     environment.systemPackages = with pkgs; [
         curl
