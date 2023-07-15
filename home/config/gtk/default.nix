@@ -14,9 +14,10 @@
         };
     };
     pointerCursor = {
-        enable = true;
         size = 40;
         package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
+        x11.enable = true;
+        gtk.enable = true;
     };
 }
