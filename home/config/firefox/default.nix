@@ -197,7 +197,7 @@
                 "browser.bookmarks.openInTabClosesMenu" = false;
                 "layout.css.has-selector.enabled" = true;
             };
-            extensions = with pkgs.nur.rycee.firefox-addons; [
+            extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 ublock-origin
                 decentraleyes
                 privacy-badger
