@@ -5,6 +5,7 @@
         enable = true;
         package = pkgs.firefox;
         profiles.default = {
+            isDefault = true;
             id = 0;
             settings = {
                 "nglayout.initialpaint.delay" = 0;
