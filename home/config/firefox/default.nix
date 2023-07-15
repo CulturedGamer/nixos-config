@@ -3,7 +3,7 @@
 {
     programs.firefox = {
         enable = true;
-        package = pkgs.firefox-unwrapped.override { cfg = {}; };
+        package = pkgs.wrapFirefox pkgs.firefox-unwrapped;
         profiles.default = {
             id = 0;
             settings = {
