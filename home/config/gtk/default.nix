@@ -5,7 +5,7 @@
         enable = true;
         font.name = "RobotoMonoNerdFont";
         theme = {
-            name = "QogirTheme";
+            name = "Qogir-Dark";
             package = pkgs.qogir-theme;
         };
         iconTheme = {
