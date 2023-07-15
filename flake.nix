@@ -13,7 +13,7 @@
     outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
         homeManagerSettings = {
-            home-manager.userGlobalPkgs = true;
+            home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
