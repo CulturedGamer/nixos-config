@@ -1,4 +1,4 @@
-from libqtile import bar, hook, layout, widget
+from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
@@ -157,8 +157,8 @@ bring_front_click = False
 cursor_warp = True
 floating_layout = layout.Floating(
     border_width = 3,
-    border_focus = '#ab4642',
-    border_normal = '#ab4642',
+    border_focus = '#4fa6ed',
+    border_normal = '#4fa6ed',
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
