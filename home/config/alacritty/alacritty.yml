@@ -1,6 +1,6 @@
 import:
   - /home/donny/.config/alacritty/colors/base16-onedark.yml
-  - /home/donny/.config/alacritty/fonts/droid-sans-mono.yml
+  - /home/donny/.config/alacritty/fonts/jetbrains.yml
 
 env:
   TERM: xterm-256color
