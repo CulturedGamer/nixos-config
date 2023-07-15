@@ -12,9 +12,13 @@
             name = "PaperIconTheme";
             package = pkgs.paper-icon-theme;
         };
-        cursorTheme= {
-            name = "Vanilla-DMZ";
-            package = pkgs.vanilla-dmz;
+    };
+    xsession = {
+        enable = true;
+        pointerCursor = {
+            size = 40;
+            package = pkgs.nur.repos.ambroisie.vimix-cursors;
+            name = "Vimix-cursors";
         };
     };
 }
