@@ -13,8 +13,7 @@
             package = pkgs.paper-icon-theme;
         };
     };
-    pointerCursor = {
-        size = 40;
+    home.pointerCursor = {
         package = pkgs.capitaine-cursors;
         name = "capitaine-cursors";
         x11.enable = true;
