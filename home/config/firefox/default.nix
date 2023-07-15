@@ -198,15 +198,6 @@
                 "browser.bookmarks.openInTabClosesMenu" = false;
                 "layout.css.has-selector.enabled" = true;
             };
-            search = {
-                engines = {
-                    "Brave" = {
-                        urls = [{
-                            template = "https://search.brave.com";
-                        }];
-                    };
-                };
-            };
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 ublock-origin
                 decentraleyes
