@@ -13,12 +13,10 @@
             package = pkgs.paper-icon-theme;
         };
     };
-    xsession = {
+    pointerCursor = {
         enable = true;
-        pointerCursor = {
-            size = 40;
-            package = pkgs.nur.repos.ambroisie.vimix-cursors;
-            name = "Vimix-cursors";
-        };
+        size = 40;
+        package = pkgs.capitaine-cursors;
+        name = "capitaine-cursors";
     };
 }
