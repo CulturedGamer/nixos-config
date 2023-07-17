@@ -17,7 +17,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
-                    ./home
+                    ./modules/home.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -30,7 +30,7 @@
                 system = "x86_64-linux";
                 modules = [
                     nur.nixosModules.nur
-                    ./configuration.nix
+                    ./modules/nixos.nix
                     home-manager.nixosModules.home-manager homeManagerSettings
                 ];
                 specialArgs = {
