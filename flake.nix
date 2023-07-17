@@ -17,7 +17,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
-                    ./modules/home.nix
+                    ./modules/home-manager.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
