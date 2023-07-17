@@ -29,7 +29,6 @@
         mypy
         neofetch
         nsxiv
-        pass
         playerctl
         ripgrep
         rofi

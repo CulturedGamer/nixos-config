@@ -15,6 +15,8 @@
         ./terminal/git.nix
         ./terminal/starship.nix
         ./terminal/tmux.nix
+        ./terminal/pass.nix
+        ./terminal/lf.nix
 
         ./misc/rofi
         ./misc/bookmarks.nix
