@@ -75,7 +75,6 @@
         isNormalUser = true;
         description = "donny";
         extraGroups = [ "networkmanager" "wheel" ];
-        imports = [ ./secrets.nix ];
     };
 
     nixpkgs.config.allowUnfree = true;
