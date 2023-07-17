@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ../machines/nixos_vm
+        ../machines/vm.nix
         # ../machines/laptop
     ];
 
