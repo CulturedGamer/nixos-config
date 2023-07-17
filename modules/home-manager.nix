@@ -23,6 +23,7 @@
         fish
         flameshot
         fzf
+        git-crypt
         gnumake
         htop
         mpv
