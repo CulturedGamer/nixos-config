@@ -3,7 +3,6 @@
 {
     imports = [
         ../machines/vm.nix
-        ../secrets.nix
         # ../machines/laptop
     ];
 
