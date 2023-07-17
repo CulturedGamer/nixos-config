@@ -139,6 +139,7 @@
                             # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                             # widget.StatusNotifier(),
                             widget.Systray(),
+                            widget.Battery(),
                             widget.PulseVolume(),
                             widget.CurrentLayout(),
                             widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
