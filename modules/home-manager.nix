@@ -12,12 +12,6 @@
         ../home
     ];
 
-    home.file.".local/bin" = {
-        source = ./scripts;
-        recursive = true;
-        executable = true;
-    };
-
     home.packages = with pkgs; [
         alacritty
         ani-cli
