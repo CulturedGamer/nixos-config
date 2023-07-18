@@ -33,7 +33,7 @@
             noto-fonts
             noto-fonts-cjk
             noto-fonts-emoji
-            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "JetBrainsMono" "RobotoMono" ]; })
+            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono"  "RobotoMono" ]; })
         ];
 
         enableDefaultFonts = false;
