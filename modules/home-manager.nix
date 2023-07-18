@@ -26,6 +26,7 @@
         git-crypt
         gnumake
         htop
+        lazygit
         mpv
         mypy
         neofetch
