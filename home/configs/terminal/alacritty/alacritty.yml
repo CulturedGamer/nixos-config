@@ -1,5 +1,5 @@
 import:
-  - /home/donny/.config/alacritty/colors/base16-onedark.yml
+  - /home/donny/.config/alacritty/colors/vscode.yml
   - /home/donny/.config/alacritty/fonts/jetbrains.yml
 
 env:
