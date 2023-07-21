@@ -2,8 +2,9 @@
 
 {
     imports = [
-        ../machines/vm.nix
-        # ../machines/laptop
+        # ../machines/vm.nix
+        # ../machines/laptop.nix
+	../machines/potato.nix
     ];
 
     boot.loader.grub.enable = true;
