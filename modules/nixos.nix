@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    imports = [
-        ../machines/potato.nix
-    ];
-
     boot.loader.grub.enable = true;
     boot.loader.grub.useOSProber = true;
 

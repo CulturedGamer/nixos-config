@@ -31,6 +31,7 @@
                 modules = [
                     nur.nixosModules.nur
                     ./modules/nixos.nix
+                    ./machines/vm.nix
                     home-manager.nixosModules.home-manager homeManagerSettings
                 ];
                 specialArgs = {
