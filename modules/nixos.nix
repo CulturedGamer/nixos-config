@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./current_system.nix
+        ../machines/potato.nix
     ];
 
     boot.loader.grub.enable = true;
