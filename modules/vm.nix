@@ -74,12 +74,13 @@
     # networking.wireless.enable = true;
     networking.networkmanager.enable = true;
 
-    services.xserver.enable = true;
-    services.xserver.displayManager.startx.enable = true;
-    services.xserver.windowManager.qtile.enable = true;
     services.xserver = {
+        enable = true;
+        displayManager.startx.enable = true;
+        windowManager.qtile.enable = true;
         layout = "us";
         xkbVariant = "";
+        libinput.enable = true;
     };
 
     sound.enable = true;
