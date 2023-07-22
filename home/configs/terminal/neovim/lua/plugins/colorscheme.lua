@@ -48,11 +48,11 @@ return {
     },
 
     { 
-        'mofiqul/vscode.nvim',
+        'lunarvim/darkplus.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-           vim.cmd.colorscheme 'vscode'
+           vim.cmd.colorscheme 'darkplus'
         end
     },
 }
