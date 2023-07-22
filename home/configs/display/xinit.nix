@@ -5,7 +5,7 @@
         text = ''
             #!/bin/sh
 
-	    exec picom &
+            exec picom &
             exec xwallpaper --zoom ~/Pictures/wallpapers/early_snow_town.jpg &
             exec sxhkd &
             exec xset r rate 210 110 &
