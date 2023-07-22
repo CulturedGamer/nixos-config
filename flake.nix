@@ -25,18 +25,27 @@
         };
     in
     {
-        nixosConfigurations = {
-            nixos = nixpkgs.lib.nixosSystem {
-                system = "x86_64-linux";
-                modules = [
-                    nur.nixosModules.nur
-                    ./modules/nixos.nix
-                    ./machines/vm.nix
-                    home-manager.nixosModules.home-manager homeManagerSettings
-                ];
-                specialArgs = {
-                    inherit inputs;
-                };
+        nixosConfigurations.potatopc = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+                nur.nixosModules.nur
+                ./modules/potato.nix
+                home-manager.nixosModules.home-manager homeManagerSettings
+            ];
+            specialArgs = {
+                inherit inputs;
+            };
+        };
+
+        nixosConfigurations.vm = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+                nur.nixosModules.nur
+                ./modules/vm.nix
+                home-manager.nixosModules.home-manager homeManagerSettings
+            ];
+            specialArgs = {
+                inherit inputs;
             };
         };
     };
