@@ -35,13 +35,13 @@
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
-                    ./modules/vm.nix
+                    ./hosts/vm.nix
                 ] ++ defaultModules;
             };
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
-                    ./modules/potato.nix
+                    ./hosts/potato.nix
                 ] ++ defaultModules;
             };
         };
