@@ -25,23 +25,25 @@
         };
     in
     {
-        nixosConfigurations = let system = "x86_64-linux"; specialArgs = { inherit inputs; }; in {
+        nixosConfigurations = 
+        let system = "x86_64-linux"; 
+        specialArgs = { inherit inputs; };
+        defaultModules = [
+            home-manager.nixosModules.home-manager homeManagerSettings
+            nur.nixosModules.nur
+        ]; in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./modules/vm.nix
-                    home-manager.nixosModules.home-manager homeManagerSettings
-                    nur.nixosModules.nur
-                ];
+                ] ++ defaultModules;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./modules/potato.nix
-                    home-manager.nixosModules.home-manager homeManagerSettings
-                    nur.nixosModules.nur
-                ];
+                ] ++ defaultModules;
             };
         };
     };
