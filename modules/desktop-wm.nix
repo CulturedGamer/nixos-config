@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    imports = [
-        ../home/configs/window-manager.nix
-    ];
-
     fonts = {
         fonts = with pkgs; [
             material-design-icons

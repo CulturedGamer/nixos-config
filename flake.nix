@@ -18,7 +18,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    # ./home/configs/desktop-environment.nix
+                    ./home/configs/desktop-environment.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -31,6 +31,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
+                    ./home/configs/window-manager.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -48,7 +49,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
-                    # ./modules/desktop-wm.nix
+                    ./modules/desktop-wm.nix
                     home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };

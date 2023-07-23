@@ -3,8 +3,6 @@
 {
     imports = [
         ./templates
-        # ./configs/window-manager.nix
-        ./configs/display/gtk.nix
     ];
 
     home.file.".local/bin" = {
