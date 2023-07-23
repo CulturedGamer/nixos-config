@@ -76,7 +76,7 @@
 
     services.xserver = {
         enable = true;
-        displayManager.sddm.enable = true;
+        displayManager.startx.enable = true;
         windowManager.qtile.enable = true;
         layout = "us";
         xkbVariant = "";
