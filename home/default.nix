@@ -3,6 +3,7 @@
 {
     imports = [
         ./templates
+        ./configs/window-manager.nix
     ];
 
     home.file.".local/bin" = {

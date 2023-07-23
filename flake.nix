@@ -31,7 +31,6 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/window-manager.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -50,9 +49,10 @@
                 modules = [
                     ./hosts/vm.nix
                     ./modules/desktop-wm.nix
-                    home-manager.nixosModules.home-manager desktopEnvironmentSettings
+                    home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };
+
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
