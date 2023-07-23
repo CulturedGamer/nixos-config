@@ -48,7 +48,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
-                    ./modules/desktop-wm.nix
+                    # ./modules/desktop-wm.nix
                     home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };
