@@ -3,7 +3,7 @@
 {
     imports = [
         ./display/wallpaper
-        ./display/gtk.nix
+        # ./display/gtk.nix
         ./display/picom.nix
         ./display/qtile.nix
         ./display/xinit.nix
