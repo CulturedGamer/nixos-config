@@ -1,10 +1,6 @@
 { config, pkgs, ... }:
 
 {
-    imports = [
-        ../home/configs/desktop-environment.nix
-    ];
-
     fonts = {
         fonts = with pkgs; [
             material-design-icons
@@ -40,6 +36,6 @@
         git
         neovim
         wget
-	    xclip
+        xclip
     ];
 }

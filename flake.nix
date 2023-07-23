@@ -12,12 +12,26 @@
 
     outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
-        homeManagerSettings = {
+        desktopEnvironmentSettings = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
                     ./home
+                    ./home/configs/desktop-environment.nix
+                ];
+                _module.args.nur = { inherit nur; };
+            };
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
+
+        windowManagerSettings = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [
+                    ./home
+                    ./home/configs/window-manager.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -29,19 +43,22 @@
         let system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
         defaultModules = [
-            home-manager.nixosModules.home-manager homeManagerSettings
             nur.nixosModules.nur
         ]; in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
+                    ./modules/desktop-wm.nix
+                    home-manager.nixosModules.home-manager desktopEnvironmentSettings
                 ] ++ defaultModules;
             };
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/potato.nix
+                    ./modules/desktop-wm.nix
+                    home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };
         };
