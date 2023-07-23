@@ -33,7 +33,7 @@
                     home-manager.nixosModules.home-manager homeManagerSettings
                     nur.nixosModules.nur
                 ];
-            }
+            };
 
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
@@ -42,7 +42,7 @@
                     home-manager.nixosModules.home-manager homeManagerSettings
                     nur.nixosModules.nur
                 ];
-            }
+            };
         };
     };
 }
