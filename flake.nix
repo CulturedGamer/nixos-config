@@ -38,7 +38,6 @@
                     ./modules/vm.nix
                 ] ++ defaultModules;
             };
-
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
