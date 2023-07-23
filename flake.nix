@@ -18,7 +18,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/desktop-environment.nix
+                    # ./home/configs/desktop-environment.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
