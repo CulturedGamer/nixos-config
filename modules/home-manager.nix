@@ -3,7 +3,6 @@
 {
     home = {
         username = "donny";
-        homeDirectory = "/home/donny";
     };
 
     fonts.fontconfig.enable = true;
