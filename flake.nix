@@ -39,7 +39,7 @@
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
             imports = [
-                ./modules/windowManagerSettings
+                ./modules/desktop-wm.nix
             ];
         };
     in
