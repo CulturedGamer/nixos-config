@@ -3,7 +3,6 @@
 {
     imports = [ 
         (modulesPath + "/installer/scan/not-detected.nix")
-        ../modules/desktop-wm.nix
     ];
 
     boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" "sr_mod" ];
