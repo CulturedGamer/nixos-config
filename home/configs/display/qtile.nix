@@ -169,13 +169,5 @@
             # java that happens to be on java's whitelist.
             wmname = "LG3D"
         '';
-
-        ".config/qtile/autostart.sh" = {
-            text = ''
-                sxhkd &
-                xset r rate 210 110
-            '';
-            executable = true;
-        };
     };
 }

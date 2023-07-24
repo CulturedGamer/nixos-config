@@ -12,36 +12,47 @@
 
     outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
-        sessionSettings = {
-            desktopEnvironmentSettings = {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.donny = {
-                    imports = [
-                        ./home
-                        ./home/configs/desktop-environment.nix
-                    ];
-                    _module.args.nur = { inherit nur; };
-                };
-                nixpkgs.overlays = [ inputs.nur.overlay ];
+        plasmaSession = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [
+                    ./home
+                    ./home/configs/desktop-environment.nix
+                ];
+                _module.args.nur = { inherit nur; };
             };
-            windowManagerSettings = {
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.users.donny = {
-                    imports = [
-                        ./home
-                        ./home/configs/window-manager.nix
-                    ];
-                    _module.args.nur = { inherit nur; };
-                };
-                nixpkgs.overlays = [ inputs.nur.overlay ];
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
+
+        qtileSession = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [
+                    ./home
+                    ./home/configs/window-manager.nix
+                ];
+                _module.args.nur = { inherit nur; };
+            };
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
+
+        activateSession = {
+            sessionModules = {
+                qtile = ./modules/desktop-wm.nix;
+                plasma5 = ./modules/desktop-de.nix;
             };
 
-            sessionModules = {
-                wm = ./modules/desktop-wm.nix;
-                de = ./modules/desktop-de.nix;
-            };
+            qtile = with activateSession; [
+                home-manager.nixosModules.home-manager qtileSession
+                sessionModules.qtile
+            ];
+
+            plasma = with activateSession; with home-manager.nixosModules.home-manager; [
+                plasmaSession
+                plasma5
+            ];
         };
     in
     {
@@ -53,18 +64,16 @@
         ]; in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
-                modules = [
+                modules = with activateSession; [
                     ./hosts/vm.nix
-                    home-manager.nixosModules.home-manager sessionSettings.windowManagerSettings
-                    sessionSettings.sessionModules.wm
+                    plasma
                 ] ++ defaultModules;
             };
+
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/potato.nix
-                    home-manager.nixosModules.home-manager sessionSettings.desktopEnvironmentSettings
-                    sessionSettings.sessionModules.de
                 ] ++ defaultModules;
             };
         };
