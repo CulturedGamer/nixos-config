@@ -12,35 +12,36 @@
 
     outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
-        desktopEnvironmentSettings = {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.donny = {
-                imports = [
-                    ./home
-                    ./home/configs/desktop-environment.nix
-                ];
-                _module.args.nur = { inherit nur; };
+        sessionSettings = {
+            desktopEnvironmentSettings = {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.donny = {
+                    imports = [
+                        ./home
+                        ./home/configs/desktop-environment.nix
+                    ];
+                    _module.args.nur = { inherit nur; };
+                };
+                nixpkgs.overlays = [ inputs.nur.overlay ];
             };
-            nixpkgs.overlays = [ inputs.nur.overlay ];
-            imports = [
-                ./modules/desktop-de.nix
-            ];
-        };
-        windowManagerSettings = {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.donny = {
-                imports = [
-                    ./home
-                    ./home/configs/window-manager.nix
-                ];
-                _module.args.nur = { inherit nur; };
+            windowManagerSettings = {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.donny = {
+                    imports = [
+                        ./home
+                        ./home/configs/window-manager.nix
+                    ];
+                    _module.args.nur = { inherit nur; };
+                };
+                nixpkgs.overlays = [ inputs.nur.overlay ];
             };
-            nixpkgs.overlays = [ inputs.nur.overlay ];
-            imports = [
-                ./modules/desktop-wm.nix
-            ];
+
+            sessionModules = {
+                wm = ./modules/desktop-wm.nix;
+                de = ./modules/desktop-de.nix;
+            };
         };
     in
     {
@@ -54,14 +55,16 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
-                    home-manager.nixosModules.home-manager windowManagerSettings
+                    home-manager.nixosModules.home-manager sessionSettings.windowManagerSettings
+                    sessionSettings.sessionModules.wm
                 ] ++ defaultModules;
             };
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/potato.nix
-                    home-manager.nixosModules.home-manager windowManagerSettings
+                    home-manager.nixosModules.home-manager sessionSettings.desktopEnvironmentSettings
+                    sessionSettings.sessionModules.de
                 ] ++ defaultModules;
             };
         };
