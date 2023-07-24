@@ -36,6 +36,7 @@
                 _module.args.nur = { inherit nur; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
+
         };
     in
     {
