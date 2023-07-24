@@ -23,8 +23,10 @@
                 _module.args.nur = { inherit nur; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
+            imports = [
+                ./modules/desktop-de.nix
+            ];
         };
-
         windowManagerSettings = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -36,7 +38,9 @@
                 _module.args.nur = { inherit nur; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
-
+            imports = [
+                ./modules/windowManagerSettings
+            ];
         };
     in
     {
@@ -50,16 +54,13 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
-                    ./modules/desktop-wm.nix
                     home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };
-
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/potato.nix
-                    ./modules/desktop-wm.nix
                     home-manager.nixosModules.home-manager windowManagerSettings
                 ] ++ defaultModules;
             };
