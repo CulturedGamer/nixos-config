@@ -85,7 +85,7 @@
             ]
 
             widget_defaults = dict(
-                font="RobotoMonoNerdFont",
+                font="JetBrainsMonoNerdFont",
                 background="#1E1E1E",
                 foreground="#D4D4D4",
                 fontsize=12,
