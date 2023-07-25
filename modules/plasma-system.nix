@@ -21,12 +21,12 @@
     };
 
     services.xserver.enable = true;
-    services.xserver.displayManager.startx.enable = true;
-    services.xserver.windowManager.qtile.enable = true;
-    # services.xserver = {
-    #     layout = "us";
-    #     xkbVariant = "";
-    # };
+    services.xserver.displayManager.sddm.enable = true;
+    services.xserver.desktopManager.plasma5.enable = true;
+    services.xserver = {
+        layout = "us";
+        xkbVariant = "";
+    };
 
     programs.dconf.enable = true;
 
@@ -36,6 +36,6 @@
         git
         neovim
         wget
-	    xclip
+        xclip
     ];
 }

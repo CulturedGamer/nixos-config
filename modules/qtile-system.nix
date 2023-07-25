@@ -7,7 +7,7 @@
             noto-fonts
             noto-fonts-cjk
             noto-fonts-emoji
-            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono"  "RobotoMono" ]; })
+            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
         ];
 
         enableDefaultFonts = false;
@@ -21,8 +21,8 @@
     };
 
     services.xserver.enable = true;
-    services.xserver.displayManager.sddm.enable = true;
-    services.xserver.desktopManager.plasma5.enable = true;
+    services.xserver.displayManager.startx.enable = true;
+    services.xserver.windowManager.qtile.enable = true;
     services.xserver = {
         layout = "us";
         xkbVariant = "";
@@ -36,6 +36,6 @@
         git
         neovim
         wget
-        xclip
+	    xclip
     ];
 }

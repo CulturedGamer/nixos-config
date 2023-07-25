@@ -24,7 +24,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/desktop-environment.nix
+                    ./home/configs/imports/plasma-imports.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -37,7 +37,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/window-manager.nix
+                    ./home/configs/imports/qtile-imports.nix
                 ];
                 _module.args.nur = { inherit nur; };
             };
