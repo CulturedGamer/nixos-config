@@ -46,8 +46,8 @@
 
         activateSession = {
             sessionSystemConfigurations = {
-                qtile = ./modules/qtile.nix;
-                plasma = ./modules/plasma.nix;
+                qtile = ./modules/qtile-system.nix;
+                plasma = ./modules/plasma-system.nix;
             };
 
             qtile = with activateSession; [
