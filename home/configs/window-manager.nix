@@ -5,7 +5,7 @@
         ./display/wallpaper
         ./display/gtk.nix
         ./display/picom.nix
-        ./display/qtile.nix
+        # ./display/qtile.nix
         ./display/xinit.nix
 
         ./terminal/alacritty
