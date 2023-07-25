@@ -47,11 +47,13 @@
             qtile = with activateSession; [
                 home-manager.nixosModules.home-manager qtileSession
                 sessionModules.qtile
+                nur.nixosModules.nur
             ];
 
-            plasma = with activateSession; with home-manager.nixosModules.home-manager; [
-                plasmaSession
-                plasma5
+            plasma = with activateSession; [
+                home-manager.nixosModules.home-manager plasmaSession
+                plasma
+                nur.nixosModules.nur
             ];
         };
     in
@@ -59,21 +61,19 @@
         nixosConfigurations = 
         let system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
-        defaultModules = [
-            nur.nixosModules.nur
-        ]; in {
+        in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm.nix
-                ] ++ defaultModules ++ activateSession.qtile;
+                ] ++ activateSession.qtile;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/potato.nix
-                ] ++ defaultModules;
+                ] ++ activateSession.plasma;
             };
         };
     };
