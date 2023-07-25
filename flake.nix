@@ -64,10 +64,9 @@
         ]; in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
-                modules = with activateSession; [
+                modules = [
                     ./hosts/vm.nix
-                    plasma
-                ] ++ defaultModules;
+                ] ++ defaultModules ++ activateSession.qtile;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
