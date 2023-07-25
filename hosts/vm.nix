@@ -61,8 +61,8 @@
 
     users.users.donny = {
         isNormalUser = true;
-        description = "donny";
         extraGroups = [ "networkmanager" "wheel" ];
+        home = "/home/donny";
     };
 
     services.printing.enable = true;

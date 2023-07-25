@@ -2,8 +2,14 @@
     description = "My NixOS flake";
     
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-        nur.url = "github:nix-community/NUR";
+        nixpkgs = {
+            url = "github:NixOS/nixpkgs/nixos-unstable";
+        };
+
+        nur = {
+            url = "github:nix-community/NUR";
+        };
+
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -39,20 +45,20 @@
         };
 
         activateSession = {
-            sessionModules = {
-                qtile = ./modules/desktop-wm.nix;
-                plasma5 = ./modules/desktop-de.nix;
+            sessionSystemConfigurations = {
+                qtile = ./modules/qtile.nix;
+                plasma = ./modules/plasma.nix;
             };
 
             qtile = with activateSession; [
                 home-manager.nixosModules.home-manager qtileSession
-                sessionModules.qtile
+                sessionSystemConfigurations.qtile
                 nur.nixosModules.nur
             ];
 
             plasma = with activateSession; [
                 home-manager.nixosModules.home-manager plasmaSession
-                plasma
+                sessionSystemConfigurations.plasma
                 nur.nixosModules.nur
             ];
         };
