@@ -23,7 +23,7 @@
     services.xserver.enable = true;
     # services.xserver.displayManager.startx.enable = true;
     # services.xserver.autorun = false;
-    services.displayManager.sddm.enable = true;
+    services.xserver.displayManager.sddm.enable = true;
     services.xserver.windowManager.qtile.enable = true;
     services.xserver = {
         layout = "us";
