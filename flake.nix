@@ -71,14 +71,14 @@
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
-                    ./hosts/vm.nix
+                    ./hosts/vm
                 ] ++ activateSession.qtile;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
-                    ./hosts/potato.nix
+                    ./hosts/potato
                 ] ++ activateSession.plasma;
             };
         };
