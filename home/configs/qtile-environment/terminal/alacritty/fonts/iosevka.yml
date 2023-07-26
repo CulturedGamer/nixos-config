@@ -1,0 +1,10 @@
+font:
+  size: 7
+  normal:
+    family: IosevkaNerdFont
+
+  bold:
+    family: IosevkaNerdFont
+
+  italic:
+    family: IosevkaNerdFont

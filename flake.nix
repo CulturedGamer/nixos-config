@@ -18,13 +18,26 @@
 
     outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
+        dwmSession = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [
+                    ./home
+                    ./home/configs/dwm-environment
+                ];
+                _module.args.nur = { inherit nur; };
+            };
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
+
         plasmaSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/imports/plasma-imports.nix
+                    ./home/configs/plasma-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -37,7 +50,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/imports/qtile-imports.nix
+                    ./home/configs/qtile-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -48,6 +61,7 @@
             sessionSystemConfigurations = {
                 qtile = ./modules/qtile-system.nix;
                 plasma = ./modules/plasma-system.nix;
+                dwm = ./modules/dwm-system.nix;
             };
 
             qtile = with activateSession; [
@@ -61,6 +75,12 @@
                 sessionSystemConfigurations.plasma
                 nur.nixosModules.nur
             ];
+
+            dwm = with activateSession; [
+                home-manager.nixosModules.home-manager dwmSession
+                sessionSystemConfigurations.dwm
+                nur.nixosModules.nur
+            ];
         };
     in
     {
@@ -72,7 +92,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
-                ] ++ activateSession.qtile;
+                ] ++ activateSession.dwm;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {

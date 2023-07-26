@@ -1,0 +1,10 @@
+font:
+  size: 8.5
+  normal:
+    family: DroidSansMNerdFont
+
+  bold:
+    family: DroidSansMNerdFont
+
+  italic:
+    family: DroidSansMNerdFont

@@ -1,0 +1,10 @@
+font:
+  size: 8
+  normal:
+    family: InconsolataNerdFont
+
+  bold:
+    family: InconsolataNerdFont
+
+  italic:
+    family: InconsolataNerdFont

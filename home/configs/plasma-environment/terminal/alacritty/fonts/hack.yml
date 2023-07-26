@@ -1,0 +1,10 @@
+font:
+  size: 9.5
+  normal:
+    family: HackNerdFont
+
+  bold:
+    family: HackNerdFont
+
+  italic:
+    family: HackNerdFont

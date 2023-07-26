@@ -1,0 +1,10 @@
+font:
+  size: 8.5
+  normal:
+    family: UbuntuMonoNerdFont
+
+  bold:
+    family: UbuntuMonoNerdFont
+
+  italic:
+    family: UbuntuMonoNerdFont

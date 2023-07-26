@@ -1,0 +1,10 @@
+font:
+  size: 7.0
+  normal:
+    family: LiterationMonoNerdFont
+
+  bold:
+    family: LiterationMonoNerdFont
+
+  italic:
+    family: LiterationMonoNerdFont
