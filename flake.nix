@@ -81,6 +81,13 @@
                     ./hosts/potato
                 ] ++ activateSession.plasma;
             };
+
+            laptop = nixpkgs.lib.nixosSystem {
+                inherit system specialArgs;
+                modules = [
+                    ./hosts/laptop
+                ] ++ activateSession.qtile;
+            };
         };
     };
 }
