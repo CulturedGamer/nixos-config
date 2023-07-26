@@ -68,19 +68,19 @@
         let system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
         in {
-            nixos = nixpkgs.lib.nixosSystem {
+            vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
                 ] ++ activateSession.qtile;
             };
 
-        #     potatopc = nixpkgs.lib.nixosSystem {
-        #         inherit system specialArgs;
-        #         modules = [
-        #             ./hosts/potato
-        #         ] ++ activateSession.plasma;
-        #     };
+            potatopc = nixpkgs.lib.nixosSystem {
+                inherit system specialArgs;
+                modules = [
+                    ./hosts/potato
+                ] ++ activateSession.plasma;
+            };
         };
     };
 }
