@@ -5,7 +5,7 @@ return {
         priority = 1000,
         config = function()
             -- vim.cmd.colorscheme 'base16-gruvbox-dark-hard'
-        end 
+        end
     },
 
     {
@@ -37,7 +37,7 @@ return {
             -- vim.cmd.colorscheme 'onedark'
         end
     },
-    
+
     {
         'aktersnurra/no-clown-fiesta.nvim',
         lazy = false,
@@ -47,12 +47,22 @@ return {
         end
     },
 
-    { 
+    {
         'lunarvim/darkplus.nvim',
         lazy = false,
         priority = 1000,
         config = function()
-           vim.cmd.colorscheme 'darkplus'
+           -- vim.cmd.colorscheme 'darkplus'
         end
     },
+
+    {
+        'rose-pine/neovim',
+        name = 'rose-pine',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd.colorscheme 'rose-pine'
+        end
+    }
 }

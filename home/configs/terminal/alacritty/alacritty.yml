@@ -1,6 +1,6 @@
 import:
-  - /home/donny/.config/alacritty/colors/vscode.yml
-  - /home/donny/.config/alacritty/fonts/jetbrains.yml
+  - /home/donny/.config/alacritty/colors/rose-pine.yml
+  - /home/donny/.config/alacritty/fonts/firacode.yml
 
 env:
   TERM: xterm-256color
@@ -9,5 +9,5 @@ shell:
   program: fish
 
 window:
-  # opacity: 0.9
-  opacity: 1
+  opacity: 0.885
+  # opacity: 1
