@@ -75,12 +75,12 @@
                 ] ++ activateSession.qtile;
             };
 
-            potatopc = nixpkgs.lib.nixosSystem {
-                inherit system specialArgs;
-                modules = [
-                    ./hosts/potato
-                ] ++ activateSession.plasma;
-            };
+        #     potatopc = nixpkgs.lib.nixosSystem {
+        #         inherit system specialArgs;
+        #         modules = [
+        #             ./hosts/potato
+        #         ] ++ activateSession.plasma;
+        #     };
         };
     };
 }
