@@ -8,7 +8,7 @@
             exec xwallpaper --zoom ~/Pictures/wallpapers/early_snow_town.jpg &
             exec sxhkd &
             exec xset r rate 210 110 &
-            exec picom --backend=glx &
+            exec picom &
             qtile start
         '';
         executable = true;
