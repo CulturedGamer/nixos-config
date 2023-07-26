@@ -68,7 +68,7 @@
         let system = "x86_64-linux"; 
         specialArgs = { inherit inputs; };
         in {
-            vm = nixpkgs.lib.nixosSystem {
+            nixos = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
