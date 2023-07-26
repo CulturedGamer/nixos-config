@@ -3,7 +3,7 @@
 {
     services.picom = {
         enable = true;
-        vSync = true;
-        backend = "glx";
+        # vSync = true;
+        # backend = "glx";
     };
 }
