@@ -9,7 +9,7 @@
             exec sxhkd &
             exec xset r rate 210 110 &
             exec picom &
-            qtile start
+            dwm
         '';
         executable = true;
     };
