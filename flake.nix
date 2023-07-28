@@ -10,13 +10,17 @@
             url = "github:nix-community/NUR";
         };
 
+        dwm = {
+            url = "github:CulturedGamer/dwm-config";
+        };
+
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
     let
         dwmSession = {
             home-manager.useGlobalPkgs = true;
@@ -26,7 +30,7 @@
                     ./home
                     ./home/configs/dwm-environment
                 ];
-                _module.args.nur = { inherit nur; };
+                _module.args.nur = { inherit nur; inherit dwm; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
         };
@@ -92,7 +96,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
-                ] ++ activateSession.dwm;
+                ] ++ activateSession.qtile;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
