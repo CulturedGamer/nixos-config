@@ -29,12 +29,6 @@
         xkbVariant = "";
     };
 
-    nixpkgs.overlays = [
-        (final: prev: {
-            dwm = prev.dwm.overrideAttrs (old: { src = ~/Suckless_builds/dwm ;});
-        })
-    ];
-
     environment.systemPackages = with pkgs; [
         curl
         gcc
