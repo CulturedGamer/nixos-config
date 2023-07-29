@@ -17,7 +17,6 @@
         ./terminal/tmux.nix
         ./terminal/lf.nix
 
-        ./misc/rofi
         ./misc/bookmarks.nix
         ./misc/firefox.nix
         ./misc/sxhkd.nix
