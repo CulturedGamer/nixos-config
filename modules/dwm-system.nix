@@ -29,9 +29,9 @@
         xkbVariant = "";
     };
 
-    nixpkgs.overlays = [
-        (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-    ];
+    # nixpkgs.overlays = [
+    #     (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+    # ];
 
     environment.systemPackages = with pkgs; [
         curl

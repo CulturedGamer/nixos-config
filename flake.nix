@@ -90,8 +90,9 @@
     in
     {
         nixosConfigurations = 
-        let system = "x86_64-linux"; 
-        specialArgs = { inherit inputs; };
+        let 
+            system = "x86_64-linux"; 
+            specialArgs = { inherit inputs; };
         in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
