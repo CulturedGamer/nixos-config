@@ -60,6 +60,6 @@
         yt-dlp
         zip
 
-        dwm-conf.packages."${pkgs.system}"
+        dwm.packages."${pkgs.system}"
     ];
 }
