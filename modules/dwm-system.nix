@@ -36,5 +36,7 @@
         neovim
         wget
 	    xclip
+
+        dwm.packages."${pkgs.system}"
     ];
 }
