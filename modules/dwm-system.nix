@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, ... }:
+{ config, pkgs, ... }:
 
 {
     fonts = {
@@ -28,10 +28,6 @@
         layout = "us";
         xkbVariant = "";
     };
-
-    # nixpkgs.overlays = [
-    #     (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-    # ];
 
     environment.systemPackages = with pkgs; [
         curl

@@ -85,6 +85,7 @@
                 home-manager.nixosModules.home-manager dwmSession
                 sessionSystemConfigurations.dwm
                 nur.nixosModules.nur
+                (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
             ];
         };
     in
