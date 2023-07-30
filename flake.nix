@@ -12,6 +12,7 @@
 
         dwm = {
             url = "github:CulturedGamer/dwm-config";
+            inputs.nixpkgs.follows = "nixpkgs";
         };
 
         home-manager = {
@@ -31,7 +32,6 @@
                     ./home/configs/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
-                _module.args.dwm = { inherit dwm; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
         };

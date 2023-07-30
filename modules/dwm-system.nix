@@ -29,6 +29,10 @@
         xkbVariant = "";
     };
 
+    nixpkgs.overlays = [
+        (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+    ];
+
     environment.systemPackages = with pkgs; [
         curl
         gcc
@@ -36,7 +40,5 @@
         neovim
         wget
 	    xclip
-
-        dwm.packages."${pkgs.system}"
     ];
 }
