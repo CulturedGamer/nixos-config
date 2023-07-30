@@ -33,7 +33,10 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
-            nixpkgs.overlays = [ inputs.nur.overlay ];
+            nixpkgs.overlays = [ 
+                inputs.nur.overlay
+                (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+            ];
         };
 
         plasmaSession = {
@@ -85,7 +88,6 @@
                 home-manager.nixosModules.home-manager dwmSession
                 sessionSystemConfigurations.dwm
                 nur.nixosModules.nur
-                (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
             ];
         };
     in
