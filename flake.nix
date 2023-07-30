@@ -89,6 +89,8 @@
         };
     in
     {
+        overlays = import ./overlays { inherit dwm; };
+
         nixosConfigurations = 
         let 
             system = "x86_64-linux"; 
@@ -99,7 +101,6 @@
                 modules = [
                     ./hosts/vm
                 ] ++ activateSession.dwm;
-                overlays = import ./overlays { inherit dwm; };
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
