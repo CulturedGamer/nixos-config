@@ -90,7 +90,7 @@
     in
     {
         overlays = [
-            (_: prev: { inherit (dwm.packaes.${prev.system}) dwm; })
+            (_: prev: { inherit (dwm.perSystem.packages) dwm; })
         ];
 
         nixosConfigurations = 
