@@ -89,7 +89,9 @@
         };
     in
     {
-        overlays = import ./overlays { inherit dwm; };
+        overlays = [
+            (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+        ];
 
         nixosConfigurations = 
         let 
