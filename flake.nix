@@ -33,10 +33,7 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
-            nixpkgs.overlays = [ 
-                inputs.nur.overlay
-                (_: prev: { inherit (inputs.dwm.packages.${prev.system}) dwm; })
-            ];
+            nixpkgs.overlays = [ inputs.nur.overlay ];
         };
 
         plasmaSession = {
@@ -102,6 +99,7 @@
                 modules = [
                     ./hosts/vm
                 ] ++ activateSession.dwm;
+                overlays = import ./overlays { inherit dwm; };
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
