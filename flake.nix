@@ -35,7 +35,7 @@
             };
             nixpkgs.overlays = [ 
                 inputs.nur.overlay
-                (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+                (_: prev: { inherit (inputs.dwm.packages.${prev.system}) dwm; })
             ];
         };
 
