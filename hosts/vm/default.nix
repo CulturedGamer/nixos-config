@@ -18,7 +18,7 @@
         alsa.support32Bit = true;
         pulse.enable = true;
     };
-    security.polkit.enable = true;
+    # security.polkit.enable = true;
 
     time.timeZone = "America/Los_Angeles";
 
