@@ -59,5 +59,7 @@
         yewtube
         yt-dlp
         zip
+
+        dwm-conf.packages."${pkgs.system}"
     ];
 }

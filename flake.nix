@@ -10,7 +10,7 @@
             url = "github:nix-community/NUR";
         };
 
-        dwm = {
+        dwm-conf = {
             url = "github:CulturedGamer/dwm-config";
         };
 
@@ -20,7 +20,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, dwm-conf, home-manager, ... }:
     let
         dwmSession = {
             home-manager.useGlobalPkgs = true;
@@ -30,7 +30,8 @@
                     ./home
                     ./home/configs/dwm-environment
                 ];
-                _module.args.nur = { inherit nur; inherit dwm; };
+                _module.args.nur = { inherit nur; };
+                _module.args.dwm-conf = { inherit dwm-conf; };
             };
             nixpkgs.overlays = [ inputs.nur.overlay ];
         };
