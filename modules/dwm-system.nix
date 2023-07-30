@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, ... }:
+{ config, pkgs, ... }:
 
 {
     fonts = {
@@ -36,6 +36,5 @@
         neovim
         wget
 	    xclip
-        dwm.packages."${pkgs.system}".dwmPackage
     ];
 }
