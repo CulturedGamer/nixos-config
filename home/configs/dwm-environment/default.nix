@@ -45,6 +45,7 @@
         playerctl
         ripgrep
         rofi
+        slstatus
         starship
         streamlink
         sxhkd
