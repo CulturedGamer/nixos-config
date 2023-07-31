@@ -2,7 +2,7 @@
 
 {
     fonts = {
-        fonts = with pkgs; [
+        packages = with pkgs; [
             material-design-icons
             noto-fonts
             noto-fonts-cjk
@@ -10,7 +10,7 @@
             (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
         ];
 
-        enableDefaultFonts = false;
+        enableDefaultPackages = false;
 
         fontconfig.defaultFonts = {
             serif = [ "Noto Serif" "Noto Color Emoji" ];
