@@ -21,7 +21,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
     let
         dwmSession = {
             home-manager.useGlobalPkgs = true;
@@ -89,9 +89,9 @@
         };
     in
     {
-        # overlays = [
-        #     (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-        # ];
+        overlays = [
+            (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+        ];
 
         nixosConfigurations = 
         let 

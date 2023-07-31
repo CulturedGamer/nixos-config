@@ -31,10 +31,6 @@
 
     programs.dconf.enable = true;
 
-    nixpkgs.overlays = [
-        (final: prev: { inherit (pkgs.dwm.packages.${prev.system}) dwm; })
-    ];
-
     environment.systemPackages = with pkgs; [
         curl
         gcc
