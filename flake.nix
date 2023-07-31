@@ -33,6 +33,10 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
+            nixpkgs.overlays = [
+                inputs.nur.overlay
+                (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
+            ];
         };
 
         plasmaSession = {
@@ -86,11 +90,10 @@
                 nur.nixosModules.nur
             ];
         };
-    in rec {
+    in {
         overlays = [
             (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
         ];
-        dwmSession.nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
 
         nixosConfigurations = 
         let 
