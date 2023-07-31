@@ -15,18 +15,13 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        helix = {
-            url = "github:helix-editor/helix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, helix, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
         dwmSession = {
             home-manager.useGlobalPkgs = true;
@@ -88,24 +83,25 @@
 
             dwm = with activateSession; [
                 home-manager.nixosModules.home-manager dwmSession
-                sessionSystemConfigurations.dwm
+                # sessionSystemConfigurations.dwm
                 nur.nixosModules.nur
             ];
         };
     in
     {
-        overlays = [
-            (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-        ];
+        # overlays = [
+        #     (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+        # ];
 
         nixosConfigurations = 
         let 
             system = "x86_64-linux"; 
-            specialArgs = { inherit inputs; };
+            specialArgs = inputs;
         in {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
+                    ./modules/dwm-system.nix
                     ./hosts/vm
                 ] ++ activateSession.dwm;
             };
