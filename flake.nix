@@ -89,10 +89,6 @@
         };
     in
     {
-        overlays = [
-            (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-        ];
-
         nixosConfigurations = 
         let 
             system = "x86_64-linux"; 
@@ -118,6 +114,10 @@
                     ./hosts/laptop
                 ] ++ activateSession.qtile;
             };
+
+            overlays = [
+                (final: prev: {dwm = inputs.dwm.packages.${system};})
+            ];
         };
     };
 }
