@@ -23,6 +23,8 @@
 
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
     rec {
+        inherit dwm;
+
         overlays = [
             (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
         ];
