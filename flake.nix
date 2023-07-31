@@ -33,11 +33,11 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/dwm-environment
+                    ./home/configs/plasma-environment
                 ];
                 _module.args.nur = { inherit nur; };
-                nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
             };
+            nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
         };
 
         plasmaSession = {
