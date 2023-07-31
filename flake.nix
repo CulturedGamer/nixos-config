@@ -10,7 +10,7 @@
             url = "github:nix-community/NUR";
         };
 
-        dwm-build = {
+        dwm = {
             url = "github:CulturedGamer/dwm-config";
             inputs.nixpkgs.follows = "nixpkgs";
         };
@@ -83,7 +83,7 @@
 
             dwm = with activateSession; [
                 home-manager.nixosModules.home-manager dwmSession
-                sessionSystemConfigurations.dwm
+                # sessionSystemConfigurations.dwm
                 nur.nixosModules.nur
             ];
         };
@@ -102,6 +102,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
+                    ./modules/dwm-system.nix
                 ] ++ activateSession.dwm;
             };
 
