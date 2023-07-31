@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, helix, ... }:
+{ config, pkgs, dwm, ... }:
 
 {
     fonts = {
@@ -39,6 +39,6 @@
         wget
 	    xclip
 
-        helix.packages."${pkgs.system}".helix
+        dwm.packages.${pkgs.system}
     ];
 }
