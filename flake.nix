@@ -36,7 +36,7 @@
                     ./home/configs/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
-                nixpkgs.overlays = [ nur.overlay ] ++ overlays;
+                nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
             };
         };
 
