@@ -24,7 +24,7 @@
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
     let
         overlays = [
-            (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
+            (_: prev: {inherit (inputs.dwm.packages.${prev.system}) dwm; })
         ];
 
         dwmSession = {
