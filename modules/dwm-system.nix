@@ -32,7 +32,7 @@
     programs.dconf.enable = true;
 
     nixpkgs.overlays = [
-        (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+        (_: prev: { inherit (pkgs.dwm.packages.${prev.system}) dwm; })
     ];
 
     environment.systemPackages = with pkgs; [
