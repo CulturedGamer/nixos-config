@@ -22,7 +22,11 @@
     };
 
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
-    let
+    rec {
+        overlays = [
+            (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
+        ];
+
         dwmSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -32,11 +36,8 @@
                     ./home/configs/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
+                nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
             };
-            nixpkgs.overlays = [
-                inputs.nur.overlay
-                (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
-            ];
         };
 
         plasmaSession = {
@@ -90,10 +91,7 @@
                 nur.nixosModules.nur
             ];
         };
-    in {
-        overlays = [
-            (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
-        ];
+
 
         nixosConfigurations = 
         let 
