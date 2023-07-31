@@ -66,6 +66,7 @@
             sessionSystemConfigurations = {
                 qtile = ./modules/qtile-system.nix;
                 plasma = ./modules/plasma-system.nix;
+                # dwm = import ./modules/dwm-system.nix { inherit dwm; };
                 dwm = ./modules/dwm-system.nix;
             };
 
@@ -89,9 +90,9 @@
         };
     in
     {
-        overlays = [
-            (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-        ];
+        # overlays = [
+        #     (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
+        # ];
 
         nixosConfigurations = 
         let 
