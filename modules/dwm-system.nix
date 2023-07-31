@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, ... }:
+{ pkgs, dwm, ... }:
 
 {
     fonts = {
