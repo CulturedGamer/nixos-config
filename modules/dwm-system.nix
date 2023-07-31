@@ -1,4 +1,4 @@
-{ pkgs, dwm, ... }:
+{ config, pkgs, dwm, helix, ... }:
 
 {
     fonts = {
@@ -31,10 +31,6 @@
 
     programs.dconf.enable = true;
 
-    nixpkgs.overlays = [
-        (_: prev: { inherit (dwm.packages.${prev.system}) dwm; })
-    ];
-
     environment.systemPackages = with pkgs; [
         curl
         gcc
@@ -42,5 +38,7 @@
         neovim
         wget
 	    xclip
+
+        helix.packages."${pkgs.system}".helix
     ];
 }
