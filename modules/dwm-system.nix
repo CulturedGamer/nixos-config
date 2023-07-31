@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, ... }:
+{ config, pkgs, dwm-build, ... }:
 
 {
     fonts = {
@@ -39,6 +39,6 @@
         wget
 	    xclip
 
-        dwm.packages.${pkgs.system}
+        dwm-build.packages.${pkgs.system}
     ];
 }

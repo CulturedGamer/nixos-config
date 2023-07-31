@@ -10,7 +10,7 @@
             url = "github:nix-community/NUR";
         };
 
-        dwm = {
+        dwm-build = {
             url = "github:CulturedGamer/dwm-config";
             inputs.nixpkgs.follows = "nixpkgs";
         };
