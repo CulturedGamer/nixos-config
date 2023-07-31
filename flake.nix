@@ -66,7 +66,7 @@
             sessionSystemConfigurations = {
                 qtile = ./modules/qtile-system.nix;
                 plasma = ./modules/plasma-system.nix;
-                dwm = import ./modules/dwm-system.nix { inherit dwm; };
+                dwm = import ./modules/dwm-system.nix { inherit nixpkgs; inherit dwm; };
                 # dwm = ./modules/dwm-system.nix;
             };
 
