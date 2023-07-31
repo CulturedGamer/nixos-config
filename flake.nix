@@ -83,7 +83,7 @@
 
             dwm = with activateSession; [
                 home-manager.nixosModules.home-manager dwmSession
-                # sessionSystemConfigurations.dwm
+                sessionSystemConfigurations.dwm
                 nur.nixosModules.nur
             ];
         };
@@ -101,7 +101,6 @@
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
-                    ./modules/dwm-system.nix
                     ./hosts/vm
                 ] ++ activateSession.dwm;
             };
