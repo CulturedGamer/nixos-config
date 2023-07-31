@@ -15,6 +15,10 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        helix = {
+            url = "github:helix-editor/helix/23.05";
+        };
+
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
