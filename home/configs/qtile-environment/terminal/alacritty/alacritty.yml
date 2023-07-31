@@ -9,5 +9,5 @@ shell:
   program: fish
 
 window:
-  opacity: 0.885
-  # opacity: 1
+  # opacity: 0.885
+  opacity: 1
