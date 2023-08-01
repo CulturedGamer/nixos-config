@@ -10,7 +10,7 @@
             (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
         ];
 
-        enableDefaultPackages = false;
+        enableDefaultFonts = false;
 
         fontconfig.defaultFonts = {
             serif = [ "Noto Serif" "Noto Color Emoji" ];
