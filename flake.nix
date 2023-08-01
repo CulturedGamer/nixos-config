@@ -22,12 +22,13 @@
     };
 
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
-    let
+    rec {
         overlays = [
-            (_: prev: {inherit (inputs.dwm.packages.${prev.system}) dwm; })
+            (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
         ];
-    in rec {
+
         dwmSession = {
+            inherit overlays;
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
