@@ -22,11 +22,11 @@
     };
 
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
-    rec {
+    let
         overlays = [
             (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
         ];
-
+    in rec {
         dwmSession = {
             inherit overlays;
             home-manager.useGlobalPkgs = true;
@@ -93,12 +93,13 @@
             ];
         };
 
-
         nixosConfigurations = 
         let 
             system = "x86_64-linux"; 
             specialArgs = inputs;
         in {
+            inherit overlays;
+
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
