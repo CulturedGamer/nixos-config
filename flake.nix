@@ -27,7 +27,7 @@
         specialArgs = inputs;
     in rec {
         overlays = [
-            (final: prev: {dwm = prev.inputs.dwm.packages.${system};})
+            (final: prev: {inputs.dwm = prev.inputs.dwm.packages.${system};})
         ];
 
         dwmSession = 
