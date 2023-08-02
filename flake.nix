@@ -22,9 +22,12 @@
     };
 
     outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
-    rec {
+    let
+        system = "x86_64-linux"; 
+        specialArgs = inputs;
+    in rec {
         overlays = [
-            (_: prev: {inherit (dwm.packages.${prev.system}) dwm; })
+            (final: prev: {dwm = prev.inputs.dwm.packages.${system};})
         ];
 
         dwmSession = 
@@ -39,8 +42,8 @@
                     ./home/configs/plasma-environment
                 ];
                 _module.args.nur = { inherit nur; };
-                nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
             };
+            nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
         };
 
         plasmaSession = {
@@ -95,12 +98,7 @@
             ];
         };
 
-
-        nixosConfigurations = 
-        let 
-            system = "x86_64-linux"; 
-            specialArgs = inputs;
-        in {
+        nixosConfigurations = {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
