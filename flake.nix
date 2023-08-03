@@ -27,7 +27,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/plasma-environment
+                    ./home/configs/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
