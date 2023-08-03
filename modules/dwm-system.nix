@@ -1,4 +1,4 @@
-{ config, pkgs, dwm, ... }:
+{ config, pkgs, ... }:
 
 {
     fonts = {
@@ -28,6 +28,18 @@
         layout = "us";
         xkbVariant = "";
     };
+
+    nixpkgs.overlays = [
+        (final: prev: {
+            dwm = prev.dwm.overrideAttrs (_: {
+                src = builtins.fetchGit {
+                    url = "https://github.com/CulturedGamer/dwm";
+                    rev = "38086b584b468b7c7083308359c2fb95be7a5683";
+                    ref = "main";
+                };
+            });
+        })
+    ];
 
     programs.dconf.enable = true;
 

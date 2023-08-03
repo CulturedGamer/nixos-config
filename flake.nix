@@ -10,26 +10,17 @@
             url = "github:nix-community/NUR";
         };
 
-        dwm = {
-            url = "github:CulturedGamer/dwm-config";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
         system = "x86_64-linux"; 
         specialArgs = inputs;
     in rec {
-        overlays = [
-            dwm.overlays.default
-        ];
-
         dwmSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
