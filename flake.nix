@@ -27,13 +27,10 @@
         specialArgs = inputs;
     in rec {
         overlays = [
-            (final: prev: {inputs.dwm = prev.inputs.dwm.packages.${system};})
+            dwm.overlays.default
         ];
 
-        dwmSession = 
-        let
-            inherit overlays;
-        in {
+        dwmSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
@@ -43,7 +40,7 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
-            nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
+            nixpkgs.overlays = [ inputs.nur.overlay ];
         };
 
         plasmaSession = {
