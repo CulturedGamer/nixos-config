@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "machine:"
+read MACHINE_OPTION
 rm -rf ~/.config/nvim/lazy-lock.json
 echo "build option:"
 read BUILD_OPTION
