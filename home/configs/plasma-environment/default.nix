@@ -18,6 +18,7 @@
         alacritty
         ani-cli
         brave
+        cargo
         cava
         clang
         cmus
@@ -32,7 +33,7 @@
         neofetch
         playerctl
         ripgrep
-        rustup
+        rustc
         starship
         streamlink
         tmux

@@ -28,6 +28,7 @@
         ani-cli
         brave
         brightnessctl
+        cargo
         cava
         clang
         cmus
@@ -44,7 +45,7 @@
         playerctl
         ripgrep
         rofi
-        rustup
+        rustc
         starship
         streamlink
         sxhkd
