@@ -32,6 +32,7 @@
         neofetch
         playerctl
         ripgrep
+        rustup
         starship
         streamlink
         tmux

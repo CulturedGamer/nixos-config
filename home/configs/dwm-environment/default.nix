@@ -46,6 +46,7 @@
         playerctl
         ripgrep
         rofi
+        rustup
         slstatus
         starship
         streamlink

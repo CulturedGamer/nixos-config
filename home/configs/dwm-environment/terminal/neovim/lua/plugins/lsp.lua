@@ -11,7 +11,7 @@ return {
 
         require('mason').setup{}
         require('mason-lspconfig').setup{
-            ensure_installed = { "lua_ls", "clangd" }
+            ensure_installed = { "lua_ls", "clangd", "nil_ls" }
         }
 
         local on_attach = function(client, bufnr)
