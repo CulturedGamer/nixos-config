@@ -1,4 +1,22 @@
 #!/bin/sh
 
-rm -rf ~/.config/nvim/lazy-lock.json
-sudo nixos-rebuild switch --flake /etc/nixos#vm
+declare -a machines=("vm" "laptop" "potatopc")
+
+echo "machine:"
+read MACHINE_OPTION
+
+UNEQUAL_COUNTER=0
+
+for i in "${machines[@]}"
+    if [ MACHINE_OPTION -ne "${machines[i]}" ]; then
+        UNEQUAL_COUNTER=$((UNEQUAL_COUNTER+1))
+    fi
+done
+
+if [ UNEQUAL_COUNTER -eq 3 ]; then
+    echo "Machine does not exist!"
+    exit 1
+else
+    rm -rf ~/.config/nvim/lazy-lock.json
+    sudo nixos-rebuild switch --flake /etc/nixos#${MACHINE_OPTION}
+fi
