@@ -8,7 +8,7 @@ read MACHINE_OPTION
 UNEQUAL_COUNTER=0
 
 for i in "${machines[@]}"; do
-    if [ MACHINE_OPTION != "${machines[$i]}" ]; then
+    if [ MACHINE_OPTION != "$i" ]; then
         UNEQUAL_COUNTER=$((UNEQUAL_COUNTER+1))
     fi
 done
