@@ -7,7 +7,7 @@ read MACHINE_OPTION
 
 UNEQUAL_COUNTER=0
 
-for i in "${machines[@]}"
+for i in "${machines[@]}"; do
     if [ MACHINE_OPTION -ne "${machines[i]}" ]; then
         UNEQUAL_COUNTER=$((UNEQUAL_COUNTER+1))
     fi
