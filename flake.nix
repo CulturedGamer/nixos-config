@@ -10,7 +10,7 @@
             url = "github:nix-community/NUR";
         };
 
-        neovim-nightly = {
+        neovim-nightly-overlay = {
             url = "github:nix-community/neovim-nightly-overlay";
         };
 
@@ -20,7 +20,7 @@
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, neovim-nightly-overlay, home-manager, ... }:
     let
         system = "x86_64-linux"; 
         specialArgs = inputs;
