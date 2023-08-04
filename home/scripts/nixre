@@ -11,6 +11,7 @@ for i in "${machines[@]}"; do
     if [ MACHINE_OPTION == "$i" ]; then
         IF_FOUND=true
     fi
+    echo "$i"
 done
 
 if [ IF_FOUND != true ]; then
