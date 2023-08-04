@@ -47,7 +47,7 @@
         curl
         gcc
         git
-        neovim
+        vim
         wget
 	    xclip
     ];

@@ -41,6 +41,7 @@
         mpv
         mypy
         neofetch
+        neovim-nightly
         nsxiv
         playerctl
         ripgrep
