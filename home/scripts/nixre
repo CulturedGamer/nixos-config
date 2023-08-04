@@ -8,12 +8,12 @@ read MACHINE_OPTION
 UNEQUAL_COUNTER=0
 
 for i in "${machines[@]}"; do
-    if [ MACHINE_OPTION -ne "${machines[$i]}" ]; then
+    if [ MACHINE_OPTION != "${machines[$i]}" ]; then
         UNEQUAL_COUNTER=$((UNEQUAL_COUNTER+1))
     fi
 done
 
-if [ UNEQUAL_COUNTER -eq 3 ]; then
+if [ UNEQUAL_COUNTER == 3 ]; then
     echo "Machine does not exist!"
     exit 1
 else
