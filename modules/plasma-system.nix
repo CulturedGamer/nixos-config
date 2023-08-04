@@ -34,6 +34,7 @@
         curl
         gcc
         git
+        udisks
         neovim
         wget
         xclip

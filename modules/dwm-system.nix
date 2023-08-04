@@ -47,6 +47,7 @@
         curl
         gcc
         git
+        udisks
         vim
         wget
 	    xclip
