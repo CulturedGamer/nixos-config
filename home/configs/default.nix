@@ -11,6 +11,7 @@
         ./fish.nix
         ./git.nix
         ./lf.nix
+        ./neovim-lua
         ./picom.nix
         ./starship.nix
     ];
