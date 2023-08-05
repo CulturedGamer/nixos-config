@@ -21,7 +21,6 @@
             p.rust
             p.yaml
             p.cpp
-            p.org
             ]))
         ];
     };
