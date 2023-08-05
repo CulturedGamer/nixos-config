@@ -3,6 +3,8 @@
 {
     imports = [
         ./alacritty
+        ./wallpaper
+
         ./bash.nix
         ./bookmarks.nix
         ./firefox.nix
