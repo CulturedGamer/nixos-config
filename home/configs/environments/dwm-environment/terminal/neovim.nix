@@ -10,9 +10,5 @@
             vim.cmd.colorscheme 'rose-pine'
         '';
 
-        ".config/nvim/lua" = {
-            source = ../../../neovim-lua;
-            recursive = true;
-        };
     };
 }
