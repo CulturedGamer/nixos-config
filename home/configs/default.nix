@@ -3,7 +3,6 @@
 {
     imports = [
         ./alacritty
-        ./neovim-lua
         ./bash.nix
         ./bookmarks.nix
         ./firefox.nix
