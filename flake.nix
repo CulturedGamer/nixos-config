@@ -11,7 +11,7 @@
         };
 
         neovim-nightly-overlay = {
-            url = "nix-community/neovim-nightly-overlay";
+            url = "github:nix-community/neovim-nightly-overlay";
         };
 
         home-manager = {
