@@ -10,18 +10,4 @@
         source = ./plugins;
         recursive = true;
     };
-
-    programs.neovim = {
-        enable = true;
-        defaultEditor = true;
-        plugins = [
-            (pkgs.vimPlugins.nvim-treesitter.withPlugins (p: [
-            p.c
-            p.lua
-            p.rust
-            p.yaml
-            p.cpp
-            ]))
-        ];
-    };
 }

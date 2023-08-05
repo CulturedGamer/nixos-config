@@ -48,7 +48,6 @@
         gcc
         git
         udisks
-        neovim
         vim
         wget
 	    xclip
