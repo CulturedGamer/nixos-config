@@ -32,7 +32,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/dwm-environment
+                    ./home/configs/environments/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -45,7 +45,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/plasma-environment
+                    ./home/configs/environments/plasma-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -58,7 +58,7 @@
             home-manager.users.donny = {
                 imports = [
                     ./home
-                    ./home/configs/qtile-environment
+                    ./home/configs/environments/qtile-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };

@@ -3,6 +3,7 @@
 {
     imports = [
         ./templates
+        ./configs
     ];
 
     home.file.".local/bin" = {
