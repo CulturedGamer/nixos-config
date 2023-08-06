@@ -3,7 +3,6 @@
 {
     imports = [
         ./rofi
-
         ./alacritty.nix
         ./gtk.nix
         ./neovim.nix
