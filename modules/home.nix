@@ -3,7 +3,8 @@
 {
     imports = [
         ./templates
-        ./configs
+        ./terminal
+        ./desktop
     ];
 
     home.file.".local/bin" = {

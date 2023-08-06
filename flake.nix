@@ -26,8 +26,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
-                    ./home
-                    ./home/configs/environments/dwm-environment
+                    ./modules/home.nix
+                    ./modules/environments/dwm-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -39,8 +39,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
-                    ./home
-                    ./home/configs/environments/plasma-environment
+                    ./modules/home.nix
+                    ./modules/environments/plasma-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -52,8 +52,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [
-                    ./home
-                    ./home/configs/environments/qtile-environment
+                    ./modules/home.nix
+                    ./modules/environments/qtile-environment
                 ];
                 _module.args.nur = { inherit nur; };
             };
@@ -62,9 +62,9 @@
 
         activateSession = {
             sessionSystemConfigurations = {
-                qtile = ./modules/qtile-system.nix;
-                plasma = ./modules/plasma-system.nix;
-                dwm = ./modules/dwm-system.nix;
+                qtile = ./modules/environments/qtile-environment/system.nix;
+                plasma = ./modules/environments/plasma-environment/system.nix;
+                dwm = ./modules/environments/dwm-environment/system.nix;
             };
 
             qtile = with activateSession; [

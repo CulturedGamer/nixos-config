@@ -1,18 +1,13 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
     imports = [
         ./alacritty
-        ./wallpaper
-
+        ./neovim-lua
         ./bash.nix
-        ./bookmarks.nix
-        ./firefox.nix
         ./fish.nix
         ./git.nix
         ./lf.nix
-        ./neovim-lua
-        ./picom.nix
         ./starship.nix
     ];
 }
