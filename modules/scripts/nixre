@@ -2,7 +2,8 @@
 
 echo "machine:"
 read MACHINE_OPTION
-rm -rf ~/.config/nvim/lazy-lock.json
 echo "build option:"
 read BUILD_OPTION
+
+rm -rf ~/.config/nvim/lazy-lock.json ~/.config/gtk-3.0 ~/.config/gtk-4.0 ~/.gtkrc-2.0
 sudo nixos-rebuild ${BUILD_OPTION} --flake /etc/nixos#${MACHINE_OPTION}
