@@ -32,7 +32,7 @@
         mpv
         mypy
         neofetch
-        node
+        nodejs_20
         nsxiv
         playerctl
         ripgrep
