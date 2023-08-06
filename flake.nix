@@ -95,7 +95,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/vm
-                ] ++ activateSession.qtile;
+                ] ++ activateSession.dwm;
             };
 
             potatopc = nixpkgs.lib.nixosSystem {
