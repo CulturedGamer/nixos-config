@@ -2,18 +2,10 @@
 
 {
     imports = [
-        ./display/gtk.nix
-        ./display/xinit.nix
-
-        ./misc/sxhkd.nix
-
-        ./terminal/alacritty
-        ./terminal/tmux.nix
-        ./terminal/neovim.nix
+        ./custom
     ];
 
     home.packages = with pkgs; [
-        alacritty
         ani-cli
         brave
         brightnessctl
