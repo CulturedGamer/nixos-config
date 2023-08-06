@@ -32,6 +32,7 @@
         mpv
         mypy
         neofetch
+        node
         nsxiv
         playerctl
         ripgrep
@@ -44,6 +45,7 @@
         xfce.thunar
         tmux
         trash-cli
+        tree-sitter
         unzip
         xdotool
         xdg-user-dirs
