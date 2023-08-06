@@ -10,21 +10,16 @@
             url = "github:nix-community/NUR";
         };
 
-        neovim-nightly-overlay = {
-            url = "github:nix-community/neovim-nightly-overlay";
-        };
-
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, neovim-nightly-overlay, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
         system = "x86_64-linux"; 
         specialArgs = inputs;
-        overlays = [ inputs.neovim-nightly-overlay.overlay ];
     in rec {
         dwmSession = {
             home-manager.useGlobalPkgs = true;
@@ -36,7 +31,7 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
-            nixpkgs.overlays = [ inputs.nur.overlay ] ++ overlays;
+            nixpkgs.overlays = [ inputs.nur.overlay ];
         };
 
         plasmaSession = {
