@@ -20,7 +20,6 @@
     let
         system = "x86_64-linux"; 
         specialArgs = inputs;
-    in rec {
         dwmSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -85,7 +84,7 @@
                 nur.nixosModules.nur
             ];
         };
-
+    in {
         nixosConfigurations = {
             vm = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
