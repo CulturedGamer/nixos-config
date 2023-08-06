@@ -4,7 +4,6 @@ return {
         require('orgmode').setup_ts_grammar()
 
         require('nvim-treesitter.configs').setup {
-            -- ensure_installed = { 'c', 'lua', 'rust', 'yaml', 'cpp', 'org' },
             ensure_installed = {};
             sync_install = false,
             auto_install = true,
