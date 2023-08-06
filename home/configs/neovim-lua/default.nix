@@ -16,7 +16,7 @@
         defaultEditor = true;
 
         plugins = with pkgs.vimPlugins; [
-            (nvim-treesitter.withPlugins (p: [ p.c p.lua p.rust p.yaml p.cpp p.org ]))
+            (nvim-treesitter.withPlugins (p: [ p.nix p.c p.lua p.rust p.yaml p.cpp p.org ]))
         ];
     };
 }
