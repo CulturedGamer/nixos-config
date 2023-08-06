@@ -38,6 +38,6 @@
         udisks
         neovim
         wget
-	    xclip
+        xclip
     ];
 }
