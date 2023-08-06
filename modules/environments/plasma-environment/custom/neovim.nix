@@ -9,10 +9,5 @@
 
             vim.cmd.colorscheme 'no-clown-fiesta'
         '';
-
-        ".config/nvim/lua" = {
-            source = ./lua;
-            recursive = true;
-        };
     };
 }
