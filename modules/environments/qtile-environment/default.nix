@@ -2,7 +2,7 @@
 
 {
     imports = [
-        
+        ./custom       
     ];
 
     home.packages = with pkgs; [

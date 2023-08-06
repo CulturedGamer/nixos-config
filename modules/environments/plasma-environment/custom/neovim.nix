@@ -7,7 +7,7 @@
             require('config.keymaps')
             require('config.lazy')
 
-            vim.cmd.colorscheme 'darkplus'
+            vim.cmd.colorscheme 'no-clown-fiesta'
         '';
 
         ".config/nvim/lua" = {

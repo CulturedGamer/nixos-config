@@ -2,9 +2,7 @@
 
 {
     imports = [
-        ./terminal/alacritty
-        ./terminal/neovim.nix
-        ./terminal/tmux.nix
+        ./custom
     ];
 
     home.packages = with pkgs; [
