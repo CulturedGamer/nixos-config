@@ -29,13 +29,14 @@
         xkbVariant = "";
     };
 
+    services.udisks2.enable = true;
+
     programs.dconf.enable = true;
 
     environment.systemPackages = with pkgs; [
         curl
         gcc
         git
-        udisks
         neovim
         vimv
         wget

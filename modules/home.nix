@@ -5,6 +5,8 @@
         ./templates
         ./terminal
         ./desktop
+
+        ./packages.nix
     ];
 
     home.file.".local/bin" = {

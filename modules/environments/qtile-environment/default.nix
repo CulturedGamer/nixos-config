@@ -1,9 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    imports = [
-        ./custom
-    ];
+    imports = [ ./custom ];
 
-    home.packages = with pkgs; [ rofi ] ++ import ../../packages.nix;
+    programs.rofi.enable = true;
 }
