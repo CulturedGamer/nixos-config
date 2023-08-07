@@ -36,6 +36,7 @@
         git
         udisks
         neovim
+        vimv
         wget
         xclip
     ];
