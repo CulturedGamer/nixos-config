@@ -1,0 +1,41 @@
+{ config, pkgs, ... }:
+
+{
+    default_packages = with pkgs; [
+        alacritty
+        ani-cli
+        brave
+        brightnessctl
+        cargo
+        cava
+        clang
+        cmus
+        fish
+        flameshot
+        fzf
+        git-crypt
+        gnumake
+        htop
+        lazygit
+        mpv
+        neofetch
+        nsxiv
+        playerctl
+        ripgrep
+        rustc
+        starship
+        streamlink
+        sxhkd
+        xfce.thunar
+        tmux
+        trash-cli
+        unzip
+        xdotool
+        xdg-user-dirs
+        xterm
+        xwallpaper
+        yewtube
+        yt-dlp
+        zip
+    ];
+}
