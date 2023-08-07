@@ -34,7 +34,7 @@
                 firefox
 
             super + shift + s
-                brave-beta
+                brave
 
             super + r
               dmenu_run

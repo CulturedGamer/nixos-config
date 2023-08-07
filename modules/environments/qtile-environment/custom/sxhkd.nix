@@ -34,7 +34,7 @@
                 firefox
 
             super + b
-                brave-beta
+                brave
 
             super + f
                 thunar
