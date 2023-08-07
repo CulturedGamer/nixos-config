@@ -2,6 +2,4 @@
 
 {
     imports = [ ./custom ];
-
-    programs.rofi.enable = true;
 }

@@ -38,6 +38,7 @@
         gcc
         git
         neovim
+        rofi
         vimv
         wget
         xclip
