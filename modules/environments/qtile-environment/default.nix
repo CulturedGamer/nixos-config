@@ -3,8 +3,7 @@
 {
     imports = [
         ./custom
-        ../../packages.nix
     ];
 
-    home.packages = with pkgs; [ rofi ] ++ default_packages;
+    home.packages = with pkgs; [ rofi ] ++ import ../../packages.nix;
 }
