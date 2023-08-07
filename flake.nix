@@ -35,7 +35,7 @@
                 ];
                 _module.args.nur = { inherit nur; };
             };
-            nixpkgs.overlays = [ inputs.nur.overlay inputs.dwm ];
+            nixpkgs.overlays = [ inputs.nur.overlay inputs.dwm.overlays.default ];
         };
 
         plasmaSession = {
