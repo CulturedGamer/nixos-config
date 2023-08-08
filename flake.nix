@@ -109,7 +109,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/laptop
-                ] ++ activateSession.qtile;
+                ] ++ activateSession.plasma;
             };
         };
     };

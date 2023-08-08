@@ -19,7 +19,7 @@
         # mouse behavior
         setw -g mouse on
 
-        set-option -g default-shell /bin/fish
+        # set-option -g default-shell /bin/fish
         set-option -g default-terminal "xterm-256color"
         set-option -ga terminal-overrides ",xterm-256color:Tc"
 

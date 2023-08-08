@@ -10,7 +10,7 @@
             ];
             env.TERM = "xterm-256color";
             shell.program = "fish";
-            window.opacity = 0.885;
+            window.opacity = 1;
         };
     };
 }
