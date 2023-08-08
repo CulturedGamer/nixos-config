@@ -3,7 +3,6 @@
 {
     programs.tmux = {
         enable = true;
-        shell = "\${pkgs.fish}/bin/fish";
         extraConfig = ''
             # vim style tmux config
 
@@ -14,7 +13,9 @@
             set -g base-index 1
 
             # Easy config reload
-            bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
+            bind-key R source-file /etc/tmux.conf \; display-message "tmux.conf reloaded."
+            
+            set-option -g default-shell "\${pkgs.fish}/bin/fish"
 
             # vi is good
             setw -g mode-keys vi
@@ -22,7 +23,6 @@
             # mouse behavior
             setw -g mouse on
 
-            set-option -g default-shell /bin/fish
             set-option -g default-terminal "xterm-256color"
             set-option -ga terminal-overrides ",xterm-256color:Tc"
 
@@ -88,6 +88,8 @@
             # set -g status-style 'bg=#1d2021 fg=#A89984'
             # set -g status-style 'bg=#1f2329 fg=#a0a8b7'
             # set -g status-style 'bg=#1E1E1E fg=#D4D4D4'
+            # set -g status-style 'bg=#181818 fg=#d8d8d8'
+            set -g status-style 'bg=#0f1419 fg=#e6e1cf'
 
             set-option -g pane-active-border-style fg=yellow
             set-option -g pane-border-style fg=cyan

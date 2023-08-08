@@ -7,7 +7,7 @@
             require('config.keymaps')
             require('config.lazy')
 
-            vim.cmd.colorscheme 'no-clown-fiesta'
+            vim.cmd.colorscheme 'base16-ayu-dark'
         '';
     };
 }

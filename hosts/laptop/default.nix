@@ -20,6 +20,10 @@
     security.polkit.enable = true;
 
     hardware.bluetooth.enable = true;
+    hardware.opengl = {
+        enable = true;
+        extraPackages = [ pkgs.mesa.drivers ];
+    };
 
     time.timeZone = "America/Los_Angeles";
 
