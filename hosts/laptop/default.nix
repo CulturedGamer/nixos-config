@@ -62,11 +62,32 @@
         xclip
     ];
 
+    fonts = {
+        packages = with pkgs; [
+            material-design-icons
+            noto-fonts
+            noto-fonts-cjk
+            noto-fonts-emoji
+            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
+        ];
+
+        enableDefaultPackages = false;
+
+        fontconfig.defaultFonts = {
+            serif = [ "Noto Serif" "Noto Color Emoji" ];
+            sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+            monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+            emoji = [ "Noto Color Emoji" ];
+        };
+    };
+
+    services = {
+        dconf.enable = true;
+        printing.enable = true;
+    };
+
     sound.mediaKeys.enable = true;
 
-    services.printing.enable = true;
-
     nixpkgs.config.allowUnfree = true;
-
     system.stateVersion = "23.05";
 }
