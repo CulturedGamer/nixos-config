@@ -81,10 +81,9 @@
         };
     };
 
-    services = {
-        dconf.enable = true;
-        printing.enable = true;
-    };
+    services.printing.enable = true;
+
+    programs.dconf.enable = true;
 
     sound.mediaKeys.enable = true;
 
