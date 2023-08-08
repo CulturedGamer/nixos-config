@@ -33,6 +33,11 @@
 
     programs.dconf.enable = true;
 
+    users.users.donny.packages = with pkgs; [
+        dmenu
+        slstatus
+    ];
+
     environment.systemPackages = with pkgs; [
         curl
         dmenu

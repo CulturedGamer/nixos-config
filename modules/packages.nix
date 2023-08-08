@@ -4,6 +4,7 @@
     home.packages = with pkgs; [
         alacritty
         ani-cli
+        bluetuith
         brave
         brightnessctl
         cargo
@@ -20,6 +21,7 @@
         mpv
         neofetch
         nsxiv
+        pavucontrol
         playerctl
         ripgrep
         rustc

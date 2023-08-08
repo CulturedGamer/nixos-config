@@ -19,6 +19,8 @@
     };
     security.polkit.enable = true;
 
+    hardware.bluetooth.enable = true;
+
     time.timeZone = "America/Los_Angeles";
 
     i18n.defaultLocale = "en_US.UTF-8";
@@ -37,11 +39,30 @@
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+    services.xserver.videoDrivers = [ "intel" ];
+    services.xserver.deviceSection = ''
+        Option "DRI" "2"
+        Option "TearFree" "true"
+    '';
+
     users.users.donny = {
         isNormalUser = true;
         extraGroups = [ "networkmanager" "wheel" ];
         home = "/home/donny";
     };
+
+    environment.systemPackages = with pkgs; [
+        curl
+        gcc
+        git
+        neovim
+        tree
+        vimv
+        wget
+        xclip
+    ];
+
+    sound.mediaKeys.enable = true;
 
     services.printing.enable = true;
 

@@ -33,14 +33,7 @@
 
     programs.dconf.enable = true;
 
-    environment.systemPackages = with pkgs; [
-        curl
-        gcc
-        git
-        neovim
-        rofi
-        vimv
-        wget
-        xclip
+    users.users.donny.packages = [
+        pkgs.rofi
     ];
 }
