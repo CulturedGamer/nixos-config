@@ -3,6 +3,7 @@
 {
     programs.tmux = {
         enable = true;
+        plugins = [ pkgs.tmuxPlugins.vim-tmux-navigator ];
         extraConfig = ''
             # vim style tmux config
 
@@ -101,17 +102,6 @@
             # Allow the arrow key to be used immediately after changing windows
             set-option -g repeat-time 1000
             set-option -g escape-time 0
-
-            # List of plugins
-            set -g @plugin 'tmux-plugins/tpm'
-            set -g @plugin 'christoomey/vim-tmux-navigator'
-            set -g @plugin 'odedlaz/tmux-onedark-theme'
-            # set -g @plugin "janoamaral/tokyo-night-tmux"
-
-            # set -g @plugin 'seebi/tmux-colors-solarized'
-            # set -g @colors-solarized 'dark'
-
-            run '~/.tmux/plugins/tpm/tpm'
         '';
     };
 }

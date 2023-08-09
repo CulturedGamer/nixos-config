@@ -5,20 +5,19 @@
         ./hardware-configuration.nix
     ];
 
-    boot.loader.grub.enable = true;
-    boot.loader.grub.device = "/dev/sda";
-    boot.loader.grub.useOSProber = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
 
-    security.rtkit.enable = true;
     services.pipewire = {
         enable = true;
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
     };
+    security.polkit.enable = true;
 
     time.timeZone = "America/Los_Angeles";
 
@@ -38,15 +37,52 @@
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+    services.xserver.videoDrivers = [ "intel" ];
+    services.xserver.deviceSection = ''
+        Option "DRI" "2"
+        Option "TearFree" "true"
+    '';
+
     users.users.donny = {
         isNormalUser = true;
         description = "donny";
         extraGroups = [ "networkmanager" "wheel" ];
     };
 
+    environment.systemPackages = with pkgs; [
+        curl
+        gcc
+        git
+        neovim
+        tree
+        vimv
+        wget
+        xclip
+    ];
+
+    fonts = {
+        packages = with pkgs; [
+            material-design-icons
+            noto-fonts
+            noto-fonts-cjk
+            noto-fonts-emoji
+            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
+        ];
+
+        enableDefaultPackages = false;
+
+        fontconfig.defaultFonts = {
+            serif = [ "Noto Serif" "Noto Color Emoji" ];
+            sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
+            monospace = [ "JetBrainsMono Nerd Font" "Noto Color Emoji" ];
+            emoji = [ "Noto Color Emoji" ];
+        };
+    };
+
     services.printing.enable = true;
 
-    nixpkgs.config.allowUnfree = true;
+    programs.dconf.enable = true;
 
-    system.stateVersion = "23.05";
+    nixpkgs.config.allowUnfree = true;
+    system.stateVersion = "23.11";
 }
