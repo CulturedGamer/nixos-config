@@ -38,6 +38,19 @@
             nixpkgs.overlays = [ inputs.nur.overlay inputs.dwm.overlays.default ];
         };
 
+        gnomeSession = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [
+                    ./modules/home.nix
+                    ./modules/environments/gnome-environment
+                ];
+                _module.args.nur = { inherit nur; };
+            };
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
+
         plasmaSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -69,6 +82,7 @@
                 qtile = ./modules/environments/qtile-environment/system.nix;
                 plasma = ./modules/environments/plasma-environment/system.nix;
                 dwm = ./modules/environments/dwm-environment/system.nix;
+                gnome = ./modules/environments/gnome-environment/system.nix;
             };
 
             qtile = with activateSession; [
@@ -86,6 +100,12 @@
             dwm = with activateSession; [
                 home-manager.nixosModules.home-manager dwmSession
                 sessionSystemConfigurations.dwm
+                nur.nixosModules.nur
+            ];
+
+            gnome = with activateSession; [
+                home-manager.nixosModules.home-manager gnomeSession
+                sessionSystemConfigurations.gnome
                 nur.nixosModules.nur
             ];
         };
@@ -109,7 +129,7 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/laptop
-                ] ++ activateSession.plasma;
+                ] ++ activateSession.gnome;
             };
         };
     };

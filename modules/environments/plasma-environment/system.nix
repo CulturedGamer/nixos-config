@@ -8,6 +8,4 @@
         layout = "us";
         xkbVariant = "";
     };
-
-    programs.dconf.enable = true;
 }
