@@ -9,5 +9,7 @@
         xkbVariant = "";
     };
 
+    users.users.donny.packages = [ pkgs.gnome.gnome-tweaks ];
+
     hardware.pulseaudio.enable = false;
 }
