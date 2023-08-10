@@ -12,5 +12,6 @@
 
     users.users.donny.packages = [
         pkgs.rofi
+        pkgs.kitty
     ];
 }
