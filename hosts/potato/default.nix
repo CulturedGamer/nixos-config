@@ -44,11 +44,10 @@
         Option "TearFree" "true"
     '';
 
+    # enable dolphin emulator
     services.udev.packages = [ pkgs.dolphinEmu ];
-    boot = {
-        extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
-        kernelModules = [ "gcadapter_oc" ];
-    }
+    boot.extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
+    boot.kernelModules = [ "gcadapter_oc" ];
 
     users.users.donny = {
         isNormalUser = true;
