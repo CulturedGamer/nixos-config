@@ -44,6 +44,12 @@
         Option "TearFree" "true"
     '';
 
+    services.udev.packages = [ pkgs.dolphinEmu ];
+    boot = {
+        extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
+        kernelModules = [ "gcadapter_oc" ];
+    }
+
     users.users.donny = {
         isNormalUser = true;
         description = "donny";
