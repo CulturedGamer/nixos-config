@@ -64,6 +64,7 @@
         tree
         vimv
         wget
+        wl-clipboard
         xclip
     ];
 
