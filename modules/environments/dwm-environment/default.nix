@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
-{
+_: {
     imports = [ ./custom ];
 }

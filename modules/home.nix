@@ -17,10 +17,10 @@
 
     home = {
         username = "donny";
+        stateVersion = "23.05";
     };
 
     fonts.fontconfig.enable = true;
 
     programs.home-manager.enable = true;
-    home.stateVersion = "23.05";
 }

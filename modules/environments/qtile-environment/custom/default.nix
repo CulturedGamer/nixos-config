@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+_: {
     imports = [
         ./rofi
         ./alacritty.nix

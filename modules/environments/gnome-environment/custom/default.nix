@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+_: {
     imports = [
         ./alacritty.nix
         ./neovim.nix

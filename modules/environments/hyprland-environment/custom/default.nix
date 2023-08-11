@@ -1,11 +1,9 @@
-{ config, pkgs, ... }:
-
-{
+_: {
     imports = [
         ./rofi
         ./alacritty.nix
         ./gtk.nix
-        ./hyprland.nix
+        # ./hyprland.nix
         ./neovim.nix
         ./tmux.nix
     ];

@@ -15,16 +15,21 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
+        hyprland = {
+            url = "github:hyprwm/Hyprland";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+
         home-manager = {
             url = "github:nix-community/home-manager/release-23.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, dwm, home-manager, ... }:
+    outputs = inputs@{ self, nixpkgs, nur, dwm, hyprland, home-manager, ... }:
     let
         system = "x86_64-linux"; 
-        specialArgs = inputs;
+        specialArgs = { inherit inputs hyprland; };
         dwmSession = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -127,6 +132,8 @@
                 home-manager.nixosModules.home-manager hyprlandSession
                 sessionSystemConfigurations.hyprland
                 nur.nixosModules.nur
+                hyprland.nixosModules.default
+                {programs.hyprland.enable = true;}
             ];
         };
     in {
