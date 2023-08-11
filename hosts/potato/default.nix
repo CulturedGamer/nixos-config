@@ -5,8 +5,9 @@
         ./hardware-configuration.nix
     ];
 
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda";
+    boot.loader.grub.useOSProber = true;
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
@@ -43,6 +44,11 @@
         Option "TearFree" "true"
     '';
 
+    # enable dolphin emulator
+    services.udev.packages = [ pkgs.dolphinEmu ];
+    boot.extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
+    boot.kernelModules = [ "gcadapter_oc" ];
+
     users.users.donny = {
         isNormalUser = true;
         description = "donny";
@@ -51,12 +57,14 @@
 
     environment.systemPackages = with pkgs; [
         curl
+        dolphinEmu
         gcc
         git
         neovim
         tree
         vimv
         wget
+        wl-clipboard
         xclip
     ];
 
