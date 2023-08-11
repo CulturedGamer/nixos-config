@@ -5,8 +5,9 @@
         ./hardware-configuration.nix
     ];
 
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.grub.enable = true;
+    boot.loader.grub.device = "/dev/sda";
+    boot.loader.grub.useOSProber = true;
 
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
@@ -18,12 +19,6 @@
         pulse.enable = true;
     };
     security.polkit.enable = true;
-
-    hardware.bluetooth.enable = true;
-    hardware.opengl = {
-        enable = true;
-        extraPackages = [ pkgs.mesa.drivers ];
-    };
 
     time.timeZone = "America/Los_Angeles";
 
@@ -42,22 +37,32 @@
     };
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    programs.hyprland.enable = true;
+
+	services.xserver.enable = true;
+	services.xserver.displayManager.sddm.enable = true;
+	services.xserver.desktopManager.plasma5.enable = true;
+
+    # enable dolphin emulator
+    services.udev.packages = [ pkgs.dolphinEmu ];
+    boot.extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
+    boot.kernelModules = [ "gcadapter_oc" ];
 
     users.users.donny = {
         isNormalUser = true;
+        description = "donny";
         extraGroups = [ "networkmanager" "wheel" ];
-        home = "/home/donny";
     };
 
     environment.systemPackages = with pkgs; [
         curl
+        dolphinEmu
         gcc
         git
         neovim
         tree
         vimv
         wget
+        wl-clipboard
         xclip
     ];
 
@@ -84,8 +89,6 @@
 
     programs.dconf.enable = true;
 
-    sound.mediaKeys.enable = true;
-
     nixpkgs.config.allowUnfree = true;
-    system.stateVersion = "23.05";
+    system.stateVersion = "23.11";
 }

@@ -1,9 +1,7 @@
-{ config, pkgs, ... }:
-
-{
+_: {
     imports = [
         ./alacritty
-        ./neovim-lua
+        ./neovim
         ./bash.nix
         ./fish.nix
         ./git.nix
