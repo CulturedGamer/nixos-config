@@ -33,7 +33,7 @@
                         home-manager.useUserPackages = true;
                         home-manager.users.donny = {
                             imports = [ ./modules/devices/laptop/home.nix ];
-                            _modules.args.nur = { inherit nur; };
+                            _module.args.nur = { inherit nur; };
                         };
                         nixpkgs.overlays = [ inputs.nur.overlay ];
                     }
@@ -49,7 +49,7 @@
                         home-manager.useUserPackages = true;
                         home-manager.users.donny = {
                             imports = [ ./modules/devices/desktop/home.nix ];
-                            _modules.args.nur = { inherit nur; };
+                            _module.args.nur = { inherit nur; };
                         };
                         nixpkgs.overlays = [ inputs.nur.overlay ];
                     }
