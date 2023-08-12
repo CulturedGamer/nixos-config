@@ -1,6 +1,6 @@
 _: {
-	imports = [
-		./bookmarks.nix
-		./firefox.nix
-	];	
+    imports = [
+        ./bookmarks.nix
+        ./firefox.nix
+    ];	
 }

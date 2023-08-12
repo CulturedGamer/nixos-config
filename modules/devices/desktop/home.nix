@@ -2,11 +2,11 @@
 
 {
     imports = [
-	../../misc
-	../../scripts
-    ../../templates
-    ../../terminal
-	../../wallpapers
+        ../../misc
+        ../../scripts
+        ../../templates
+        ../../terminal
+        ../../wallpapers
 
         ./packages.nix
     ];

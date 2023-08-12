@@ -24,7 +24,7 @@
         pavucontrol
         playerctl
         ripgrep
-	rofi-wayland
+        rofi-wayland
         rustc
         starship
         streamlink
@@ -37,8 +37,8 @@
         xdg-user-dirs
         xterm
         xwallpaper
-	wl-clipboard
-	wtype
+        wl-clipboard
+        wtype
         yewtube
         yt-dlp
         zip

@@ -42,7 +42,6 @@
     };
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
-    programs.hyprland.enable = true;
 
     users.users.donny = {
         isNormalUser = true;
