@@ -24,25 +24,65 @@
                 layout = "master";
             };
 
+            master = {
+                mfact = 0.5;
+            };
+
             gestures = {
                 workspace_swipe = true;
             };
+
+            decoration = {
+                rounding = 5;
+            };
             
             bind = [
-                "SUPER,W,killactive"
-                "SUPER CTRL,Q,exit"
-                "SUPER SHIFT,SPACE,togglefloating"
+                "SUPER, W, killactive"
+                "SUPER CTRL, Q, exit"
+                "SUPER SHIFT, SPACE, togglefloating"
 
-                "SUPER,h,movefocus,l"
-                "SUPER,l,movefocus,r"
-                "SUPER,k,movefocus,u"
-                "SUPER,j,movefocus,d"
+                "SUPER, h, movefocus,l"
+                "SUPER, l, movefocus,r"
+                "SUPER, k, movefocus,u"
+                "SUPER, j, movefocus,d"
                 "SUPER SHIFT, H, movewindow, l"
                 "SUPER SHIFT, L, movewindow, r"
                 "SUPER SHIFT, K, movewindow, u"
                 "SUPER SHIFT, J, movewindow, d"
+                "SUPER CTRL, H, resizeactive, -50 0"
+                "SUPER CTRL, L, resizeactive, 50 0"
+                "SUPER CTRL, K, resizeactive, 0 -50"
+                "SUPER CTRL, J, resizeactive, 0 50"
 
-                "SUPER,RETURN,exec,alacritty"
+                "SUPER, RETURN, exec, alacritty"
+
+                "SUPER $mainMod, 1, workspace, 1"
+                "SUPER $mainMod, 2, workspace, 2"
+                "SUPER $mainMod, 3, workspace, 3"
+                "SUPER $mainMod, 4, workspace, 4"
+                "SUPER $mainMod, 5, workspace, 5"
+                "SUPER $mainMod, 6, workspace, 6"
+                "SUPER $mainMod, 7, workspace, 7"
+                "SUPER $mainMod, 8, workspace, 8"
+                "SUPER $mainMod, 9, workspace, 9"
+                "SUPER $mainMod, 0, workspace, 10"
+                "SUPER $mainMod SHIFT, 1, movetoworkspacesilent, 1"
+                "SUPER $mainMod SHIFT, 2, movetoworkspacesilent, 2"
+                "SUPER $mainMod SHIFT, 3, movetoworkspacesilent, 3"
+                "SUPER $mainMod SHIFT, 4, movetoworkspacesilent, 4"
+                "SUPER $mainMod SHIFT, 5, movetoworkspacesilent, 5"
+                "SUPER $mainMod SHIFT, 6, movetoworkspacesilent, 6"
+                "SUPER $mainMod SHIFT, 7, movetoworkspacesilent, 7"
+                "SUPER $mainMod SHIFT, 8, movetoworkspacesilent, 8"
+                "SUPER $mainMod SHIFT, 9, movetoworkspacesilent, 9"
+                "SUPER $mainMod SHIFT, 0, movetoworkspacesilent, 10"
+
+                "SUPER, S, exec, firefox"
+            ];
+
+            bindm = [
+                "SUPER, mouse:272, movewindow"
+                "SUPER, mouse:273, resizewindow"
             ];
         };
     };
