@@ -49,10 +49,10 @@
                 "SUPER SHIFT, L, movewindow, r"
                 "SUPER SHIFT, K, movewindow, u"
                 "SUPER SHIFT, J, movewindow, d"
-                "SUPER CTRL, H, resizeactive, -50 0"
-                "SUPER CTRL, L, resizeactive, 50 0"
-                "SUPER CTRL, K, resizeactive, 0 -50"
-                "SUPER CTRL, J, resizeactive, 0 50"
+                "SUPER CTRL, H, resizeactive, -100 0"
+                "SUPER CTRL, L, resizeactive, 100 0"
+                "SUPER CTRL, K, resizeactive, 0 -100"
+                "SUPER CTRL, J, resizeactive, 0 100"
 
                 "SUPER, RETURN, exec, alacritty"
 

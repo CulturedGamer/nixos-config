@@ -2,7 +2,6 @@
 
 {
     home.packages = with pkgs; [
-        alacritty
         ani-cli
         bluetuith
         brave
@@ -30,7 +29,6 @@
         streamlink
         sxhkd
         xfce.thunar
-        tmux
         trash-cli
         unzip
         xdotool

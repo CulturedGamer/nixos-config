@@ -1,6 +1,6 @@
 _: {
     imports = [
-	    ./gtk.nix
+	    ./catppuccin-gtk.nix
 	    ./hyprland.nix
     ];
 }

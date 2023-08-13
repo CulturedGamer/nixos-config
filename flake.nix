@@ -39,6 +39,7 @@
                     }
                 ];
             };
+
             desktop = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [

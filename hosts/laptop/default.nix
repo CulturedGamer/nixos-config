@@ -54,6 +54,7 @@
         gcc
         git
         neovim
+        nix-prefetch-git
         tree
         vimv
         wget

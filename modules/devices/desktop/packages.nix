@@ -29,7 +29,6 @@
         streamlink
         sxhkd
         xfce.thunar
-        tmux
         trash-cli
         unzip
         xdotool
