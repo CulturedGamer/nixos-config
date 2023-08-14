@@ -17,8 +17,8 @@
         enable = true;
         settings = {
             import = [
-                "/home/donny/.config/alacritty/colors/catppuccin-mocha.yml"
-                "/home/donny/.config/alacritty/fonts/jetbrains.yml"
+                "/home/donny/.config/alacritty/colors/gruvbox.yml"
+                "/home/donny/.config/alacritty/fonts/firacode.yml"
             ];
             env.TERM = "xterm-256color";
             shell.program = "fish";

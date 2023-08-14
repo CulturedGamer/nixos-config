@@ -58,7 +58,6 @@
         tree
         vimv
         wget
-        xclip
     ];
 
     fonts = {

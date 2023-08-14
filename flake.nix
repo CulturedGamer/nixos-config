@@ -20,41 +20,36 @@
     let
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
+
+        defaultModules = [
+            nur.nixosModules.nur
+            hyprland.nixosModules.default
+            home-manager.nixosModules.home-manager homeConfiguration
+        ];
+
+        homeConfiguration = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.donny = {
+                imports = [ ./modules/home.nix ];
+                _module.args.nur = { inherit nur; };
+            };
+            nixpkgs.overlays = [ inputs.nur.overlay ];
+        };
     in {
         nixosConfigurations = {
             laptop = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/laptop
-                    nur.nixosModules.nur
-                    hyprland.nixosModules.default
-                    home-manager.nixosModules.home-manager {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
-                        home-manager.users.donny = {
-                            imports = [ ./modules/devices/laptop/home.nix ];
-                            _module.args.nur = { inherit nur; };
-                        };
-                        nixpkgs.overlays = [ inputs.nur.overlay ];
-                    }
-                ];
+                ] ++ defaultModules;
             };
 
             desktop = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/desktop
-                    nur.nixosModules.nur
-                    home-manager.nixosModules.home-manager {
-                        home-manager.useGlobalPkgs = true;
-                        home-manager.useUserPackages = true;
-                        home-manager.users.donny = {
-                            imports = [ ./modules/devices/desktop/home.nix ];
-                            _module.args.nur = { inherit nur; };
-                        };
-                        nixpkgs.overlays = [ inputs.nur.overlay ];
-                    }
-                ];  
+                ] ++ defaultModules;
             };
         };
     };

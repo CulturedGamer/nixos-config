@@ -38,10 +38,6 @@
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-    services.xserver.enable = true;
-    services.xserver.displayManager.sddm.enable = true;
-    services.xserver.desktopManager.plasma5.enable = true;
-
     # enable dolphin emulator
     services.udev.packages = [ pkgs.dolphinEmu ];
     boot.extraModulePackages = [ config.boot.kernelPackages.gcadapter-oc-kmod ];
@@ -62,8 +58,6 @@
         tree
         vimv
         wget
-        wl-clipboard
-        xclip
     ];
 
     fonts = {

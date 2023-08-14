@@ -9,6 +9,10 @@
                 "eDP-1, 1920x1080@60,0x0,1"
             ];
 
+            exec-once = [
+                "swaybg -i ~/Pictures/wallpapers/forest.jpg"
+            ];
+
             input = {
                 follow_mouse = 1;
                 repeat_delay = 210;
@@ -20,7 +24,8 @@
             general = {
                 gaps_in = 8;
                 gaps_out = 8;
-                border_size = 1;
+                border_size = 2;
+                "col.active_border" = "rgb(98971a)";
                 layout = "master";
             };
 
@@ -34,6 +39,10 @@
 
             decoration = {
                 rounding = 5;
+                blur = true;
+                blur_size = 5;
+                blur_passes = 1;
+                blur_new_optimizations = true;
             };
             
             bind = [
@@ -83,6 +92,10 @@
             bindm = [
                 "SUPER, mouse:272, movewindow"
                 "SUPER, mouse:273, resizewindow"
+            ];
+
+            windowrulev2 = [
+                "opacity 0.9 0.9, class:^(Alacritty)\$"
             ];
         };
     };
