@@ -53,9 +53,6 @@
             yewtube
             yt-dlp
             zip
-
-            # custom packages
-            (callPackage ./pkgs/grapejuice.nix {})
         ];
     };
 
