@@ -132,4 +132,4 @@ schemes:
       cyan:    '0x4c7a5d'
       white:   '0xe6d5ae'
 
-colors: *gruvbox_material_soft_dark
+colors: *gruvbox_material_hard_dark

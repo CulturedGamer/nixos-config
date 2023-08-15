@@ -87,6 +87,9 @@
                 "SUPER $mainMod SHIFT, 0, movetoworkspacesilent, 10"
 
                 "SUPER, S, exec, firefox"
+                "SUPER, R, exec, rofi -show drun"
+                "SUPER SHIFT, R, exec, rofi -show run"
+                "SUPER CTRL, I, exec, ~/.local/bin/bookmark type"
             ];
 
             bindm = [

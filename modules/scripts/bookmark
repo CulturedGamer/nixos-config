@@ -1,9 +1,12 @@
 #!/bin/sh
 
-bookmark="$(xclip -o)"
+bookmark="$(wl-copy && wl-paste -o)"
 file="$HOME/.local/snippets/urls.txt"
 
-if grep -q "^bookmark$" "$file"; then
+
+if [ "$1" -eq "type" ]; then
+    wtype $(grep -v '^#' ~/.local/bookmarks/urls.txt | rofi -dmenu | cut -d' ' -f1)
+elif grep -q "^bookmark$" "$file"; then
     notify-send "Already bookmarked!"
 else
     notify-send "Bookmark added!"
