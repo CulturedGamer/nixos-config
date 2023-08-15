@@ -3,7 +3,6 @@
 bookmark="$(wl-copy && wl-paste -o)"
 file="$HOME/.local/snippets/urls.txt"
 
-
 if [ "$1" -eq "type" ]; then
     wtype $(grep -v '^#' ~/.local/bookmarks/urls.txt | rofi -dmenu | cut -d' ' -f1)
 elif grep -q "^bookmark$" "$file"; then
