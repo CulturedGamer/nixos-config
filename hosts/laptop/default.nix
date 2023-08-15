@@ -8,6 +8,10 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
+    boot.initrd.secrets = {
+        "/crypto_keyfile.bin" = null;
+    };
+
     networking.hostName = "nixos";
     networking.networkmanager.enable = true;
 
@@ -80,6 +84,8 @@
     };
 
     services.printing.enable = true;
+    services.udisks2.enable = true;
+    services.getty.autologinUser = "donny";
 
     programs.dconf.enable = true;
 
