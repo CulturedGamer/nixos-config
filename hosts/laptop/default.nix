@@ -21,7 +21,9 @@
         alsa.support32Bit = true;
         pulse.enable = true;
     };
+
     security.polkit.enable = true;
+    security.sudo.wheelNeedsPassword = false;
 
     hardware.bluetooth.enable = true;
     hardware.opengl = {
@@ -59,6 +61,8 @@
         git
         neovim
         nix-prefetch-git
+        pulseaudio
+        python3
         tree
         vimv
         wget

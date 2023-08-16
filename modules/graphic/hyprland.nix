@@ -48,7 +48,9 @@
             bind = [
                 "SUPER, W, killactive"
                 "SUPER CTRL, Q, exit"
-                "SUPER SHIFT, SPACE, togglefloating"
+
+                "SUPER, F, togglefloating"
+                "SUPER, M, fullscreen"
 
                 "SUPER, h, movefocus,l"
                 "SUPER, l, movefocus,r"
@@ -90,6 +92,17 @@
                 "SUPER, R, exec, rofi -show drun"
                 "SUPER SHIFT, R, exec, rofi -show run"
                 "SUPER CTRL, I, exec, ~/.local/bin/bookmark-type"
+            ];
+
+            binde = [
+                ", xf86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +1%"
+                ", xf86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -1%"
+                ", xf86audiomute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+                ", xf86audioplay, exec, playerctl play-pause"
+                ", xf86audionext, exec, playerctl next"
+                ", xf86audioprev, exec, playerctl previous"
+                ", xf86monbrightnessup, exec, brightnessctl set +2%"
+                ", xf86monbrightnessdown, exec, brightnessctl set 2%-"
             ];
 
             bindm = [

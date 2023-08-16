@@ -12,16 +12,13 @@
         fish_add_path ~/.config/rofi/scripts
 
         alias v='nvim'
-        alias fishrc='nvim ~/.config/fish/config.fish'
-        alias fishso='source ~/.config/fish/config.fish'
+        alias fishrc='nvim /etc/nixos/modules/terminal/fish.nix'
         alias lg='lazygit'
-        alias sxhkdrc='nvim ~/.config/sxhkd/sxhkdrc'
-        alias nluaconf='cd ~/.config/nvim/lua/'
+        alias se='sudoedit'
+        alias nluaconf='cd /etc/nixos/modules/terminal/neovim'
         alias ytaudio='yt-dlp --extract-audio --audio-format mp3'
         alias ytvideo="yt-dlp -f 'bv*[height=1080]+ba'"
-        alias lofi_radio='streamlink -p mpv https://youtu.be/jfKfPfyJRdk worst'
-        alias synth_radio='streamlink -p mpv https://youtu.be/MVPTGNGiI-4 worst'
-        alias phonk_radio='streamlink -p mpv https://youtu.be/bVr3C-dHq_E worst'
+        alias lofi_radio='streamlink -p mpv --no-video https://youtu.be/jfKfPfyJRdk'
 
         starship init fish | source
     '';

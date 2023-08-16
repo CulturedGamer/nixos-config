@@ -244,12 +244,13 @@
             };
 
             extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-                ublock-origin
                 decentraleyes
-                privacy-badger
+                df-youtube
                 istilldontcareaboutcookies
-                vimium
+                privacy-badger
                 return-youtube-dislikes
+                ublock-origin
+                vimium
             ];
         };
     };
