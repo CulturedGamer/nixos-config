@@ -7,8 +7,13 @@
         escapeTime = 0;
         keyMode = "vi";
         mouse = true;
+        sensibleOnTop = false;
         shell = "\\${pkgs.fish}/bin/fish";
         terminal = "xterm-256color";
+
+        plugins = with pkgs; [
+            tmuxPlugins.onedark-theme
+        ];
 
         extraConfig = ''
             set-option -g prefix 'C-space'
@@ -100,6 +105,8 @@
             bind-key -T copy-mode-vi 'C-k' select-pane -U
             bind-key -T copy-mode-vi 'C-l' select-pane -R
             bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+            # run-shell \${pkgs.tmuxPlugins.onedark-theme}/share/tmux-plugins/onedark-theme/tmux-onedark-theme.tmux
         '';
     };
 }

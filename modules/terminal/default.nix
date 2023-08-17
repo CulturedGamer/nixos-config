@@ -5,7 +5,7 @@ _: {
         ./fish.nix
         ./git.nix
         ./lf.nix
-        ./neovim
+        ./neovim-nix
         ./starship.nix
         ./tmux.nix
     ];

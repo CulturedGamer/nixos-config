@@ -1,6 +1,6 @@
 _: {
     imports = [
-	    ./gruvbox-gtk.nix
+	    ./qogir-gtk.nix
 	    ./hyprland.nix
     ];
 }

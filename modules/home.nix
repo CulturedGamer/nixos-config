@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, poetry2nix, ... }:
 
 {
     imports = [
         ./graphic
         ./misc
         ./scripts
-        ./templates
         ./terminal
         ./wallpapers
     ];
@@ -30,7 +29,6 @@
             htop
             imv
             lazygit
-            mpv
             neofetch
             pavucontrol
             playerctl
@@ -53,6 +51,8 @@
             yewtube
             yt-dlp
             zip
+
+            (mpv.override {scripts = [mpvScripts.mpris];})
         ];
     };
 

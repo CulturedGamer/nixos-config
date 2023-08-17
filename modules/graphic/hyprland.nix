@@ -10,7 +10,7 @@
             ];
 
             exec-once = [
-                "swaybg -i ~/Pictures/wallpapers/forest.jpg"
+                "swaybg -i ~/Pictures/wallpapers/splash.png"
             ];
 
             input = {
@@ -25,7 +25,7 @@
                 gaps_in = 8;
                 gaps_out = 8;
                 border_size = 2;
-                "col.active_border" = "rgb(98971a)";
+                "col.active_border" = "rgb(61afef)";
                 layout = "master";
             };
 
@@ -39,10 +39,12 @@
 
             decoration = {
                 rounding = 5;
-                blur = true;
-                blur_size = 5;
-                blur_passes = 1;
-                blur_new_optimizations = true;
+                blur = {
+                    enabled = true;
+                    size = 5;
+                    passes = 1;
+                    new_optimizations = true;
+                };
             };
             
             bind = [
@@ -111,7 +113,7 @@
             ];
 
             windowrulev2 = [
-                "opacity 0.9 0.9, class:^(Alacritty)\$"
+                # "opacity 0.9 0.9, class:^(Alacritty)\$"
             ];
         };
     };
