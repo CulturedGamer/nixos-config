@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
     wayland.windowManager.hyprland = {
@@ -11,7 +11,7 @@
 
             exec-once = [
                 "swaybg -i ~/Pictures/wallpapers/abstract_blue.jpg"
-                "pkill waybar; waybar"
+                "waybar"
             ];
 
             input = {
