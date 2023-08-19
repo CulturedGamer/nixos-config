@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     programs.rofi = {
@@ -6,5 +6,8 @@
         package = pkgs.rofi-wayland;
         plugins = [ pkgs.rofimoji ];
         theme = ./onedark.rasi;
+        extraConfig = ''
+            
+        '';
     };
 }
