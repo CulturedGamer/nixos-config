@@ -1,10 +1,9 @@
 * {
     bg: #1f2329;
     bg-alt: #242b38;
-    bg-selected: #4fa6ed
+    bg-selected: #4fa6ed;
 
     fg: #a0a8b7;
-    fg-alt: #FFFFFF;
 
     border: 0;
     margin: 0;
@@ -20,11 +19,11 @@ window {
 element {
   padding: 8 12;
   background-color: transparent;
-  text-color: @fg-alt;
+  text-color: @fg;
 }
 
 element selected {
-  text-color: @fg;
+  text-color: @bg;
   background-color: @bg-selected;
 }
 
@@ -35,7 +34,7 @@ element-text {
 }
 
 element-icon {
-  size: 14;
+  size: 20;
   padding: 0 10 0 0;
   background-color: transparent;
 }
