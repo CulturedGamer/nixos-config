@@ -63,6 +63,7 @@
         nix-prefetch-git
         pulseaudio
         python3
+        rsync
         tree
         vimv
         wget
@@ -87,9 +88,10 @@
         };
     };
 
+    services.getty.autologinUser = "donny";
     services.printing.enable = true;
     services.udisks2.enable = true;
-    services.getty.autologinUser = "donny";
+    services.upower.enable = true;
 
     programs.dconf.enable = true;
 

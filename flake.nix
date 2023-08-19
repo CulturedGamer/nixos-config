@@ -14,14 +14,9 @@
             url = "github:hyprwm/hyprland";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        poetry2nix = {
-            url = "github:nix-community/poetry2nix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager, hyprland, poetry2nix }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager, hyprland }:
     let
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
@@ -39,7 +34,7 @@
                 imports = [ ./modules/home.nix ];
                 _module.args.nur = { inherit nur; };
             };
-            home-manager.extraSpecialArgs = { inherit poetry2nix; };
+            home-manager.extraSpecialArgs = { inherit inputs; };
             nixpkgs.overlays = [ inputs.nur.overlay ];
         };
     in {

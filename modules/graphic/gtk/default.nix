@@ -1,6 +1,5 @@
 _: {
     imports = [
-	    ./gtk
-	    ./wm
+        ./qogir-gtk.nix
     ];
 }

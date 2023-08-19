@@ -1,4 +1,4 @@
-{ config, pkgs, poetry2nix, ... }:
+{ config, pkgs, ... }:
 
 {
     imports = [
@@ -33,7 +33,6 @@
             pavucontrol
             playerctl
             ripgrep
-            rofi-wayland
             rustc
             starship
             streamlink
