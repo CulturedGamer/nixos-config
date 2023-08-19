@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     home.file.".config/nvim/lua/settings.lua".source = ./settings.lua;
