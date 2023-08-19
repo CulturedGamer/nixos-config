@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
     imports = [
@@ -8,6 +8,8 @@
         ./terminal
         ./wallpapers
     ];
+
+    programs.home-manager.enable = true;
 
     home = {
         username = "donny";
@@ -19,6 +21,7 @@
             brightnessctl
             cargo
             cava
+            cinnamon.nemo
             clang
             cmus
             fish
@@ -38,7 +41,6 @@
             streamlink
             sxhkd
             swaybg
-            xfce.thunar
             trash-cli
             unzip
             xdotool
@@ -54,6 +56,4 @@
             (mpv.override {scripts = [mpvScripts.mpris];})
         ];
     };
-
-    programs.home-manager.enable = true;
 }
