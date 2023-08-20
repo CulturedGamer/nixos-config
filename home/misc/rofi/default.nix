@@ -4,11 +4,11 @@
     programs.rofi = {
         enable = true;
         package = pkgs.rofi-wayland;
-        plugins = [ pkgs.rofimoji ];
-        font = "JetBrainsMonoNerdFont 12";
+        font = "JetBrainsMonoNerdFont 11.5";
         theme = ./onedark.rasi;
         extraConfig = {
-            display-drun = "Applications: ";
+            display-drun = " ";
+            display-run = " ";
             drun-display-format = "{icon} {name}";
             show-icons = true;
             icon-theme = "Qogir";

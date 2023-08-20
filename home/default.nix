@@ -36,6 +36,7 @@
             pavucontrol
             playerctl
             ripgrep
+            rofimoji
             rustc
             starship
             streamlink

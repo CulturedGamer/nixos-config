@@ -95,6 +95,8 @@
                 "SUPER, R, exec, rofi -show drun"
                 "SUPER SHIFT, R, exec, rofi -show run"
                 "SUPER CTRL, I, exec, ~/.local/bin/bookmark-type"
+                "SUPER, P, exec, rofimoji"
+                "SUPER, E, exec, nemo"
             ];
 
             binde = [
