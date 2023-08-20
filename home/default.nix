@@ -46,7 +46,6 @@
             unzip
             xdotool
             xdg-user-dirs
-            xterm
             xwallpaper
             wl-clipboard
             wtype
