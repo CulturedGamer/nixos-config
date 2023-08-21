@@ -18,7 +18,7 @@
         settings = {
             import = [
                 "/home/donny/.config/alacritty/colors/onedark.yml"
-                "/home/donny/.config/alacritty/fonts/cascadia-code.yml"
+                "/home/donny/.config/alacritty/fonts/hack.yml"
             ];
             env.TERM = "xterm-256color";
             shell.program = "fish";

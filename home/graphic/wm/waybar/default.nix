@@ -8,14 +8,20 @@
             mainBar = {
                 layer = "top";
                 position = "top";
-                height = 30;
+                height = 10;
                 output = [ "eDP-1" ];
 
-                modules-left = [ "hyprland/workspaces" "hyprland/submap" ];
+                modules-left = [ "hyprland/workspaces" ];
                 modules-center = [ "hyprland/window" ];
                 modules-right = [ "pulseaudio" "upower" "clock" ];
+
+                clock = {
+                    interval = 60;
+                    format = " {:%I:%M}";
+                    max-length = 25;
+                };
             };
         };
-        # style = {};
+        style = ./style.css;
     };
 }

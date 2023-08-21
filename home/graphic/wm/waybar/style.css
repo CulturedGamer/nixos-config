@@ -1,0 +1,28 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMonoNerdFont;
+    font-size: 11.5px;
+    margin: 0;
+    padding: 0;
+}
+
+#clock,
+#pulseaudio,
+#upower,
+#window,
+#workspaces {
+    background: #1F2329;
+    border-radius: 12px;
+    color: #adb1b9 ;
+    margin-bottom: -2px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5 15px;
+}
+
+window {
+    background-color: transparent;
+    box-shadow: none;
+}

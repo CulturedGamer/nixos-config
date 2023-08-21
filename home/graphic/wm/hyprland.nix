@@ -10,7 +10,7 @@
             ];
 
             exec-once = [
-                "swaybg -i ~/Pictures/wallpapers/abstract_blue.jpg"
+                "swaybg -i ~/Pictures/wallpapers/lake.jpg"
                 "waybar"
             ];
 
@@ -80,16 +80,18 @@
                 "SUPER $mainMod, 8, workspace, 8"
                 "SUPER $mainMod, 9, workspace, 9"
                 "SUPER $mainMod, 0, workspace, 10"
-                "SUPER $mainMod SHIFT, 1, movetoworkspacesilent, 1"
-                "SUPER $mainMod SHIFT, 2, movetoworkspacesilent, 2"
-                "SUPER $mainMod SHIFT, 3, movetoworkspacesilent, 3"
-                "SUPER $mainMod SHIFT, 4, movetoworkspacesilent, 4"
-                "SUPER $mainMod SHIFT, 5, movetoworkspacesilent, 5"
-                "SUPER $mainMod SHIFT, 6, movetoworkspacesilent, 6"
-                "SUPER $mainMod SHIFT, 7, movetoworkspacesilent, 7"
-                "SUPER $mainMod SHIFT, 8, movetoworkspacesilent, 8"
-                "SUPER $mainMod SHIFT, 9, movetoworkspacesilent, 9"
-                "SUPER $mainMod SHIFT, 0, movetoworkspacesilent, 10"
+                "SUPER $mainMod SHIFT, 1, movetoworkspace, 1"
+                "SUPER $mainMod SHIFT, 2, movetoworkspace, 2"
+                "SUPER $mainMod SHIFT, 3, movetoworkspace, 3"
+                "SUPER $mainMod SHIFT, 4, movetoworkspace, 4"
+                "SUPER $mainMod SHIFT, 5, movetoworkspace, 5"
+                "SUPER $mainMod SHIFT, 6, movetoworkspace, 6"
+                "SUPER $mainMod SHIFT, 7, movetoworkspace, 7"
+                "SUPER $mainMod SHIFT, 8, movetoworkspace, 8"
+                "SUPER $mainMod SHIFT, 9, movetoworkspace, 9"
+                "SUPER $mainMod SHIFT, 0, movetoworkspace, 10"
+                "SUPER $mainMod, c, movetoworkspacesilent, special"
+                "SUPER $mainMod, grave, togglespecialworkspace"
 
                 "SUPER, S, exec, firefox"
                 "SUPER, R, exec, rofi -show drun"
@@ -114,6 +116,13 @@
                 "SUPER, mouse:272, movewindow"
                 "SUPER, mouse:273, resizewindow"
             ];
+
+            animations = {
+                enabled = true;
+                animation = [
+                    "workspaces, 1, 3, default"
+                ];
+            };
 
             windowrulev2 = [
                 # "opacity 0.9 0.9, class:^(Alacritty)\$"
