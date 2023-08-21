@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
     home.file = {
@@ -18,7 +18,7 @@
         settings = {
             import = [
                 "/home/donny/.config/alacritty/colors/onedark.yml"
-                "/home/donny/.config/alacritty/fonts/jetbrains.yml"
+                "/home/donny/.config/alacritty/fonts/cascadia-code.yml"
             ];
             env.TERM = "xterm-256color";
             shell.program = "fish";

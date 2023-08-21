@@ -1,0 +1,10 @@
+font:
+  size: 13
+  normal:
+    family: GohuFont14NerdFont
+
+  bold:
+    family: GohuFont14NerdFont
+
+  italic:
+    family: GohuFont14NerdFont

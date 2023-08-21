@@ -1,0 +1,10 @@
+font:
+  size: 13
+  normal:
+    family: CaskaydiaCoveNerdFont
+
+  bold:
+    family: CaskaydiaCoveNerdFont
+
+  italic:
+    family: CaskaydiaCoveNerdFont

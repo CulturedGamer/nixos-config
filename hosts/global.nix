@@ -57,7 +57,7 @@
             noto-fonts
             noto-fonts-cjk
             noto-fonts-emoji
-            (nerdfonts.override { fonts = [ "DroidSansMono" "FiraCode" "Hack" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
+            (nerdfonts.override { fonts = [ "BigBlueTerminal" "CascadiaCode" "DroidSansMono" "Gohu" "FiraCode" "Hack" "Inconsolata" "Iosevka" "JetBrainsMono" "RobotoMono" ]; })
         ];
 
         enableDefaultPackages = false;
