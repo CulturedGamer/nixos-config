@@ -5,10 +5,9 @@
         enable = true;
         package = pkgs.rofi-wayland;
         font = "JetBrainsMonoNerdFont 11.5";
-        terminal = "${pkgs.alacritty}/bin/alacritty -e fish";
+        terminal = "${pkgs.alacritty}/bin/alacritty";
         theme = ./onedark.rasi;
         extraConfig = {
-            display-dmenu = " ";
             display-drun = "󰀻 ";
             display-run = " ";
             drun-display-format = "{icon} {name}";
