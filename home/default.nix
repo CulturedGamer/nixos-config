@@ -25,7 +25,6 @@
             clang
             cmus
             fish
-            flameshot
             fzf
             git-crypt
             gnumake
