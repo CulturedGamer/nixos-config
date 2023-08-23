@@ -121,12 +121,14 @@
                 enabled = true;
                 animation = [
                     "workspaces, 1, 3, default"
+                    "windows, 1, 5, default"
+                    "fade, 1, 5, default"
                 ];
             };
 
-            windowrulev2 = [
-                # "opacity 0.9 0.9, class:^(Alacritty)\$"
-            ];
+            # windowrulev2 = [
+            #     "opacity 0.9 0.9, class:^(Alacritty)\$"
+            # ];
         };
     };
 }

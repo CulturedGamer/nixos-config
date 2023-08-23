@@ -7,5 +7,6 @@
         https://monkeytype.com
         https://10fastfingers.com/typing-test/english
         https://github.com/veryfastman
+        https://github.com/veryfastman/nixos-config
     '';
 }

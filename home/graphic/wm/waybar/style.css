@@ -2,6 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: JetBrainsMonoNerdFont;
+    font-weight: bold;
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -12,19 +13,17 @@
 #upower,
 #window,
 #workspaces {
-    background-color: #282c34;
+    background: #1F2329;
     border-radius: 12px;
-    /* color: #adb1b9; */
     color: #abb2bf;
-    margin-bottom: -2px;
+    margin-bottom: 0px;
     margin-top: 5px;
     margin-right: 5px;
     margin-left: 5px;
-    padding: 5 15px;
+    padding: 0 10px;
 }
 
 window {
-    /* background-color: transparent; */
-    background: #1F2329;
+    background-color: transparent;
     box-shadow: none;
 }

@@ -8,7 +8,7 @@
             mainBar = {
                 layer = "top";
                 position = "top";
-                height = 10;
+                height = 20;
                 output = [ "eDP-1" ];
 
                 modules-left = [ "hyprland/workspaces" ];
