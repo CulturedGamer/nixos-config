@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: RobotoMonoNerdFont;
+    font-family: JetBrainsMonoNerdFont;
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -12,9 +12,10 @@
 #upower,
 #window,
 #workspaces {
-    background: #1F2329;
+    background-color: #282c34;
     border-radius: 12px;
-    color: #adb1b9;
+    /* color: #adb1b9; */
+    color: #abb2bf;
     margin-bottom: -2px;
     margin-top: 5px;
     margin-right: 5px;
@@ -23,6 +24,7 @@
 }
 
 window {
-    background-color: transparent;
+    /* background-color: transparent; */
+    background: #1F2329;
     box-shadow: none;
 }

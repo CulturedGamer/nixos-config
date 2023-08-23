@@ -10,7 +10,7 @@
             ];
 
             exec-once = [
-                "swaybg -i ~/Pictures/wallpapers/lake.jpg"
+                "swaybg -i ~/Pictures/wallpapers/onedark_clouds.png"
                 "waybar"
             ];
 
