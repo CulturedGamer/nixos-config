@@ -1,29 +1,28 @@
 * {
+    background: #1F2329;
     border: none;
     border-radius: 0;
+    color: #abb2bf;
     font-family: JetBrainsMonoNerdFont;
-    font-weight: bold;
-    font-size: 12px;
+    font-size: 13.5px;
     margin: 0;
     padding: 0;
 }
 
+#backlight,
 #clock,
+#disk,
+#memory,
 #pulseaudio,
-#upower,
 #window,
 #workspaces {
-    background: #1F2329;
-    border-radius: 12px;
-    color: #abb2bf;
-    margin-bottom: 0px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 0 10px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
-window {
-    background-color: transparent;
-    box-shadow: none;
+#battery,
+#network {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
 }
