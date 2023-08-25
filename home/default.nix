@@ -51,7 +51,6 @@
             wtype
             yewtube
             yt-dlp
-            zathura
             zip
 
             (mpv.override {scripts = [mpvScripts.mpris];})
