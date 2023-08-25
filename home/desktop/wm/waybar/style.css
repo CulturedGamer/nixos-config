@@ -14,6 +14,7 @@
 #disk,
 #memory,
 #pulseaudio,
+#tray,
 #window,
 #workspaces {
     margin-right: 8px;
@@ -25,4 +26,29 @@
     margin-right: 5px;
     margin-left: 5px;
     font-size: 14px;
+}
+
+#workspaces button.active label {
+    color: #4fa6ed;
+    font-weight: bold;
+}
+
+#clock {
+    color: #4fa6ed;
+}
+
+#pulseaudio {
+    color: #48b0bd;
+}
+
+#backlight {
+    color: #98c379;
+}
+
+#memory {
+    color: #bf68d9;
+}
+
+#disk {
+    color: #e2b86b;
 }

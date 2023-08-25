@@ -2,7 +2,7 @@
 
 {
     imports = [
-        ./graphic
+        ./desktop
         ./misc
         ./scripts
         ./terminal

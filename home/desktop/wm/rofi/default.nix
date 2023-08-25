@@ -4,7 +4,7 @@
     programs.rofi = {
         enable = true;
         package = pkgs.rofi-wayland;
-        font = "RobotoMonoNerdFont 10";
+        font = "HackNerdFont 11.5";
         terminal = "${pkgs.alacritty}/bin/alacritty";
         theme = ./onedark.rasi;
         extraConfig = {

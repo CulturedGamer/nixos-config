@@ -11,8 +11,7 @@
                 height = 30;
                 output = [ "eDP-1" ];
 
-                modules-left = [ "hyprland/workspaces" ];
-                modules-center = [ "hyprland/window" ];
+                modules-left = [ "hyprland/workspaces" "hyprland/window" ];
                 modules-right = [ "tray" "network" "battery" "disk"  "memory" "backlight" "pulseaudio" "clock" ];
 
                 backlight = {
@@ -37,12 +36,15 @@
 
                 disk = {
                     format = "󰨣 {percentage_free}%";
-                    on-click = "nemo";
+                    format-alt = "󰨣 {free} free";
+                    on-click-right = "nemo";
+                    path = "/";
                 };
 
                 memory = {
                     format = "󰍹 {}%";
-                    on-click = "alacritty -e htop";
+                    format-alt = "󰍹 {used}GiB";
+                    on-click-right = "alacritty -e htop";
                 };
 
                 network = {
@@ -53,12 +55,13 @@
 
                 pulseaudio = {
                     format = "{icon} {volume}%";
+                    format-alt = "{icon} {desc}";
                     format-bluetooth = "{icon}󰂯 {volume}%";
                     format-muted = "󰝟";
                     format-icons = {
                         default = [ "" "" ];
                     };
-                    on-click = "pavucontrol";
+                    on-click-right = "pavucontrol";
                 };
             };
         };
