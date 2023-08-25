@@ -1,9 +1,13 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
     home.file.".config/fish/config.fish".text = ''
         function fish_greeting
 
+        end
+
+        function fish_user_key_bindings
+            fish_vi_key_bindings
         end
 
         export VISUAL=nvim

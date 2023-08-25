@@ -3,6 +3,7 @@ require ("plugins.flash")
 require ("plugins.lualine")
 require ("plugins.telescope")
 require ("plugins.treesitter")
+require ("plugins.vimtex")
 require ("plugins.which-key")
 
 require ("plugins.cmp")

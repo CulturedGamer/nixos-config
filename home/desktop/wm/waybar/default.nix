@@ -51,6 +51,7 @@
                     format = "{icon}";
                     format-alt = "{essid} ({signalStrength}%) {icon}";
                     format-icons = [ "󰤯" "󰤟" "󰤢" "󰤢" "󰤨" ];
+                    on-click-right = "alacritty -e nmcli";
                 };
 
                 pulseaudio = {

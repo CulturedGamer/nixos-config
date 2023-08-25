@@ -42,6 +42,7 @@
             sxhkd
             swaybg
             trash-cli
+            texlive.combined.scheme-full
             unzip
             xdotool
             xdg-user-dirs
@@ -50,6 +51,7 @@
             wtype
             yewtube
             yt-dlp
+            zathura
             zip
 
             (mpv.override {scripts = [mpvScripts.mpris];})

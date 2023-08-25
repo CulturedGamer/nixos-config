@@ -39,6 +39,7 @@
             telescope-nvim
             todo-comments-nvim
             trouble-nvim
+            vimtex
             vim-fugitive
             vim-tmux-navigator
             which-key-nvim
