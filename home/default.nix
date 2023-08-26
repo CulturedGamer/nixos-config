@@ -22,7 +22,6 @@
             cargo
             cava
             cinnamon.nemo
-            clang
             cmus
             fish
             fzf

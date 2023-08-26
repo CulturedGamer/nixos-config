@@ -9,7 +9,7 @@
     };
 
     home.packages = with pkgs; [ # language servers
-        llvmPackages_rocm.clang-tools-extra
+        # clang
         lua-language-server
         nil
     ];
