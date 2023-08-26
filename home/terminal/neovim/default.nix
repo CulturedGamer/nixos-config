@@ -9,7 +9,7 @@
     };
 
     home.packages = with pkgs; [ # language servers
-        # clang
+        clang-tools
         lua-language-server
         nil
     ];
