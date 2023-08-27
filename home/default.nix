@@ -30,6 +30,7 @@
             htop
             imv
             lazygit
+            mpv-unwrapped
             neofetch
             pavucontrol
             playerctl
@@ -51,8 +52,15 @@
             yewtube
             yt-dlp
             zip
-
-            (mpv.override {scripts = [mpvScripts.mpris];})
         ];
     };
+
+    nixpkgs.overlays = [
+        (final: prev: {
+            mpv-unwrapped = prev.mpv-unwrapped.override {
+                scripts = [ prev.mpvScripts.mpris ];
+                ffmpeg_6 = pkgs.ffmpeg_6-full;
+            };
+        })
+    ];
 }

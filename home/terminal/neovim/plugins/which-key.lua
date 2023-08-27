@@ -9,5 +9,6 @@ require('which-key').register ({
         b = { builtin.buffers, "Search Buffers" },
         c = { builtin.colorscheme, "Colorscheme" },
     },
+    t = { "<cmd>ToggleTerm<cr>", "Toggle" },
     o = { name = "Org" }
 }, { prefix = "<leader>" })

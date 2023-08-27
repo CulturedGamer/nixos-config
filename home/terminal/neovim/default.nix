@@ -38,6 +38,7 @@
             orgmode
             telescope-nvim
             todo-comments-nvim
+            toggleterm-nvim
             trouble-nvim
             vimtex
             vim-fugitive

@@ -1,6 +1,7 @@
 require ("plugins.bufferline")
 require ("plugins.flash")
 require ("plugins.lualine")
+require ("plugins.toggleterm")
 require ("plugins.treesitter")
 require ("plugins.vimtex")
 require ("plugins.which-key")
