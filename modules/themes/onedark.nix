@@ -4,10 +4,13 @@
     imports = [
         ../desktop/hyprland.nix
 
+        ../misc/wallpapers.nix
+
         ../terminal/tmux.nix
         ../terminal/alacritty
         ../terminal/neovim
 
+        ../graphic/rofi
         ../graphic/waybar/default.nix
 
         ./global.nix
@@ -55,11 +58,20 @@
             plugins = with pkgs.tmuxPlugins; [ onedark-theme ];
         };
         
-        # Graphical
+        # Desktop
         hyprland = {
             enable = true;
             activeBorderColor = "4fa6ed";
             wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/onedark_clouds.png";
+        };
+
+        rofi = {
+            enable = true;
+            theme = ../graphic/rofi/themes/onedark.rasi;
+        };
+
+        wallpapers = {
+            enable = true;
         };
 
         waybar = {
