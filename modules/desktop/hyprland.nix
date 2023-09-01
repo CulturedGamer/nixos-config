@@ -10,7 +10,7 @@ in {
 
         inactiveBorderColor = mkOption {
             type = types.str;
-            default = "ffffffff";
+            default = "5c6370";
             description = "Inactive window border color";
         };
 
@@ -56,8 +56,8 @@ in {
                     gaps_in = 8;
                     gaps_out = 8;
                     border_size = 2;
-                    # "col.inactive_border" = "rgb(${cfg.inactiveBorderColor})";
-                    # "col.active_border" = "rgb(${cfg.activeBorderColor})";
+                    "col.inactive_border" = "rgb(${cfg.inactiveBorderColor})";
+                    "col.active_border" = "rgb(${cfg.activeBorderColor})";
                     layout = "master";
                 };
 

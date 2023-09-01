@@ -25,6 +25,7 @@ in {
             };
 
             shellInit = ''
+                set -U fish_greeting
                 fish_add_path ~/.local/bin
                 export VISUAL=nvim
                 export EDITOR="$VISUAL"
