@@ -21,21 +21,21 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
 
-        defaultNixosModules = [
+        extraModules = [
             nur.nixosModules.nur
             hyprland.nixosModules.default
-            home-manager.nixosModules.home-manager homeConfiguration
         ];
-
-        homeConfiguration = {
+        
+        homeManagerConfiguration = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
-                imports = [ ./home ];
+                imports = [ ./home.nix ];
+                modules.hyprland.enable = true;
                 _module.args.nur = { inherit nur; };
             };
             home-manager.extraSpecialArgs = { inherit inputs; };
-            nixpkgs.overlays = [ inputs.nur.overlay ];
+            nixpkgs.overlays = [ nur.overlay ];
         };
     in {
         nixosConfigurations = {
@@ -43,15 +43,18 @@
                 inherit system specialArgs;
                 modules = [
                     ./hosts/laptop
-                ] ++ defaultNixosModules;
+                    home-manager.nixosModules.home-manager homeManagerConfiguration
+                ] ++ extraModules;
             };
 
             desktop = nixpkgs.lib.nixosSystem {
                 inherit system specialArgs;
                 modules = [
                     ./hosts/desktop
-                ] ++ defaultNixosModules;
+                    home-manager.nixosModules.home-manager homeManagerConfiguration
+                ] ++ extraModules;
             };
+
         };
     };
 }
