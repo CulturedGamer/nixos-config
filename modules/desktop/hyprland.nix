@@ -53,7 +53,7 @@ in {
                 };
 
                 general = {
-                    gaps_in = 8;
+                    gaps_in = 6;
                     gaps_out = 8;
                     border_size = 2;
                     "col.inactive_border" = "rgb(${cfg.inactiveBorderColor})";
