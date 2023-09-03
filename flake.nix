@@ -9,29 +9,20 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        hyprland = {
-            url = "github:hyprwm/hyprland";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager, hyprland }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager }:
     let
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
 
-        extraModules = [
-            nur.nixosModules.nur
-            hyprland.nixosModules.default
-        ];
+        extraModules = [ nur.nixosModules.nur ];
         
         homeManagerConfiguration = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.donny = {
                 imports = [ ./home.nix ];
-                modules.hyprland.enable = true;
                 _module.args.nur = { inherit nur; };
             };
             home-manager.extraSpecialArgs = { inherit inputs; };

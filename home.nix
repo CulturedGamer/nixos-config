@@ -2,7 +2,8 @@
 
 {
     imports = [
-        ./modules/themes/onedark.nix
+        ./modules/themes/minimal.nix
+        # ./modules/themes/onedark.nix
     ];
 
     programs.home-manager.enable = true;

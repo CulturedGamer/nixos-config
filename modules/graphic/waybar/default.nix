@@ -13,6 +13,12 @@ in {
             default = null;
             description = "Custom Waybar theme";
         };
+
+        wmModules = mkOption {
+            type = types.listOf types.str;
+            default = [ ];
+            description  = "Modules specific to the current compositor";
+        };
     };
 
     config = mkIf cfg.enable {
@@ -26,7 +32,7 @@ in {
                     height = 30;
                     output = [ "eDP-1" ];
 
-                    modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+                    modules-left = cfg.wmModules;
                     modules-right = [ "tray" "network" "battery" "disk"  "memory" "backlight" "pulseaudio" "clock" ];
 
                     backlight = {

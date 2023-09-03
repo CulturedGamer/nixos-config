@@ -77,6 +77,7 @@
         waybar = {
             enable = true;
             theme = ../graphic/waybar/styles/onedark.css;
+            wmModules = [ "hyprland/workspaces" "hyprland/window" ];
         };
     };
 }

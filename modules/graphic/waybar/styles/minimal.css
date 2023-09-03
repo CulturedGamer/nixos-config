@@ -1,8 +1,8 @@
 * {
-    background: #1F2329;
+    background: #181818;
     border: none;
     border-radius: 0;
-    color: #abb2bf;
+    color: #d8d8d8;
     font-family: JetBrainsMonoNerdFont;
     font-size: 13.5px;
     margin: 0;
@@ -28,32 +28,7 @@
     font-size: 14px;
 }
 
-#tags button.focused label {
-    color: #4fa6ed;
-    font-weight: bold;
-}
-
 #workspaces button.active label {
-    color: #4fa6ed;
+    color: #464646;
     font-weight: bold;
-}
-
-#clock {
-    color: #4fa6ed;
-}
-
-#pulseaudio {
-    color: #48b0bd;
-}
-
-#backlight {
-    color: #98c379;
-}
-
-#memory {
-    color: #bf68d9;
-}
-
-#disk {
-    color: #e2b86b;
 }

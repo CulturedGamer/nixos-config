@@ -8,6 +8,17 @@ in {
     options.modules.tmux = {
         enable = mkEnableOption "Tmux";
 
+        extraConfig = mkOption {
+            type = types.str;
+            default = "";
+            example = literalExpression ''
+                set-window-option -g other-pane-height 25
+                set-window-option -g other-pane-width 80
+                set-window-option -g display-panes-time 1500
+            '';
+            description = "Extra Tmux configuration";
+        };
+
         plugins = mkOption {
             type = types.listOf types.package;
             default = [ ];
@@ -111,9 +122,6 @@ in {
                 set-option -g pane-active-border-style fg=yellow
                 set-option -g pane-border-style fg=cyan
 
-                # setw -g monitor-activity on
-                # set -g visual-activity on
-
                 set-option -g repeat-time 1000
                 
                 # Smart pane switching with awareness of Vim splits.
@@ -136,6 +144,7 @@ in {
                 bind-key -T copy-mode-vi 'C-l' select-pane -R
                 bind-key -T copy-mode-vi 'C-\' select-pane -l
 
+                ${cfg.extraConfig}
                 ${cfg.pluginsConfiguration}
             '';
         };

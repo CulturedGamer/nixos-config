@@ -9,7 +9,7 @@ in {
         enable = mkEnableOption "Alacritty";
 
         colorscheme = mkOption {
-            type = types.enum [ "onedark" "gruvbox" ];
+            type = types.str;
             description = "Sets a colorscheme";
         };
 
