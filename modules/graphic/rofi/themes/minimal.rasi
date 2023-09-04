@@ -1,8 +1,9 @@
 * {
     bg: #181818;
-    bg-selected: #464646;
+    bg-selected: #2f2f2f;
 
     fg: #d8d8d8;
+    fg-selected: #848484;
 
     border-color: @bg-selected;
     border-radius: 5px;
@@ -28,7 +29,7 @@ element {
 }
 
 element selected {
-    text-color: @bg;
+    text-color: @fg-selected;
     background-color: @bg-selected;
     border: 0px solid;
     border-radius: 0px;

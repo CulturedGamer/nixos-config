@@ -30,8 +30,10 @@ in {
         enable = true;
         font.name = "Noto";
         theme = {
-            name = "WhiteSur";
-            package = pkgs.whitesur-gtk-theme;
+            name = "WhiteSur-Dark";
+            package = pkgs.callPackage ../../pkgs/whitesur-gtk-theme.nix {
+                colorVariants = [ "Dark" ];
+            };
         };
         iconTheme = {
             name = "PaperIconTheme";

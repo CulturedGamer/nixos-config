@@ -21,11 +21,12 @@ in {
     config = mkIf cfg.enable {
         home = {
             packages = [ pkgs.river ];
-            file.".config/river/init" = {
+            file.".config/river/init" = 
+            let
+                scratch_tag = "$((1 << 20 ))";
+                all_but_scratch_tag="$(( ((1 << 32) - 1) ^ ${scratch_tag} ))";
+            in {
                 text = ''
-                    waybar
-                    ${cfg.wallpaperCommand}
-
                     riverctl map normal Super Return spawn alacritty
                     riverctl map normal Super W close
                     riverctl map normal Super+Control Q exit
@@ -89,11 +90,22 @@ in {
                     riverctl background-color 0x002b36
                     riverctl border-color-focused 0x93a1a1
                     riverctl border-color-unfocused 0x586e75
+                    riverctl focus-follows-cursor always
+                    riverctl set-cursor-warp on-focus-change
                     riverctl set-repeat 110 210
                     riverctl default-layout rivertile
-                    rivertile -view-padding 6 -outer-padding 6 &
+                    rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
 
-                    riverctl mapnormal SUPER F
+                    riverctl map normal Super R spawn 'rofi -show drun'
+                    riverctl map normal Super+Control I spawn 'bookmark-type'
+                    riverctl map normal Super S spawn firefox
+
+                    riverctl map normal Super grave toggle-focused-tags ${scratch_tag}
+                    riverctl map normal Super C set-view-tags ${scratch_tag}
+                    riverctl spawn-tagmask ${all_but_scratch_tag}
+
+                    waybar &
+                    ${cfg.wallpaperCommand}
                 '';
                 executable = true;
             };
