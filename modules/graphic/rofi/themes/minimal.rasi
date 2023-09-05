@@ -6,7 +6,6 @@
     fg-selected: #848484;
 
     border-color: @bg-selected;
-    border-radius: 5px;
 
     border: 1;
     margin: 0;

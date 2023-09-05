@@ -29,7 +29,7 @@ in {
                 mainBar = {
                     layer = "top";
                     position = "top";
-                    height = 30;
+                    height = 15;
                     output = [ "eDP-1" ];
 
                     modules-left = cfg.wmModules;

@@ -6,7 +6,9 @@ let
     cfg = config.modules.hyprland;
 in {
     options.modules.hyprland = {
-        enable = mkEnableOption "hyprland";
+        enable = mkEnableOption "Hyprland";
+        enableAnimations = mkEnableOption "Hyprland animations";
+        roundBorders = mkEnableOption "Hyprland rounded corners";
 
         inactiveBorderColor = mkOption {
             type = types.str;
@@ -70,7 +72,7 @@ in {
                 };
 
                 decoration = {
-                    rounding = 5;
+                    rounding = mkIf cfg.roundBorders 5;
                     blur = {
                         enabled = true;
                         size = 5;
@@ -149,7 +151,7 @@ in {
                 ];
 
                 animations = {
-                    enabled = true;
+                    enabled = cfg.enableAnimations;
                     animation = [
                         "workspaces, 1, 3, default"
                         "windows, 1, 5, default"

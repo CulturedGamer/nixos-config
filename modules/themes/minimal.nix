@@ -12,6 +12,7 @@ let
     };
 in {
     imports = [
+        # ../desktop/hyprland.nix
         ../desktop/river.nix
 
         ../misc/wallpapers.nix
@@ -65,11 +66,21 @@ in {
             '';
         };
 
-        # Desktpo
+        # Desktop
         river = {
             enable = true;
             wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/dark_city_morning.jpg";
+            backgroundColor = "0x181818";
+            focusedBorderColor = "0x9d9d9d";
+            unfocusedBorderColor = "0x626262";
         };
+        
+        # hyprland = {
+        #     enable = true;
+        #     wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/dark_city_morning.jpg";
+        #     activeBorderColor = "9d9d9d";
+        #     inactiveBorderColor = "626262";
+        # };
 
         rofi = {
             enable = true;
@@ -84,6 +95,7 @@ in {
             enable = true;
             theme = ../graphic/waybar/styles/minimal.css;
             wmModules = [ "river/tags" "river/window" ];
+            # wmModules = [ "hyprland/workspaces" "hyprland/window" ];
         };
     };
 }

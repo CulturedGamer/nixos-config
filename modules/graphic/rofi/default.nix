@@ -13,13 +13,18 @@ in {
             default = ./themes/onedark.rasi;
             description = "Rofi custom theme";
         };
+        
+        font = mkOption {
+            type = types.str;
+            default = "JetBrainsMonoNerdFont 10.5";
+        };
     };
 
     config = mkIf cfg.enable {
         programs.rofi = {
             enable = true;
             package = pkgs.rofi-wayland;
-            font = "HackNerdFont 11.5";
+            font = cfg.font;
             terminal = "${pkgs.alacritty}/bin/alacritty";
             theme = cfg.theme;
             extraConfig = {

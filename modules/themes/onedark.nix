@@ -61,6 +61,8 @@
         # Desktop
         hyprland = {
             enable = true;
+            enableAnimations = true;
+            roundBorders = true;
             activeBorderColor = "4fa6ed";
             wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/onedark_clouds.png";
         };

@@ -45,7 +45,6 @@
                     home-manager.nixosModules.home-manager homeManagerConfiguration
                 ] ++ extraModules;
             };
-
         };
     };
 }

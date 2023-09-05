@@ -4,7 +4,7 @@
     border-radius: 0;
     color: #d8d8d8;
     font-family: JetBrainsMonoNerdFont;
-    font-size: 13.5px;
+    font-size: 12px;
     margin: 0;
     padding: 0;
 }
@@ -29,6 +29,6 @@
 }
 
 #workspaces button.active label {
-    color: #464646;
+    color: #f7ca88;
     font-weight: bold;
 }
