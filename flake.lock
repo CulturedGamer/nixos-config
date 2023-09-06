@@ -55,7 +55,24 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nur": "nur"
+        "nur": "nur",
+        "wallpaper-collection": "wallpaper-collection"
+      }
+    },
+    "wallpaper-collection": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1693886788,
+        "narHash": "sha256-B9Inp3CyJkVW7y2ZmhnEYZtchB7wu2ca+cBIuYJ1w5Y=",
+        "owner": "veryfastman",
+        "repo": "wallpaper-collection",
+        "rev": "751845e9ecf0d230a99b72c42c9116f19ac492e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "veryfastman",
+        "repo": "wallpaper-collection",
+        "type": "github"
       }
     }
   },

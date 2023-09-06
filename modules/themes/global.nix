@@ -5,6 +5,7 @@
         ../misc/bookmarks.nix
         ../misc/firefox.nix
         ../misc/zathura.nix
+        ../misc/wallpapers.nix
 
         ../scripts
 
@@ -20,6 +21,7 @@
         lf.enable = true;
         shell-scripts.enable = true;
         starship.enable = true;
+        wallpapers.enable = true;
         zathura.enable = true;
 
         fish = {

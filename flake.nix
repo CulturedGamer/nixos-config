@@ -9,9 +9,14 @@
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        wallpaper-collection = {
+            url = "github:veryfastman/wallpaper-collection";
+            flake = false;
+        };
     };
 
-    outputs = inputs@{ self, nixpkgs, nur, home-manager }:
+    outputs = inputs@{ self, nixpkgs, nur, home-manager, wallpaper-collection }:
     let
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };

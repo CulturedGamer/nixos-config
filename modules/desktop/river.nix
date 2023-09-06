@@ -53,8 +53,8 @@ in {
                     riverctl map normal Super+Control Q exit
                     riverctl map normal Super J focus-view next
                     riverctl map normal Super K focus-view previous
-                    riverctl map normal Super+Shift J focus-view next
-                    riverctl map normal Super+Shift K focus-view previous
+                    riverctl map normal Super+Shift J swap next
+                    riverctl map normal Super+Shift K swap previous
                     riverctl map normal Super+Shift Return zoom
                     riverctl map -repeat normal Super H send-layout-cmd rivertile "main-ratio -0.05"
                     riverctl map -repeat normal Super L send-layout-cmd rivertile "main-ratio +0.05"
