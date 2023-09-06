@@ -69,7 +69,7 @@ in {
         # Desktop
         river = {
             enable = true;
-            wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/dark_city_morning.jpg";
+            wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/ripple_wallpaper.png";
             backgroundColor = "0x181818";
             focusedBorderColor = "0x9d9d9d";
             unfocusedBorderColor = "0x626262";
