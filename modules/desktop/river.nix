@@ -117,7 +117,7 @@ in {
                     riverctl default-layout rivertile
                     rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
 
-                    riverctl input touch-10900-20557-G2Touch_Multi-Touch_by_G2TSP tap enabled
+                    riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
                     riverctl map normal Super R spawn 'rofi -show drun'
                     riverctl map normal Super+Control I spawn 'bookmark-type'

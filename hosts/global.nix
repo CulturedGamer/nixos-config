@@ -70,6 +70,12 @@
         };
     };
 
+    # Garbage collection
+    nix.gc = {
+        automatic = true;
+        dates = "weekly";
+    };
+
     programs.dconf.enable = true;
 
     services.printing.enable = true;
