@@ -71,7 +71,7 @@ in {
             enable = true;
             wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/ripple_wallpaper.png";
             backgroundColor = "0x181818";
-            focusedBorderColor = "0x9d9d9d";
+            focusedBorderColor = "0x7E97AB";
             unfocusedBorderColor = "0x626262";
         };
         

@@ -14,6 +14,7 @@
 #disk,
 #memory,
 #pulseaudio,
+#tags,
 #tray,
 #window,
 #workspaces {
@@ -29,6 +30,15 @@
 }
 
 #workspaces button.active label {
+    color: #f7ca88;
+    font-weight: bold;
+}
+
+#tags button.occupied label {
+    color: #7E97AB;
+}
+
+#tags button.focused label {
     color: #f7ca88;
     font-weight: bold;
 }

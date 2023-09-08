@@ -85,6 +85,11 @@ in {
                         };
                         on-click-right = "pavucontrol";
                     };
+
+                    river.tags = {
+                        num-tags = 9;
+                        tag-labels = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" ];
+                    };
                 };
             };
             style = cfg.theme;
