@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent  = true }
+local ui = require("harpoon.ui")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -13,8 +14,8 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
 vim.keymap.set("n", "to", ":tabnew<CR>", opts)
-vim.keymap.set("n", "tl", ":bnext<CR>", opts)
-vim.keymap.set("n", "th", ":bprev<CR>", opts)
+vim.keymap.set("n", "tl", function() ui.nav_next() end)
+vim.keymap.set("n", "th", function() ui.nav_prev() end)
 vim.keymap.set("n", "td", ":bd<CR>", opts)
 vim.keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")

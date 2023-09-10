@@ -34,7 +34,7 @@ in {
                 key_bindings = [
                     {
                         key = "N";
-                        mods = "Control";
+                        mods = "Control|Shift";
                         action = "SpawnNewInstance";
                     }
                 ];

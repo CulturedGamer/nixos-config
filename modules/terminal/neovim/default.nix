@@ -54,11 +54,10 @@ in {
             plugins = with pkgs.vimPlugins; [
                 cfg.theme
 
-                bufferline-nvim
                 comment-nvim
                 flash-nvim
                 gitsigns-nvim
-                lualine-nvim
+                harpoon
                 nvim-autopairs
                 nvim-tree-lua
                 nvim-treesitter.withAllGrammars
@@ -66,10 +65,8 @@ in {
                 orgmode
                 telescope-nvim
                 todo-comments-nvim
-                toggleterm-nvim
                 trouble-nvim
                 vimtex
-                vim-fugitive
                 vim-tmux-navigator
                 which-key-nvim
 
@@ -85,7 +82,6 @@ in {
 
                 # lsp
                 nvim-lspconfig
-                nvim-navic
             ];
         };
     };
