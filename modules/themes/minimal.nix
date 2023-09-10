@@ -61,8 +61,7 @@ in {
         tmux = {
             enable = true;
             extraConfig = ''
-                set-window-option -g window-status-fg #d8d8d8
-                set-window-option -g window-status-bg #181818
+                set -g status-style 'bg=#181818 fg=#d8d8d8'
             '';
         };
 

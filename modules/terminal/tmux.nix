@@ -102,8 +102,7 @@ in {
                 set-window-option -g other-pane-height 25
                 set-window-option -g other-pane-width 80
                 set-window-option -g display-panes-time 1500
-                set-window-option -g window-status-current-style fg=magenta
-
+                
                 bind-key a last-pane
                 bind-key q display-panes
                 bind-key c new-window
