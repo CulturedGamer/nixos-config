@@ -31,6 +31,13 @@ in {
                 ];
                 env.TERM = "xterm-256color";
                 shell.program = "fish";
+                key_bindings = [
+                    {
+                        key = "N";
+                        mods = "Control";
+                        action = "SpawnNewInstance";
+                    }
+                ];
             };
         };
     };
