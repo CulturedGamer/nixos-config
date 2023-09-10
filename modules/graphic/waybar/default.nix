@@ -19,6 +19,12 @@ in {
             default = [ ];
             description  = "Modules specific to the current compositor";
         };
+
+        barPosition = mkOption {
+            type = types.str;
+            default = "top";
+            description = "Bar position on the screen";
+        };
     };
 
     config = mkIf cfg.enable {
@@ -28,7 +34,7 @@ in {
             settings = {
                 mainBar = {
                     layer = "top";
-                    position = "top";
+                    position = "bottom";
                     height = 15;
                     output = [ "eDP-1" ];
 

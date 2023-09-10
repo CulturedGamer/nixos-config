@@ -23,6 +23,12 @@ in {
             description = "Background color (if no wallpaper is set)";
         };
 
+        borderWidth = mkOption {
+            type = types.str;
+            default = "0";
+            description = "Set border width around windows (pixels)";
+        };
+
         unfocusedBorderColor = mkOption {
             type = types.str;
             default = "0x586e75";
@@ -109,6 +115,7 @@ in {
                     done
 
                     riverctl background-color ${cfg.backgroundColor}
+                    riverctl border-width ${cfg.borderWidth}
                     riverctl border-color-focused ${cfg.focusedBorderColor}
                     riverctl border-color-unfocused ${cfg.unfocusedBorderColor}
                     riverctl focus-follows-cursor normal

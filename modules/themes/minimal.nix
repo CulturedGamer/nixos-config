@@ -95,6 +95,7 @@ in {
             theme = ../graphic/waybar/styles/minimal.css;
             wmModules = [ "river/tags" "river/window" ];
             # wmModules = [ "hyprland/workspaces" "hyprland/window" ];
+            barPosition = "bottom";
         };
     };
 }
