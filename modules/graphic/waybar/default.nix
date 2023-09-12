@@ -34,7 +34,7 @@ in {
             settings = {
                 mainBar = {
                     layer = "top";
-                    position = "bottom";
+                    position = cfg.barPosition;
                     height = 15;
                     output = [ "eDP-1" ];
 
