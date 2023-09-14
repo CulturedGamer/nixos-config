@@ -4,8 +4,8 @@
     imports = [
         ../misc/bookmarks.nix
         ../misc/firefox.nix
-        ../misc/zathura.nix
         ../misc/wallpapers.nix
+        ../misc/zathura.nix
 
         ../scripts
 

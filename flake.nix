@@ -22,7 +22,7 @@
         specialArgs = { inherit inputs; };
 
         extraModules = [ nur.nixosModules.nur ];
-        
+
         homeManagerConfiguration = {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
