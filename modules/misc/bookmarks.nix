@@ -9,5 +9,6 @@
     https://github.com/veryfastman
     https://github.com/veryfastman/nixos-config
     https://arewewaylandyet.com/
+    https://search.nixos.org/packages
   '';
 }
