@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    alacritty-files = {
+      url = "github:veryfastman/alacritty-configuration-files";
+      flake = false;
+    };
+
     shell-scripts = {
       url = "github:veryfastman/shell-scripts";
       flake = false;
@@ -26,6 +31,7 @@
     , nixpkgs
     , nur
     , home-manager
+    , alacritty-files
     , shell-scripts
     , wallpaper-collection
     }:

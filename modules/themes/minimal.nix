@@ -18,8 +18,8 @@ in
 
     ../misc/wallpapers.nix
 
-    ../terminal/tmux.nix
     ../terminal/alacritty
+    ../terminal/tmux.nix
     ../terminal/neovim
 
     ../graphic/rofi

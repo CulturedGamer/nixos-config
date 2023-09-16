@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, inputs, ... }:
 
 with lib;
 
@@ -46,8 +46,8 @@ in
       enable = true;
       settings = {
         import = [
-          ./colors/${cfg.colorscheme}.yml
-          ./fonts/${cfg.font}.yml
+          "~/.config/alacritty/colors/${cfg.colorscheme}.yml"
+          "~/.config/alacritty/fonts/${cfg.font}.yml"
         ];
         env.TERM = "xterm-256color";
         shell.program = "fish";
@@ -60,6 +60,11 @@ in
           }
         ];
       };
+    };
+
+    home.file.".config/alacritty" = {
+      source = inputs.alacritty-files;
+      recursive = true;
     };
   };
 }

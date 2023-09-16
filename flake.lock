@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "alacritty-files": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1694837807,
+        "narHash": "sha256-SbosZqLFlWYK2aFIXdMf0JOSFqf8OVYVIklOG6BfuJQ=",
+        "owner": "veryfastman",
+        "repo": "alacritty-configuration-files",
+        "rev": "1f50dffe13d39d55ed0b594beb1f5babf0673095",
+        "type": "github"
+      },
+      "original": {
+        "owner": "veryfastman",
+        "repo": "alacritty-configuration-files",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -53,6 +69,7 @@
     },
     "root": {
       "inputs": {
+        "alacritty-files": "alacritty-files",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nur": "nur",

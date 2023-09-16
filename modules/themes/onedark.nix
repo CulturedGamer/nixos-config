@@ -6,8 +6,8 @@
 
     ../misc/wallpapers.nix
 
+    ../terminal/alacritty.nix
     ../terminal/tmux.nix
-    ../terminal/alacritty
     ../terminal/neovim
 
     ../graphic/rofi
