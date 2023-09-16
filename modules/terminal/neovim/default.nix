@@ -21,6 +21,7 @@ in
 
     extraPlugins = mkOption {
       type = types.listOf types.package;
+      default = [ ];
       example = literalExpression ''
         [
           pkgs.vimPlugins.bufferline-nvim

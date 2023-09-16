@@ -35,8 +35,8 @@ in
     };
 
     opacity = mkOption {
-      type = types.int;
-      default = 1;
+      type = types.float;
+      default = 1.0;
       description = "Window transparency";
     };
   };

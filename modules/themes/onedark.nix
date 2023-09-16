@@ -41,7 +41,7 @@
     alacritty = {
       enable = true;
       colorscheme = "onedark";
-      font = "jetbrains";
+      font = "inconsolata";
       opacity = 1;
     };
 

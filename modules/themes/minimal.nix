@@ -18,7 +18,7 @@ in
 
     ../misc/wallpapers.nix
 
-    ../terminal/alacritty
+    ../terminal/alacritty.nix
     ../terminal/tmux.nix
     ../terminal/neovim
 
@@ -48,7 +48,8 @@ in
     alacritty = {
       enable = true;
       colorscheme = "base16-default-dark";
-      font = "jetbrains";
+      font = "firacode";
+      opacity = 0.8;
     };
 
     neovim = {
