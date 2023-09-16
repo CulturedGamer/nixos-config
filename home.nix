@@ -22,6 +22,7 @@
       cmus
       fish
       fzf
+      gimp
       git-crypt
       gnumake
       htop
