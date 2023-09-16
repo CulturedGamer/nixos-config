@@ -31,6 +31,7 @@ in {
                 ];
                 env.TERM = "xterm-256color";
                 shell.program = "fish";
+                window.opacity = 0.8;
                 key_bindings = [
                     {
                         key = "N";

@@ -23,4 +23,8 @@
 
     services.getty.autologinUser = "donny";
     services.upower.enable = true;
+    
+    # X11
+    services.xserver.enable = true;
+    services.xserver.displayManager.startx.enable = true;
 }

@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lspconfig = require("lspconfig")
 
 lspconfig.lua_ls.setup {
     settings = {
@@ -9,3 +9,6 @@ lspconfig.lua_ls.setup {
         }
     },
 }
+
+lspconfig.clangd.setup {}
+lspconfig.nil_ls.setup {}

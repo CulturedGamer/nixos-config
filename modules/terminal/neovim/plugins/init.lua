@@ -9,6 +9,8 @@ require ("plugins.lsp")
 require ("Comment").setup()
 require ("gitsigns").setup()
 require ("nvim-autopairs").setup()
-require ("nvim-tree").setup()
 require ("orgmode").setup()
 require ("todo-comments").setup()
+require ("transparent").setup {
+    extra_groups = { "MsgArea" }
+}

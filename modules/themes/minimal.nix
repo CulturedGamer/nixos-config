@@ -47,7 +47,7 @@ in {
         alacritty = {
             enable = true;
             colorscheme = "base16-default-dark";
-            font = "hack";
+            font = "jetbrains";
         };
 
         neovim = {
