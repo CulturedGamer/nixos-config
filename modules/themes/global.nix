@@ -1,32 +1,32 @@
 { ... }:
 
 {
-    imports = [
-        ../misc/bookmarks.nix
-        ../misc/firefox.nix
-        ../misc/wallpapers.nix
-        ../misc/zathura.nix
+  imports = [
+    ../misc/bookmarks.nix
+    ../misc/firefox.nix
+    ../misc/wallpapers.nix
+    ../misc/zathura.nix
 
-        ../scripts
+    ../misc/scripts.nix
 
-        ../terminal/bash.nix
-        ../terminal/lf.nix
-        ../terminal/starship.nix
-        ../terminal/fish.nix
-    ];
+    ../terminal/bash.nix
+    ../terminal/lf.nix
+    ../terminal/starship.nix
+    ../terminal/fish.nix
+  ];
 
-    modules = {
-        bash.enable = true;
-        firefox.enable = true;
-        lf.enable = true;
-        shell-scripts.enable = true;
-        starship.enable = true;
-        wallpapers.enable = true;
-        zathura.enable = true;
+  modules = {
+    bash.enable = true;
+    firefox.enable = true;
+    lf.enable = true;
+    shell-scripts.enable = true;
+    starship.enable = true;
+    wallpapers.enable = true;
+    zathura.enable = true;
 
-        fish = {
-            enable = true;
-            enableShellAliases = true;
-        };
+    fish = {
+      enable = true;
+      enableShellAliases = true;
     };
+  };
 }

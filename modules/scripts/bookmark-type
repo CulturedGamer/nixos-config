@@ -1,3 +1,0 @@
-#!/bin/sh
-
-wtype $(grep -v '^#' ~/.local/bookmarks/urls.txt | rofi -dmenu | cut -d' ' -f1)

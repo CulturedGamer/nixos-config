@@ -1,8 +1,0 @@
-#!/bin/sh
-
-echo 'Project name:'
-read NAME
-echo 'Location:'
-read PROJECT_PATH
-cp -r ~/Templates/cpp_template/ $PROJECT_PATH
-mv cpp_template $NAME

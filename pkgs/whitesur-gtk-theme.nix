@@ -9,10 +9,10 @@
 , libxml2
 , sassc
 , util-linux
-, altVariants ? [] # default: normal
-, colorVariants ? [] # default: all
-, opacityVariants ? [] # default: all
-, themeVariants ? [] # default: default (BigSur-like theme)
+, altVariants ? [ ] # default: normal
+, colorVariants ? [ ] # default: all
+, opacityVariants ? [ ] # default: all
+, themeVariants ? [ ] # default: default (BigSur-like theme)
 , nautilusSize ? null # default: 200px
 , panelOpacity ? null # default: 15%
 , panelSize ? null # default: 32px
@@ -24,14 +24,21 @@ let
 
 in
 lib.checkListOfEnum "${pname}: alt variants" [ "normal" "alt" "all" ] altVariants
-lib.checkListOfEnum "${pname}: color variants" [ "Light" "Dark" ] colorVariants
-lib.checkListOfEnum "${pname}: opacity variants" [ "normal" "solid" ] opacityVariants
-lib.checkListOfEnum "${pname}: theme variants" [ "default" "blue" "purple" "pink" "red" "orange" "yellow" "green" "grey" "all" ] themeVariants
-lib.checkListOfEnum "${pname}: nautilus sidebar minimum width" [ "default" "180" "220" "240" "260" "280" ] (single nautilusSize)
-lib.checkListOfEnum "${pname}: panel opacity" [ "default" "30" "45" "60" "75" ] (single panelOpacity)
-lib.checkListOfEnum "${pname}: panel size" [ "default" "smaller" "bigger" ] (single panelSize)
+  lib.checkListOfEnum "${pname}: color variants" [ "Light" "Dark" ]
+  colorVariants
+  lib.checkListOfEnum "${pname}: opacity variants" [ "normal" "solid" ]
+  opacityVariants
+  lib.checkListOfEnum "${pname}: theme variants" [ "default" "blue" "purple" "pink" "red" "orange" "yellow" "green" "grey" "all" ]
+  themeVariants
+  lib.checkListOfEnum "${pname}: nautilus sidebar minimum width" [ "default" "180" "220" "240" "260" "280" ]
+  (single nautilusSize)
+  lib.checkListOfEnum "${pname}: panel opacity" [ "default" "30" "45" "60" "75" ]
+  (single panelOpacity)
+  lib.checkListOfEnum "${pname}: panel size" [ "default" "smaller" "bigger" ]
+  (single panelSize)
 
-stdenv.mkDerivation rec {
+  stdenv.mkDerivation
+rec {
   pname = "whitesur-gtk-theme";
   version = "2023-06-30";
 

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-echo "machine:"
-read MACHINE_OPTION
-echo "build option:"
-read BUILD_OPTION
-
-sudo nixos-rebuild ${BUILD_OPTION} --flake /etc/nixos#${MACHINE_OPTION}

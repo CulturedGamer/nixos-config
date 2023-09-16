@@ -3,102 +3,109 @@
 with lib;
 
 let
-    cfg = config.modules.waybar;
-in {
-    options.modules.waybar = {
-        enable = mkEnableOption "Waybar";
+  cfg = config.modules.waybar;
+in
+{
+  options.modules.waybar = {
+    enable = mkEnableOption "Waybar";
 
-        theme = mkOption {
-            type = types.nullOr types.path;
-            default = null;
-            description = "Custom Waybar theme";
-        };
-
-        wmModules = mkOption {
-            type = types.listOf types.str;
-            default = [ ];
-            description  = "Modules specific to the current compositor";
-        };
-
-        barPosition = mkOption {
-            type = types.str;
-            default = "top";
-            description = "Bar position on the screen";
-        };
+    theme = mkOption {
+      type = types.nullOr types.path;
+      default = null;
+      description = "Custom Waybar theme";
     };
 
-    config = mkIf cfg.enable {
-        programs.waybar = {
-            enable = true;
-            package = pkgs.waybar;
-            settings = {
-                mainBar = {
-                    layer = "top";
-                    position = cfg.barPosition;
-                    height = 15;
-                    output = [ "eDP-1" ];
+    wmModules = mkOption {
+      type = types.listOf types.str;
+      default = [ ];
+      description = "Modules specific to the current compositor";
+    };
 
-                    modules-left = cfg.wmModules;
-                    modules-right = [ "tray" "network" "battery" "disk"  "memory" "backlight" "pulseaudio" "clock" ];
+    barHeight = mkOption {
+      type = types.int;
+      default = 15;
+      description = "Waybar height";
+    };
 
-                    backlight = {
-                        format = "{icon} {percent}%";
-                        format-icons = [ "" "" ];
-                    };
+    barPosition = mkOption {
+      type = types.str;
+      default = "top";
+      description = "Bar position on the screen";
+    };
+  };
 
-                    battery = {
-                        format = "{icon} ";
-                        format-alt = "{icon} {capacity}%";
-                        format-icons = [" " " " " " " " " "];
-                        states = {
-                            warning = 30;
-                            critical = 10;
-                        };
-                    };
+  config = mkIf cfg.enable {
+    programs.waybar = {
+      enable = true;
+      package = pkgs.waybar;
+      settings = {
+        mainBar = {
+          layer = "top";
+          position = cfg.barPosition;
+          height = cfg.barHeight;
+          output = [ "eDP-1" ];
 
-                    clock = {
-                        format = " {:%I:%M}";
-                        format-alt = " {:%m/%d/%Y}";
-                    };
+          modules-left = cfg.wmModules;
+          modules-right = [ "tray" "network" "battery" "disk" "memory" "backlight" "pulseaudio" "clock" ];
 
-                    disk = {
-                        format = "󰨣 {percentage_free}%";
-                        format-alt = "󰨣 {free} free";
-                        on-click-right = "nemo";
-                        path = "/";
-                    };
+          backlight = {
+            format = "{icon} {percent}%";
+            format-icons = [ "" "" ];
+          };
 
-                    memory = {
-                        format = "󰍹 {}%";
-                        format-alt = "󰍹 {used}GiB";
-                        on-click-right = "alacritty -e htop";
-                    };
-
-                    network = {
-                        format = "{icon}";
-                        format-alt = "{essid} ({signalStrength}%) {icon}";
-                        format-icons = [ "󰤯" "󰤟" "󰤢" "󰤢" "󰤨" ];
-                        on-click-right = "alacritty -e nmcli";
-                    };
-
-                    pulseaudio = {
-                        format = "{icon} {volume}%";
-                        format-alt = "{icon} {description}";
-                        format-bluetooth = "{icon}󰂯 {volume}%";
-                        format-muted = "󰝟";
-                        format-icons = {
-                            default = [ "" "" ];
-                        };
-                        on-click-right = "pavucontrol";
-                    };
-
-                    river.tags = {
-                        num-tags = 9;
-                        tag-labels = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" ];
-                    };
-                };
+          battery = {
+            format = "{icon} ";
+            format-alt = "{icon} {capacity}%";
+            format-icons = [ " " " " " " " " " " ];
+            states = {
+              warning = 30;
+              critical = 10;
             };
-            style = cfg.theme;
+          };
+
+          clock = {
+            format = " {:%I:%M}";
+            format-alt = " {:%m/%d/%Y}";
+          };
+
+          disk = {
+            format = "󰨣 {percentage_free}%";
+            format-alt = "󰨣 {free} free";
+            on-click-right = "nemo";
+            path = "/";
+          };
+
+          memory = {
+            format = "󰍹 {}%";
+            format-alt = "󰍹 {used}GiB";
+            on-click-right = "alacritty -e htop";
+          };
+
+          network = {
+            format = "{icon}";
+            format-alt = "{essid} ({signalStrength}%) {icon}";
+            format-icons = [ "󰤯" "󰤟" "󰤢" "󰤢" "󰤨" ];
+            on-click-right = "alacritty -e nmcli";
+          };
+
+          pulseaudio = {
+            format = "{icon} {volume}%";
+            format-alt = "{icon} {description}";
+            format-bluetooth = "{icon}󰂯 {volume}%";
+            format-muted = "󰝟";
+            format-icons = {
+              default = [ "" "" ];
+            };
+            on-click-right = "pavucontrol";
+          };
+
+          river.tags = {
+            num-tags = 9;
+            tag-labels = [ "1" "2" "3" "4" "5" "6" "7" "8" "9" ];
+          };
         };
+      };
+      style = cfg.theme;
     };
+  };
 }
