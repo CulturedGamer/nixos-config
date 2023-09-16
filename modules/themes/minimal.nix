@@ -33,7 +33,7 @@ in
     font.name = "Noto";
     theme = {
       name = "WhiteSur-Dark";
-      package = pkgs.callPackage ../../pkgs/whitesur-gtk-theme.nix {
+      package = pkgs.callPackage ../../pkgs/whitesur-gtk-theme {
         colorVariants = [ "Dark" ];
       };
     };

@@ -33,7 +33,7 @@
 
   users.users.donny = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "keyd" "networkmanager" "wheel" ];
     home = "/home/donny";
   };
 

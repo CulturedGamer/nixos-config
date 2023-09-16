@@ -3,7 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../global.nix
+    ../common
+    ../common/keyd.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
