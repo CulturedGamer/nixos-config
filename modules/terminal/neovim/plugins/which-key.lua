@@ -14,5 +14,7 @@ require("which-key").register({
   },
   a = { harpoon_mark.add_file, "Mark file with Harpoon" },
   m = { harpoon_ui.toggle_quick_menu, "Toggle a menu to view marks" },
+  h = { name = "Harpoon previous" },
+  l = { name = "Harpoon next" },
   o = { name = "Org" },
 }, { prefix = "<leader>" })
