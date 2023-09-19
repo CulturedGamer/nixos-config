@@ -42,7 +42,6 @@
       texlive.combined.scheme-full
       unzip
       xdotool
-      xdg-user-dirs
       xwallpaper
       wl-clipboard
       wtype
