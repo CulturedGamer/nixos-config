@@ -80,11 +80,11 @@
     "shell-scripts": {
       "flake": false,
       "locked": {
-        "lastModified": 1695269686,
-        "narHash": "sha256-20RjSVHiIrXEG7+/hmvLTtSLGbxKvagBiC8N4z5qqEk=",
+        "lastModified": 1695269930,
+        "narHash": "sha256-Nl6LQ/Mn0mRc/L5KC2+Ry4cGhLeNVSLuPcz0BfeBFvM=",
         "owner": "veryfastman",
         "repo": "shell-scripts",
-        "rev": "20979ca620b89db48bef1682dff6070647b1cf61",
+        "rev": "687dfcb9f6410f773402b21c1176ff462b0fcfae",
         "type": "github"
       },
       "original": {
