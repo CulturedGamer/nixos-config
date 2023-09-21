@@ -8,7 +8,7 @@ in
 {
   options.modules.wallpapers.enable = mkEnableOption "Wallpaper directory";
   config = mkIf cfg.enable {
-    home.file."Pictures/wallpapers" = {
+    home.file."pictures/wallpapers" = {
       source = inputs.wallpaper-collection;
       recursive = true;
     };

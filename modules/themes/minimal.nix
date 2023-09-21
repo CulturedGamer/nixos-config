@@ -70,7 +70,7 @@ in
     # Desktop
     river = {
       enable = true;
-      wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/ripple_wallpaper.png";
+      wallpaperCommand = "swaybg -i ~/pictures/wallpapers/ripple_wallpaper.png";
       backgroundColor = "0x181818";
       borderWidth = "1";
       focusedBorderColor = "0x7E97AB";
