@@ -34,7 +34,7 @@
         Type = "simple";
         ExecStart = "${pkgs.keyd}/bin/keyd";
       };
-      wantedBy = [ "multi-user.target" ];
+      wantedBy = [ "sysinit.target" ];
     };
   };
 }

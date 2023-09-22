@@ -19,6 +19,7 @@ in
         v = "nvim";
         nd = "cd /etc/nixos";
         diro = "ll | awk '(NR>1) { print $9 }'";
+        fdh = "cd $(find . -type d -path '*/.*' -prune -o -not -name '.*' -type d -print | fzf)";
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
         lg = "lazygit";
         se = "sudoedit";
