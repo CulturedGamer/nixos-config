@@ -28,16 +28,9 @@
       package = pkgs.nordzy-icon-theme;
     };
     cursorTheme = {
-      name = "Nordzy-cursors";
+      name = "Capitaine Cursors (Nord)";
       package = pkgs.nordzy-cursor-theme;
     };
-  };
-
-  home.pointerCursor = {
-    package = pkgs.nordzy-cursor-theme;
-    name = "Nordzy-cursors";
-    x11.enable = true;
-    gtk.enable = true;
   };
 
   modules = {
