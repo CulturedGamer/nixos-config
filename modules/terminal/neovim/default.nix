@@ -4,16 +4,6 @@ with lib;
 
 let
   cfg = config.modules.neovim;
-
-  transparent-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "transparent-nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "xiyaowong";
-      repo = "transparent.nvim";
-      rev = "3af6232c8d39d51062702e875ff6407c1eeb0391";
-      sha256 = "17imywr9kxprw5c0d9c0vfxkbn06asacr2y3ka7x1d22f309z76l";
-    };
-  };
 in
 {
   options.modules.neovim = {
@@ -68,8 +58,8 @@ in
       recursive = true;
     };
 
+    # language servers
     home.packages = with pkgs; [
-      # language servers
       clang-tools
       lua-language-server
       nil
@@ -90,7 +80,6 @@ in
 
       plugins = with pkgs.vimPlugins; cfg.extraPlugins ++ [
         cfg.theme
-        transparent-nvim
 
         comment-nvim
         flash-nvim
@@ -116,8 +105,6 @@ in
         luasnip
         cmp_luasnip
         friendly-snippets
-
-        # lsp
         nvim-lspconfig
       ];
     };

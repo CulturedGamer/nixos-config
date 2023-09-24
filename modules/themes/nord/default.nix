@@ -54,10 +54,13 @@
       extraPlugins = with pkgs.vimPlugins; [
         bufferline-nvim
         lualine-nvim
+        nvim-tree-lua
       ];
       extraPluginsConfiguration = ''
         require("bufferline").setup()
         require("lualine").setup()
+        require("nvim-tree").setup()
+        vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })
       '';
       theme = pkgs.vimPlugins.nightfox-nvim;
       themeConfiguration = ''
@@ -68,7 +71,6 @@
             }
           }
         }
-
         vim.cmd.colorscheme "nordfox"
       '';
     };

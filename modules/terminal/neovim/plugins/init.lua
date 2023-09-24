@@ -11,6 +11,3 @@ require("gitsigns").setup()
 require("nvim-autopairs").setup()
 require("orgmode").setup()
 require("todo-comments").setup()
-require("transparent").setup {
-  extra_groups = { "MsgArea" },
-}
