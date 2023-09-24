@@ -90,8 +90,8 @@
       borderWidth = "3";
       focusedBorderColor = "0x81a1c1";
       unfocusedBorderColor = "0x767676";
-      viewPadding = "8";
-      outerPadding = "8";
+      viewPadding = "5";
+      outerPadding = "5";
     };
 
     rofi = {
