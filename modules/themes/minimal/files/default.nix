@@ -13,19 +13,18 @@ let
 in
 {
   imports = [
-    # ../desktop/hyprland.nix
-    ../desktop/river.nix
+    ../../desktop/river.nix
 
-    ../misc/wallpapers.nix
+    ../../misc/wallpapers.nix
 
-    ../terminal/alacritty.nix
-    ../terminal/tmux.nix
-    ../terminal/neovim
+    ../../terminal/alacritty.nix
+    ../../terminal/tmux.nix
+    ../../terminal/neovim
 
-    ../graphic/rofi
-    ../graphic/waybar/default.nix
+    ../../graphic/rofi
+    ../../graphic/waybar/default.nix
 
-    ./global.nix
+    ../global.nix
   ];
 
   gtk = {
@@ -47,9 +46,9 @@ in
     # Terminal
     alacritty = {
       enable = true;
-      colorscheme = "base16-default-dark";
-      font = "firacode";
-      opacity = 0.8;
+      colorscheme = "nord";
+      font = "roboto-mono";
+      opacity = 1.0;
     };
 
     neovim = {
@@ -77,16 +76,9 @@ in
       unfocusedBorderColor = "0x626262";
     };
 
-    # hyprland = {
-    #     enable = true;
-    #     wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/dark_city_morning.jpg";
-    #     activeBorderColor = "9d9d9d";
-    #     inactiveBorderColor = "626262";
-    # };
-
     rofi = {
       enable = true;
-      theme = ../graphic/rofi/themes/minimal.rasi;
+      theme = ./files/minimal-rofi.css;
     };
 
     wallpapers = {
@@ -95,9 +87,8 @@ in
 
     waybar = {
       enable = true;
-      theme = ../graphic/waybar/styles/minimal.css;
+      theme = ./files/minimal-waybar.css;
       wmModules = [ "river/tags" "river/window" ];
-      # wmModules = [ "hyprland/workspaces" "hyprland/window" ];
       barPosition = "top";
     };
   };

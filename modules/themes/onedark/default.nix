@@ -2,18 +2,18 @@
 
 {
   imports = [
-    ../desktop/hyprland.nix
+    ../../desktop/hyprland.nix
 
-    ../misc/wallpapers.nix
+    ../../misc/wallpapers.nix
 
-    ../terminal/alacritty.nix
-    ../terminal/tmux.nix
-    ../terminal/neovim
+    ../../terminal/alacritty.nix
+    ../../terminal/tmux.nix
+    ../../terminal/neovim
 
-    ../graphic/rofi
-    ../graphic/waybar/default.nix
+    ../../graphic/rofi
+    ../../graphic/waybar/default.nix
 
-    ./global.nix
+    ../global.nix
   ];
 
   gtk = {
@@ -78,7 +78,7 @@
 
     rofi = {
       enable = true;
-      theme = ../graphic/rofi/themes/onedark.rasi;
+      theme = ./files/onedark-rofi.rasi;
     };
 
     wallpapers = {
@@ -88,7 +88,7 @@
     waybar = {
       enable = true;
       barHeight = 30;
-      theme = ../graphic/waybar/styles/onedark.css;
+      theme = ./files/onedark-waybar.css;
       wmModules = [ "hyprland/workspaces" "hyprland/window" ];
     };
   };

@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./modules/themes/minimal.nix
-    # ./modules/themes/onedark.nix
+    # ./modules/themes/minimal
+    # ./modules/themes/onedark
+    ./modules/themes/nord
   ];
 
   programs.home-manager.enable = true;
