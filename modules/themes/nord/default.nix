@@ -28,8 +28,8 @@
       package = pkgs.nordzy-icon-theme;
     };
     cursorTheme = {
-        name = "Nordzy-cursors";
-        package = pkgs.nordzy-cursor-theme;
+      name = "Nordzy-cursors";
+      package = pkgs.nordzy-cursor-theme;
     };
   };
 
@@ -44,7 +44,7 @@
     # Terminal
     alacritty = {
       enable = true;
-      colorscheme = "onedark";
+      colorscheme = "nord";
       font = "roboto-mono";
       opacity = 1.0;
     };
@@ -88,6 +88,8 @@
       borderWidth = "3";
       focusedBorderColor = "0x81a1c1";
       unfocusedBorderColor = "0x767676";
+      viewPadding = "8";
+      outerPadding = "8";
     };
 
     rofi = {

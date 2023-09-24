@@ -41,6 +41,18 @@ in
       default = "0x93a1a1";
       description = "Active window border color";
     };
+
+    viewPadding = mkOption {
+      type = types.str;
+      default = "0";
+      description = "Padding around views in pixels.";
+    };
+
+    outerPadding = mkOption {
+      type = types.str;
+      default = "0";
+      description = "Padding around the edge of the layout area in pixels";
+    };
   };
 
   config = mkIf cfg.enable {
@@ -124,7 +136,7 @@ in
             riverctl set-cursor-warp on-focus-change
             riverctl set-repeat 110 210
             riverctl default-layout rivertile
-            rivertile -view-padding 3 -outer-padding 3 -main-ratio 0.5 &
+            rivertile -view-padding ${viewPadding} -outer-padding ${outerPadding} -main-ratio 0.5 &
 
             riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
