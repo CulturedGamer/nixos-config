@@ -1,8 +1,8 @@
 * {
-    background: #2e3440;
+    background: #232831;
     border: none;
     border-radius: 0;
-    color: #d8dee9;
+    color: #cdcecf;
     font-family: JetBrainsMonoNerdFont;
     font-size: 12px;
     margin: 0;
@@ -14,6 +14,7 @@
 #disk,
 #memory,
 #pulseaudio,
+#tags,
 #tray,
 #window {
     margin-right: 8px;
@@ -25,6 +26,10 @@
     margin-right: 5px;
     margin-left: 5px;
     font-size: 14px;
+}
+
+#tags button.occupied label {
+    color: #5a84ae;
 }
 
 #tags button.focused label {

@@ -18,7 +18,7 @@
 
   gtk = {
     enable = true;
-    font.name = "RobotoMonoNerdFont";
+    font.name = "JetBrainsMonoNerdFont";
     theme = {
       name = "Nordic";
       package = pkgs.nordic;
@@ -45,7 +45,7 @@
     alacritty = {
       enable = true;
       colorscheme = "nord";
-      font = "roboto-mono";
+      font = "jetbrains";
       opacity = 1.0;
     };
 
@@ -87,11 +87,11 @@
       enable = true;
       wallpaperCommand = "swaybg -i ~/pictures/wallpapers/early_snow_town.jpg";
       backgroundColor = "0x81a1c1";
-      borderWidth = "3";
+      borderWidth = "2";
       focusedBorderColor = "0x81a1c1";
       unfocusedBorderColor = "0x767676";
-      viewPadding = "5";
-      outerPadding = "5";
+      viewPadding = "4";
+      outerPadding = "4";
     };
 
     rofi = {

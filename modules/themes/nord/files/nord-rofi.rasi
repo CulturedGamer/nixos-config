@@ -28,7 +28,7 @@ element {
 }
 
 element selected {
-    text-color: @bg;
+    text-color: #81a1c1;
     background-color: @bg-selected;
     border: 0px solid;
     border-radius: 0px;
