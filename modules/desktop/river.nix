@@ -136,7 +136,7 @@ in
             riverctl set-cursor-warp on-focus-change
             riverctl set-repeat 110 210
             riverctl default-layout rivertile
-            rivertile -view-padding ${viewPadding} -outer-padding ${outerPadding} -main-ratio 0.5 &
+            rivertile -view-padding ${cfg.viewPadding} -outer-padding ${cfg.outerPadding} -main-ratio 0.5 &
 
             riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
