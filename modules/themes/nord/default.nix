@@ -28,9 +28,16 @@
       package = pkgs.nordzy-icon-theme;
     };
     cursorTheme = {
-      name = "Capitaine Cursors (Nord)";
+      name = "Nordzy-cursors";
       package = pkgs.nordzy-cursor-theme;
     };
+  };
+
+  home.pointerCursor = {
+    package = pkgs.nordzy-cursor-theme;
+    name = "Nordzy-cursors";
+    x11.enable = true;
+    gtk.enable = true;
   };
 
   modules = {
@@ -78,7 +85,7 @@
     # Desktop
     river = {
       enable = true;
-      wallpaperCommand = "swaybg -i ~/pictures/wallpapers/early_snow_town.jpg";
+      wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/early_snow_town.jpg";
       backgroundColor = "0x81a1c1";
       borderWidth = "2";
       focusedBorderColor = "0x81a1c1";
