@@ -12,6 +12,11 @@ require("which-key").register({
     b = { builtin.buffers, "Search Buffers" },
     c = { builtin.colorscheme, "Colorscheme" },
   },
+  c = {
+    name = "Compile",
+    c = { name = "Nix Build" },
+    v = { name = "Nix Run" }
+  },
   a = { harpoon_mark.add_file, "Mark file with Harpoon" },
   m = { harpoon_ui.toggle_quick_menu, "Toggle a menu to view marks" },
   h = { name = "Harpoon previous" },
