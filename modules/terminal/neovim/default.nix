@@ -85,10 +85,10 @@ in
         flash-nvim
         gitsigns-nvim
         harpoon
+        neorg
         nvim-autopairs
         nvim-treesitter.withAllGrammars
         nvim-web-devicons
-        orgmode
         telescope-nvim
         todo-comments-nvim
         trouble-nvim

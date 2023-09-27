@@ -21,5 +21,4 @@ require("which-key").register({
   m = { harpoon_ui.toggle_quick_menu, "Toggle a menu to view marks" },
   h = { name = "Harpoon previous" },
   l = { name = "Harpoon next" },
-  o = { name = "Org" },
 }, { prefix = "<leader>" })
