@@ -4,7 +4,9 @@ require('neorg').setup {
     ["core.concealer"] = {},
 
     ["core.completion"] = {
-      engine = "nvim-cmp"
+      config = {
+        engine = "nvim-cmp"
+      }
     };
 
     ["core.dirman"] = {

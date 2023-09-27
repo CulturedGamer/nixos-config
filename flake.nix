@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    neorg-overlay = {
+      url = "github:nvim-neorg/nixpkgs-neorg-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     alacritty-files = {
       url = "github:veryfastman/alacritty-configuration-files";
       flake = false;
@@ -31,6 +36,7 @@
     , nixpkgs
     , nur
     , home-manager
+    , neorg-overlay
     , alacritty-files
     , shell-scripts
     , wallpaper-collection
@@ -49,9 +55,11 @@
           _module.args.nur = { inherit nur; };
         };
         home-manager.extraSpecialArgs = { inherit inputs; };
-        nixpkgs.overlays = [ nur.overlay ];
+        nixpkgs.overlays = [
+          neorg-overlay.overlays.default
+          nur.overlay
+        ];
       };
-
     in
     {
       nixosConfigurations = {
