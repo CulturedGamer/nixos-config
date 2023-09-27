@@ -5,11 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/nur";
 
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +35,6 @@
     inputs@{ self
     , nixpkgs
     , nur
-    , neovim-nightly-overlay
     , home-manager
     , neorg-overlay
     , alacritty-files
@@ -63,7 +57,6 @@
         home-manager.extraSpecialArgs = { inherit inputs; };
         nixpkgs.overlays = [
           neorg-overlay.overlays.default
-          neovim-nightly-overlay.overlay
           nur.overlay
         ];
       };
