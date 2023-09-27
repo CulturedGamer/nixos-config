@@ -17,9 +17,7 @@ require('neorg').setup {
     ["core.dirman"] = {
       config = {
         workspaces = {
-          school = "~/Documents/school",
-          notes = "~/Documents/notes",
-          learning = "~/Documents/learning"
+            neorg = "~/Documents/neorg/"
         }
       }
     }
