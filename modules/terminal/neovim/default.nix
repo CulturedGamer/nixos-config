@@ -67,6 +67,7 @@ in
 
     programs.neovim = {
       enable = true;
+      package = pkgs.neovim-nightly;
       defaultEditor = true;
 
       extraLuaConfig = ''

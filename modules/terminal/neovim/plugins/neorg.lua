@@ -3,6 +3,9 @@ require('neorg').setup {
     ["core.defaults"] = {},
     ["core.concealer"] = {},
 
+    -- Commenting this out until the module works again
+    -- ["core.tempus"] = {},
+
     ["core.completion"] = {
       config = {
         engine = "nvim-cmp"
