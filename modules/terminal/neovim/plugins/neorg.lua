@@ -3,6 +3,7 @@ require('neorg').setup {
     ["core.defaults"] = {},
     ["core.concealer"] = {},
     ["core.summary"] = {},
+    ["core.ui.calendar"] = {},
 
     -- Commenting this out until the module works again
     -- ["core.tempus"] = {},
