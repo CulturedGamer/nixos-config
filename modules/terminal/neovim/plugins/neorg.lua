@@ -2,6 +2,7 @@ require('neorg').setup {
   load = {
     ["core.defaults"] = {},
     ["core.concealer"] = {},
+    ["core.summary"] = {},
 
     -- Commenting this out until the module works again
     -- ["core.tempus"] = {},
