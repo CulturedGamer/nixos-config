@@ -10,16 +10,6 @@ let
       sha256 = "0p0cf8n927k7xzgxz77g73aj7dsj3axmzq4f8qj51c3ngq9kcy66";
     };
   };
-
-  transparent-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "transparent-nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "xiyaowong";
-      repo = "transparent.nvim";
-      rev = "3af6232c8d39d51062702e875ff6407c1eeb0391";
-      sha256 = "17imywr9kxprw5c0d9c0vfxkbn06asacr2y3ka7x1d22f309z76l";
-    };
-  };
 in
 {
   imports = [
@@ -42,7 +32,7 @@ in
     font.name = "Noto";
     theme = {
       name = "WhiteSur-Dark";
-      package = pkgs.callPackage ../../pkgs/whitesur-gtk-theme.nix {
+      package = pkgs.callPackage ../../../pkgs/whitesur-gtk-theme.nix {
         colorVariants = [ "Dark" ];
       };
     };
@@ -56,19 +46,13 @@ in
     # Terminal
     alacritty = {
       enable = true;
-      colorscheme = "nord";
+      colorscheme = "base16-default-dark";
       font = "roboto-mono";
       opacity = 1.0;
     };
 
     neovim = {
       enable = true;
-      extraPlugins = [ transparent-nvim ];
-      extraPluginsConfiguration = ''
-        require("transparent").setup {
-          extra_groups = { "MsgArea" },
-        }
-      '';
       theme = no-clown-fiesta-nvim;
       themeConfiguration = ''
         vim.cmd.colorscheme "no-clown-fiesta"
@@ -85,7 +69,7 @@ in
     # Desktop
     river = {
       enable = true;
-      wallpaperCommand = "swaybg -i ~/pictures/wallpapers/ripple_wallpaper.png";
+      wallpaperCommand = "swaybg -i ~/Pictures/wallpapers/ripple_wallpaper.png";
       backgroundColor = "0x181818";
       borderWidth = "1";
       focusedBorderColor = "0x7E97AB";
