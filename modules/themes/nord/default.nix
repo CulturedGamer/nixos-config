@@ -57,9 +57,18 @@
         nvim-tree-lua
       ];
       extraPluginsConfiguration = ''
-        require("bufferline").setup()
         require("lualine").setup()
         require("nvim-tree").setup()
+
+        require("bufferline").setup {
+          options = {
+            close_command = "Bdelete! %d",
+            right_mouse_command = "Bdelete! %d",
+            offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+            separator_style = "thin",
+          },
+        }
+
         vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })
       '';
       theme = pkgs.vimPlugins.nightfox-nvim;
@@ -70,7 +79,7 @@
               bg1 = "#232831"
             }
           }
-        }
+
         vim.cmd.colorscheme "nordfox"
       '';
     };
