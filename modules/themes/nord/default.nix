@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     ../../desktop/river.nix
 
@@ -52,12 +50,20 @@
     neovim = {
       enable = true;
       extraPlugins = with pkgs.vimPlugins; [
+        bufferline-nvim
         lualine-nvim
         nvim-tree-lua
       ];
       extraPluginsConfiguration = ''
         require("lualine").setup()
         require("nvim-tree").setup()
+
+        require("bufferline").setup {
+          options = {
+            separator_style = "slant"
+          }
+        }
+
         vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })
       '';
       theme = pkgs.vimPlugins.nightfox-nvim;
@@ -105,7 +111,7 @@
       enable = true;
       barHeight = 30;
       theme = ./files/nord-waybar.css;
-      wmModules = [ "river/tags" "river/window" ];
+      wmModules = ["river/tags" "river/window"];
     };
   };
 }
