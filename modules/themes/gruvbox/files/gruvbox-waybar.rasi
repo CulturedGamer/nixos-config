@@ -1,0 +1,39 @@
+* {
+    background: #1d2021;
+    border: none;
+    border-radius: 0;
+    color: #ebdbb2;
+    font-family: RobotoMonoNerdFont;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#backlight,
+#clock,
+#disk,
+#memory,
+#pulseaudio,
+#tray,
+#window,
+#workspaces {
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+#battery,
+#network {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+#tags button.focused label {
+    color: #4fa6ed;
+    font-weight: bold;
+}
+
+#workspaces button.active label {
+    color: #4fa6ed;
+    font-weight: bold;
+}

@@ -111,7 +111,7 @@
       enable = true;
       barHeight = 30;
       theme = ./files/nord-waybar.css;
-      wmModules = ["river/tags" "river/window"];
+      wmModules = [ "river/tags" "river/window" ];
     };
   };
 }

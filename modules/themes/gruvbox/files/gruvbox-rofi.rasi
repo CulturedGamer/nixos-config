@@ -1,0 +1,92 @@
+* {
+    bg: #1d2021;
+    bg-selected: #282828;
+
+    fg: #ebdbb2;
+
+    border-color: @bg-selected;
+    border-radius: 0px;
+
+    border: 1;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 30%;
+    background-color: @bg;
+}
+
+element {
+    padding: 8 12;
+    background-color: transparent;
+    text-color: @fg;
+    border: 0px solid;
+    border-radius: 0px;
+    spacing: 10px;
+}
+
+element selected {
+    text-color: #458588;
+    background-color: @bg-selected;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+element-icon {
+    size: 25;
+    padding: 0 10 0 0;
+    background-color: transparent;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+entry {
+    padding: 12;
+    background-color: @bg;
+    text-color: @fg;
+    placeholder: "Search";
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg;
+    padding: 5;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+listview {
+    background-color: @bg;
+    columns: 1;
+    lines: 10;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: @bg;
+    border: 0px solid;
+    border-radius: 0px;
+}
+
+prompt {
+    enabled: true;
+    padding: 12 0 0 12;
+    background-color: @bg;
+    text-color: @fg;
+    border: 0px solid;
+    border-radius: 0px;
+}

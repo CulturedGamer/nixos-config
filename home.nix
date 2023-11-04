@@ -2,9 +2,10 @@
 
 {
   imports = [
+        ./modules/themes/gruvbox
     # ./modules/themes/minimal
+    # ./modules/themes/nord
     # ./modules/themes/onedark
-    ./modules/themes/nord
   ];
 
   programs.home-manager.enable = true;
