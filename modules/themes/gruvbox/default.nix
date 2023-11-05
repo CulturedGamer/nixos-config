@@ -51,12 +51,15 @@
 
     neovim = {
       enable = true;
-      theme = pkgs.vimPlugins.gruvbox-material;
+      theme = pkgs.vimPlugins.gruvbox-nvim;
       themeConfiguration = ''
-        vim.g.gruvbox_material_background = "hard"
-        vim.g.gruvbox_material_foreground = "material"
-        vim.g.gruvbox_material_better_performance = 1
-        vim.cmd.colorscheme "gruvbox-material"
+        require("gruvbox").setup {
+          contrast = "hard",
+          palette_overrides = {
+            
+          }
+        }
+        vim.cmd.colorscheme "gruvbox"
       '';
     };
 

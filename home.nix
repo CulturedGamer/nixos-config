@@ -27,6 +27,7 @@
       gimp
       git-crypt
       gnumake
+      grapejuice
       htop
       imv
       lazygit
@@ -46,6 +47,7 @@
       xdotool
       xdg-user-dirs
       xwallpaper
+      wine-wayland
       wl-clipboard
       wtype
       yewtube
