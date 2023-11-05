@@ -2,7 +2,7 @@
 
 {
   imports = [
-        ./modules/themes/gruvbox
+    ./modules/themes/gruvbox
     # ./modules/themes/minimal
     # ./modules/themes/nord
     # ./modules/themes/onedark
@@ -27,7 +27,6 @@
       gimp
       git-crypt
       gnumake
-      grapejuice
       htop
       imv
       lazygit
