@@ -24,12 +24,12 @@
       package = pkgs.gruvbox-gtk-theme;
     };
     iconTheme = {
-      name = "gruvbox-dark-icons-gtk";
-      package = pkgs.gruvbox-dark;
+      name = "gruvbox-dark";
+      package = pkgs.gruvbox-dark-icons-gtk;
     };
     cursorTheme = {
       name = "Capitaine Cursors (Gruvbox)";
-      package = "capitaine-cursors-themed";
+      package = pkgs.capitaine-cursors-themed;
     };
   };
 
@@ -46,7 +46,7 @@
       enable = true;
       colorscheme = "gruvbox";
       font = "inconsolata";
-      opacity = 1;
+      opacity = 1.0;
     };
 
     neovim = {
@@ -62,7 +62,7 @@
 
     tmux = {
       enable = true;
-      extraOptions = ''
+      extraConfig = ''
         set -g status-style 'bg=#282828 fg=#fbf1c7'
       '';
     };
