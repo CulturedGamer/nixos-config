@@ -14,11 +14,14 @@
 #disk,
 #memory,
 #pulseaudio,
-#tags,
 #tray,
 #window {
     margin-right: 8px;
     margin-left: 8px;
+}
+
+#tags button {
+    margin: -10px;
 }
 
 #battery,
@@ -33,10 +36,10 @@
 }
 
 #tags button.focused label {
-    color: #4fa6ed;
+    color: #7daea3;
 }
 
 #workspaces button.active label {
-    color: #4fa6ed;
+    color: #7daea3;
     font-weight: bold;
 }

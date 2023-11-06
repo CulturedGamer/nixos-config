@@ -16,11 +16,5 @@
     extraPackages = [ pkgs.mesa.drivers ];
   };
 
-  services.flatpak.enable = true;
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-  };
-
   services.upower.enable = true;
 }

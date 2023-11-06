@@ -46,7 +46,6 @@
       xdotool
       xdg-user-dirs
       xwallpaper
-      wine-wayland
       wl-clipboard
       wtype
       yewtube
