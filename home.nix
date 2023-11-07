@@ -54,7 +54,7 @@
 
       (pkgs.wrapMpv
         (pkgs.mpv-unwrapped.override {
-          ffmpeg_5 = pkgs.ffmpeg_6-full;
+          ffmpeg = pkgs.ffmpeg_6-full;
         })
         { scripts = [ pkgs.mpvScripts.mpris ]; })
     ];
