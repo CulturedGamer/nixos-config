@@ -51,13 +51,18 @@
 
     neovim = {
       enable = true;
+      extraPlugins = with pkgs.vimPlugins; [
+        bufferline-nvim
+        lualine-nvim
+      ];
+      extraPluginsConfiguration = ''
+        require("bufferline").setup()
+        require("lualine").setup()
+      '';
       theme = pkgs.vimPlugins.gruvbox-nvim;
       themeConfiguration = ''
         require("gruvbox").setup {
           contrast = "hard",
-          palette_overrides = {
-            
-          }
         }
         vim.cmd.colorscheme "gruvbox"
       '';
