@@ -255,6 +255,7 @@ in
           decentraleyes
           df-youtube
           istilldontcareaboutcookies
+          leechblock-ng
           privacy-badger
           return-youtube-dislikes
           ublock-origin
