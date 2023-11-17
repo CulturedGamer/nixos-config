@@ -4,6 +4,16 @@ with lib;
 
 let
   cfg = config.modules.neovim;
+
+  fm-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "fm-nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "is0n";
+      repo = "fm-nvim";
+      rev = "8e6a77049330e7c797eb9e63affd75eb796fe75e";
+      sha256 = "0lc97r9phdx9adlcj6zlv0lvk34ijc6j3n9h5p5iynpqqg9njvr3";
+    };
+  };
 in
 {
   options.modules.neovim = {
@@ -83,8 +93,10 @@ in
 
         comment-nvim
         flash-nvim
+        fm-nvim
         gitsigns-nvim
         harpoon
+        lf-vim
         neorg
         nvim-autopairs
         nvim-treesitter.withAllGrammars
