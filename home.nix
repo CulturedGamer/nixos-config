@@ -27,6 +27,7 @@
       gimp
       git-crypt
       gnumake
+      grim
       htop
       imv
       lazygit
@@ -36,6 +37,7 @@
       ripgrep
       rofimoji
       rustc
+      slurp
       starship
       streamlink
       sxhkd

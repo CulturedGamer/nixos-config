@@ -23,6 +23,7 @@ in
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
         lg = "lazygit";
         se = "sudoedit";
+        snip = "grim -g '$(slurp)'";
         nluaconf = "cd /etc/nixos/modules/terminal/neovim";
         ytaudio = "yt-dlp --extract-audio --audio-format mp3";
         ytvideo = "yt-dlp -f 'bv*[height=1080]+ba'";
