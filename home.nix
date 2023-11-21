@@ -2,10 +2,11 @@
 
 {
   imports = [
-    ./modules/themes/gruvbox
+    # ./modules/themes/gruvbox
     # ./modules/themes/minimal
     # ./modules/themes/nord
     # ./modules/themes/onedark
+    ./modules/themes/plasma
   ];
 
   programs.home-manager.enable = true;
@@ -27,7 +28,6 @@
       gimp
       git-crypt
       gnumake
-      grim
       htop
       imv
       lazygit
@@ -35,21 +35,14 @@
       pavucontrol
       playerctl
       ripgrep
-      rofimoji
       rustc
-      slurp
       starship
       streamlink
-      sxhkd
       swaybg
       trash-cli
       texlive.combined.scheme-full
       unzip
-      xdotool
       xdg-user-dirs
-      xwallpaper
-      wl-clipboard
-      wtype
       yewtube
       yt-dlp
       zip

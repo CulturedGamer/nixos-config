@@ -42,6 +42,13 @@ in
     };
   };
 
+  home.packages = with pkgs; [
+    grim
+    slurp
+    wl-clipboard
+    wtype
+  ];
+
   modules = {
     # Terminal
     alacritty = {
@@ -79,10 +86,6 @@ in
     rofi = {
       enable = true;
       theme = ./files/minimal-rofi.css;
-    };
-
-    wallpapers = {
-      enable = true;
     };
 
     waybar = {

@@ -11,7 +11,6 @@ in
 
     theme = mkOption {
       type = types.path;
-      default = ./themes/onedark.rasi;
       description = "Rofi custom theme";
     };
 
@@ -22,6 +21,10 @@ in
   };
 
   config = mkIf cfg.enable {
+    home.packages = with pkgs; [
+      rofimoji
+    ];
+
     programs.rofi = {
       enable = true;
       package = pkgs.rofi-wayland;

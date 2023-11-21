@@ -31,11 +31,20 @@
     };
   };
 
-  home.pointerCursor = {
-    package = pkgs.nordzy-cursor-theme;
-    name = "Nordzy-cursors";
-    x11.enable = true;
-    gtk.enable = true;
+  home = {
+      pointerCursor = {
+        package = pkgs.nordzy-cursor-theme;
+        name = "Nordzy-cursors";
+        x11.enable = true;
+        gtk.enable = true;
+      };
+
+      packages = with pkgs; [
+        grim
+        slurp
+        wl-clipboard
+        wtype
+      ];
   };
 
   modules = {
@@ -101,10 +110,6 @@
     rofi = {
       enable = true;
       theme = ./files/nord-rofi.rasi;
-    };
-
-    wallpapers = {
-      enable = true;
     };
 
     waybar = {
