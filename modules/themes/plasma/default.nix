@@ -16,7 +16,7 @@
       enable = true;
       colorscheme = "onedark";
       font = "inconsolata";
-      opacity = 1;
+      opacity = 1.0;
     };
 
     neovim = {
