@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common
-    ../common/keyd.nix
+    # ../common/keyd.nix
     ../common/plasma.nix
   ];
 
