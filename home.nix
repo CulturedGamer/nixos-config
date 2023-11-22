@@ -31,6 +31,7 @@
       htop
       imv
       lazygit
+      ncdu
       neofetch
       pavucontrol
       playerctl
