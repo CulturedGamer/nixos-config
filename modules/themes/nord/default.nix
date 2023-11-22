@@ -32,19 +32,19 @@
   };
 
   home = {
-      pointerCursor = {
-        package = pkgs.nordzy-cursor-theme;
-        name = "Nordzy-cursors";
-        x11.enable = true;
-        gtk.enable = true;
-      };
+    pointerCursor = {
+      package = pkgs.nordzy-cursor-theme;
+      name = "Nordzy-cursors";
+      x11.enable = true;
+      gtk.enable = true;
+    };
 
-      packages = with pkgs; [
-        grim
-        slurp
-        wl-clipboard
-        wtype
-      ];
+    packages = with pkgs; [
+      grim
+      slurp
+      wl-clipboard
+      wtype
+    ];
   };
 
   modules = {

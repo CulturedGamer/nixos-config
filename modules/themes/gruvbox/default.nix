@@ -34,19 +34,19 @@
   };
 
   home = {
-      pointerCursor = {
-        package = pkgs.capitaine-cursors-themed;
-        name = "Capitaine Cursors (Gruvbox)";
-        x11.enable = true;
-        gtk.enable = true;
-      };
+    pointerCursor = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors (Gruvbox)";
+      x11.enable = true;
+      gtk.enable = true;
+    };
 
-      packages = with pkgs; [
-        grim
-        slurp
-        wl-clipboard
-        wtype
-      ];
+    packages = with pkgs; [
+      grim
+      slurp
+      wl-clipboard
+      wtype
+    ];
   };
 
   modules = {

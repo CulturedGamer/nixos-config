@@ -10,6 +10,10 @@
     ../../terminal/neovim
   ];
 
+  home.packages = with pkgs; [
+    xclip
+  ];
+
   modules = {
     # Terminal
     alacritty = {

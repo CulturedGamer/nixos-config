@@ -30,19 +30,19 @@
   };
 
   home = {
-      pointerCursor = {
-        package = pkgs.capitaine-cursors;
-        name = "capitaine-cursors";
-        x11.enable = true;
-        gtk.enable = true;
-      };
+    pointerCursor = {
+      package = pkgs.capitaine-cursors;
+      name = "capitaine-cursors";
+      x11.enable = true;
+      gtk.enable = true;
+    };
 
-      packages = with pkgs; [
-        grim
-        slurp
-        wl-clipboard
-        wtype
-      ];
+    packages = with pkgs; [
+      grim
+      slurp
+      wl-clipboard
+      wtype
+    ];
   };
 
   modules = {
