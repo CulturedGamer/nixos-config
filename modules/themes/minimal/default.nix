@@ -73,6 +73,11 @@ in
       extraPlugins = [
         transparent-nvim
       ];
+      extraPluginsConfiguration = ''
+        require("transparent").setup {
+          extra_groups = { "MsgArea", "ModeMsg" }
+        }
+      '';
       theme = no-clown-fiesta-nvim;
       themeConfiguration = ''
         vim.cmd.colorscheme "no-clown-fiesta"
