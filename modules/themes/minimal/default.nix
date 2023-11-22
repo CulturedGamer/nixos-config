@@ -10,6 +10,16 @@ let
       sha256 = "0p0cf8n927k7xzgxz77g73aj7dsj3axmzq4f8qj51c3ngq9kcy66";
     };
   };
+
+  transparent-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "transparent.nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "xiyaowong";
+      repo = "transparent.nvim";
+      rev = "fd35a46f4b7c1b244249266bdcb2da3814f01724";
+      sha256 = "0a9rckkz95a0szgykwxb6qanriszr4c34zkac0bvvwkldapbngy1";
+    };
+  };
 in
 {
   imports = [
@@ -60,6 +70,9 @@ in
 
     neovim = {
       enable = true;
+      extraPlugins = [
+        transparent-nvim
+      ];
       theme = no-clown-fiesta-nvim;
       themeConfiguration = ''
         vim.cmd.colorscheme "no-clown-fiesta"
