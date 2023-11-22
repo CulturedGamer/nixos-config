@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
     ../common
     ../common/keyd.nix
-    ../common/plasma.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
