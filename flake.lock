@@ -3,11 +3,11 @@
     "alacritty-files": {
       "flake": false,
       "locked": {
-        "lastModified": 1700613285,
-        "narHash": "sha256-AbIn/o87+If7aL5ZTOthVk5Rv+cp54MA8mAxDWdfcmQ=",
+        "lastModified": 1700613351,
+        "narHash": "sha256-f6ncM3wFVHxHbr1GlT4HInOKmeWD/5E0qpNYMWii96Q=",
         "owner": "veryfastman",
         "repo": "alacritty-configuration-files",
-        "rev": "965cefc26058c42e669fea6d9161874d792a0fea",
+        "rev": "7e27e786c07d52a96721b37fbe9ad7cf2cf7b26b",
         "type": "github"
       },
       "original": {
