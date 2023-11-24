@@ -99,7 +99,6 @@ in
         lf-vim
         neorg
         nvim-autopairs
-        nvim-treesitter.withPlugins (p: [ p.c p.cpp p.java p.nix p.zig ])
         nvim-web-devicons
         telescope-nvim
         todo-comments-nvim
@@ -107,6 +106,7 @@ in
         vimtex
         vim-tmux-navigator
         which-key-nvim
+        (nvim-treesitter.withPlugins (p: [ p.c p.cpp p.java p.nix p.zig ]))
 
         # completion
         nvim-cmp
