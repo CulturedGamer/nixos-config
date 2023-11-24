@@ -99,7 +99,7 @@ in
         lf-vim
         neorg
         nvim-autopairs
-        nvim-treesitter.withAllGrammars
+        nvim-treesitter.withPlugins (p: [ p.c p.cpp p.java p.nix p.zig ])
         nvim-web-devicons
         telescope-nvim
         todo-comments-nvim
