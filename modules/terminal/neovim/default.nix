@@ -82,6 +82,7 @@ in
       extraLuaConfig = ''
         require ("settings")
         require ("keymaps")
+        require ("autocmds")
         require ("plugins")
 
         ${cfg.extraPluginsConfiguration}
@@ -106,7 +107,7 @@ in
         vimtex
         vim-tmux-navigator
         which-key-nvim
-        (nvim-treesitter.withPlugins (p: [ p.c p.cpp p.java p.nix p.zig ]))
+        (nvim-treesitter.withPlugins (p: [ p.c p.cpp p.java p.lua p.nix p.zig ]))
 
         # completion
         nvim-cmp
