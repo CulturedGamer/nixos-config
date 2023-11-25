@@ -64,7 +64,7 @@ in
     alacritty = {
       enable = true;
       colorscheme = "base16-default-dark";
-      font = "roboto-mono";
+      font = "jetbrains";
       opacity = 1.0;
     };
 
