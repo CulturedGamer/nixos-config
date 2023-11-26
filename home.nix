@@ -17,7 +17,6 @@
     packages = with pkgs; [
       ani-cli
       bluetuith
-      brave
       brightnessctl
       cargo
       cava
@@ -42,6 +41,7 @@
       swaybg
       trash-cli
       texlive.combined.scheme-full
+      ungoogled-chromium
       unzip
       xdg-user-dirs
       yewtube
