@@ -22,9 +22,10 @@ in
         fdh = "cd $(find . -type d -path '*/.*' -prune -o -not -name '.*' -type d -print | fzf)";
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
         lg = "lazygit";
+        nluaconf = "cd /etc/nixos/modules/terminal/neovim";
         se = "sudoedit";
         snip = "grim -g '$(slurp)'";
-        nluaconf = "cd /etc/nixos/modules/terminal/neovim";
+        tms = "tmux new-session -c . -s";
         ytaudio = "yt-dlp --extract-audio --audio-format mp3";
         ytvideo = "yt-dlp -f 'bv*[height=1080]+ba'";
       };
