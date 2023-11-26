@@ -26,6 +26,7 @@ in
         se = "sudoedit";
         snip = "grim -g '$(slurp)'";
         tms = "tmux new-session -c . -s";
+        upd = "cd /etc/nixos && nix flake update";
         ytaudio = "yt-dlp --extract-audio --audio-format mp3";
         ytvideo = "yt-dlp -f 'bv*[height=1080]+ba'";
       };
