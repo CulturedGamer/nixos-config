@@ -9,7 +9,7 @@ in
   options.modules.templates.enable = mkEnableOption "Programming templates";
   config = mkIf cfg.enable {
     home.file."Templates/programming" = {
-      src = inputs.basic-templates;
+      source = inputs.basic-templates;
       recursive = true;
     };
   };
