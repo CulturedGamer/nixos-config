@@ -20,11 +20,6 @@
       flake = false;
     };
 
-    basic-templates = {
-      url = "github:veryfastman/basic-templates";
-      flake = false;
-    };
-
     shell-scripts = {
       url = "github:veryfastman/shell-scripts";
       flake = false;
