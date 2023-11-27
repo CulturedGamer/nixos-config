@@ -16,22 +16,6 @@
         "type": "github"
       }
     },
-    "basic-templates": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1688162696,
-        "narHash": "sha256-ULDkYwdZ1BD4+7oQYWsyrtlOyTI2DrPYwbOZu8TALx0=",
-        "owner": "veryfastman",
-        "repo": "basic-templates",
-        "rev": "37fde95c8b875525e8640e24f3f158cd10d232ab",
-        "type": "github"
-      },
-      "original": {
-        "owner": "veryfastman",
-        "repo": "basic-templates",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -119,11 +103,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1700900274,
-        "narHash": "sha256-KWoKDP5I1viHR4bG3ENnJ7H1DD16tXWH4ROvS0IfXw8=",
+        "lastModified": 1701040754,
+        "narHash": "sha256-rHld3E3CeVI/GUxH3xE+mqAo+IX2hTbXVfXKahCrG5I=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a462e7315deaa8194b0821f726709bb7e51a850c",
+        "rev": "7c97c46dc4f45f2a78df536a6ebe15252831b800",
         "type": "github"
       },
       "original": {
@@ -280,11 +264,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1701026589,
-        "narHash": "sha256-EUwYtkwiEPp5Hx7RtfGBT/3QGyOriP7GUsaWjYd/G8w=",
+        "lastModified": 1701047095,
+        "narHash": "sha256-Au/U65SGDH4jtrD9Btv63t8X7MbaSLKcEVPtpKGhvAA=",
         "owner": "nix-community",
         "repo": "nur",
-        "rev": "f393a1d1972accabcaca7d4443b32ced35a5bde2",
+        "rev": "f69fe2f32f963f16b2abeeb941866a0273142af7",
         "type": "github"
       },
       "original": {
@@ -296,7 +280,6 @@
     "root": {
       "inputs": {
         "alacritty-files": "alacritty-files",
-        "basic-templates": "basic-templates",
         "home-manager": "home-manager",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_3",
@@ -308,11 +291,11 @@
     "shell-scripts": {
       "flake": false,
       "locked": {
-        "lastModified": 1695348626,
-        "narHash": "sha256-62K6DuIdylhQ3a1lOyqJmzw1Foc4qs0nlYGyoS8SK6Q=",
+        "lastModified": 1701050123,
+        "narHash": "sha256-8468A0u9CPQBHvgaa4P3jEDsQJ+ydlCqm0dWpyM0Of8=",
         "owner": "veryfastman",
         "repo": "shell-scripts",
-        "rev": "1073143080a93a9d099d1dd61a60d429ee970878",
+        "rev": "57af2c0dabd3809dadcaf9844db4a5db22251999",
         "type": "github"
       },
       "original": {

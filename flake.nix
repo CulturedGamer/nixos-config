@@ -38,7 +38,6 @@
     , home-manager
     , neorg-overlay
     , alacritty-files
-    , basic-templates
     , shell-scripts
     , wallpaper-collection
     }:
