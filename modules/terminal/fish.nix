@@ -29,7 +29,9 @@ in
         lapsw = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
         lapte = "sudo nixos-rebuild test --flake /etc/nixos#laptop";
         lg = "lazygit";
+        nb = "nix build";
         nluaconf = "cd /etc/nixos/modules/terminal/neovim";
+        nr = "nix run";
         se = "sudoedit";
         snip = "grim -g '$(slurp)'";
         tms = "tmux new-session -c . -s";
