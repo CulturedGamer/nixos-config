@@ -20,6 +20,11 @@
       flake = false;
     };
 
+    basic-templates = {
+      url = "github:veryfastman/basic-templates";
+      flake = false;
+    };
+
     shell-scripts = {
       url = "github:veryfastman/shell-scripts";
       flake = false;
@@ -38,6 +43,7 @@
     , home-manager
     , neorg-overlay
     , alacritty-files
+    , basic-templates
     , shell-scripts
     , wallpaper-collection
     }:

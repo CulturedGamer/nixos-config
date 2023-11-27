@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "basic-templates": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688162696,
+        "narHash": "sha256-ULDkYwdZ1BD4+7oQYWsyrtlOyTI2DrPYwbOZu8TALx0=",
+        "owner": "veryfastman",
+        "repo": "basic-templates",
+        "rev": "37fde95c8b875525e8640e24f3f158cd10d232ab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "veryfastman",
+        "repo": "basic-templates",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -280,6 +296,7 @@
     "root": {
       "inputs": {
         "alacritty-files": "alacritty-files",
+        "basic-templates": "basic-templates",
         "home-manager": "home-manager",
         "neorg-overlay": "neorg-overlay",
         "nixpkgs": "nixpkgs_3",
