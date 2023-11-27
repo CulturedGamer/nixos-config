@@ -61,7 +61,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.file.".config/nvim/lua/autocmds.lua".source = ./autocmds.lua;
     home.file.".config/nvim/lua/settings.lua".source = ./settings.lua;
     home.file.".config/nvim/lua/keymaps.lua".source = ./keymaps.lua;
     home.file.".config/nvim/lua/plugins" = {
@@ -83,7 +82,6 @@ in
       extraLuaConfig = ''
         require ("settings")
         require ("keymaps")
-        require ("autocmds")
         require ("plugins")
 
         ${cfg.extraPluginsConfiguration}
