@@ -18,11 +18,14 @@ in
       shellAliases = mkIf (cfg.enableShellAliases) {
         v = "nvim";
         nd = "cd /etc/nixos";
+        cpptem = "cp -r ~/Templates/programming/cpp_template";
+        ctem = "cp -r ~/Templates/programming/c_template";
         desksw = "sudo nixos-rebuild switch --flake /etc/nixos#desktop";
         deskte = "sudo nixos-rebuild test --flake /etc/nixos#desktop";
         diro = "ll | awk '(NR>1) { print $9 }'";
         fdh = "cd $(find . -type d -path '*/.*' -prune -o -not -name '.*' -type d -print | fzf)";
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
+        gltem = "cp -r ~/Templates/programming/opengl_template";
         lapsw = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
         lapte = "sudo nixos-rebuild test --flake /etc/nixos#laptop";
         lg = "lazygit";
