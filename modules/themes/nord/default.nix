@@ -64,14 +64,9 @@
         nvim-tree-lua
       ];
       extraPluginsConfiguration = ''
+        require("bufferline").setup()
         require("lualine").setup()
         require("nvim-tree").setup()
-
-        require("bufferline").setup {
-          options = {
-            separator_style = "slant"
-          }
-        }
 
         vim.keymap.set('n', "<leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })
       '';
