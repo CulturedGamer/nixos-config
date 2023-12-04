@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ../common
     ../common/keyd.nix
+    ../common/vm.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
