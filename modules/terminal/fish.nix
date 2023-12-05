@@ -25,6 +25,7 @@ in
         diro = "ll | awk '(NR>1) { print $9 }'";
         fdh = "cd $(find . -type d -path '*/.*' -prune -o -not -name '.*' -type d -print | fzf)";
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
+        lapupd = "upd && git add . && git commit -m 'nix flake update' && git push && trcl && lapsw";
         gltem = "cp -r ~/Templates/programming/opengl_template";
         lapsw = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
         lapte = "sudo nixos-rebuild test --flake /etc/nixos#laptop";
