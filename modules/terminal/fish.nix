@@ -25,10 +25,10 @@ in
         diro = "ll | awk '(NR>1) { print $9 }'";
         fdh = "cd $(find . -type d -path '*/.*' -prune -o -not -name '.*' -type d -print | fzf)";
         fishrc = "sudoedit /etc/nixos/modules/terminal/fish.nix";
-        lapupd = "upd && lapsw && git add . && git commit -m 'nix flake update' && git push";
         gltem = "cp -r ~/Templates/programming/opengl_template";
         lapsw = "sudo nixos-rebuild switch --flake /etc/nixos#laptop";
         lapte = "sudo nixos-rebuild test --flake /etc/nixos#laptop";
+        lapupd = "nix flake update && sudo nixos-rebuild switch --flake /etc/nixos#laptop && git add . && git commit -m 'nix flake update' && git push";
         lg = "lazygit";
         nb = "nix build";
         nluaconf = "cd /etc/nixos/modules/terminal/neovim";
