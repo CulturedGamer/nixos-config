@@ -32,6 +32,7 @@ in
         lg = "lazygit";
         nb = "nix build";
         nluaconf = "cd /etc/nixos/modules/terminal/neovim";
+        ndev = "nix develop";
         nr = "nix run";
         se = "sudoedit";
         snip = "grim -g '$(slurp)'";
