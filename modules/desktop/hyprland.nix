@@ -64,12 +64,16 @@ in
           layout = "master";
         };
 
+        gestures = {
+          workspace_swipe = true;
+        };
+
         master = {
           mfact = 0.5;
         };
 
-        gestures = {
-          workspace_swipe = true;
+        misc = {
+          force_default_wallpaper = 0;
         };
 
         decoration = {
