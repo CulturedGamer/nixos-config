@@ -168,7 +168,6 @@ in
             "float, class:.*"
             "tile, class:^(firefox)\$"
             "tile, class:^(Alacritty)\$"
-            "fakefullscreen, class:^(firefox)\$"
             # "opacity 0.9 0.9, class:^(Alacritty)\$"
         ];
       };
