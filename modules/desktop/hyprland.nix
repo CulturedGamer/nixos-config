@@ -164,9 +164,13 @@ in
           ];
         };
 
-        # windowrulev2 = [
-        #     "opacity 0.9 0.9, class:^(Alacritty)\$"
-        # ];
+        windowrulev2 = [
+            "float, class:.*"
+            "tile, class:^(firefox)\$"
+            "tile, class:^(Alacritty)\$"
+            "fakefullscreen, class:^(firefox)\$"
+            # "opacity 0.9 0.9, class:^(Alacritty)\$"
+        ];
       };
     };
   };
