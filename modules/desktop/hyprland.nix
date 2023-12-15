@@ -165,11 +165,11 @@ in
         };
 
         windowrulev2 = [
-            "float, class:.*"
-            "tile, class:^(firefox)\$"
-            "tile, class:^(Chromium-browser)\$"
-            "tile, class:^(Alacritty)\$"
-            # "opacity 0.9 0.9, class:^(Alacritty)\$"
+          "float, class:.*"
+          "tile, class:^(firefox)\$"
+          "tile, class:^(Chromium-browser)\$"
+          "tile, class:^(Alacritty)\$"
+          # "opacity 0.9 0.9, class:^(Alacritty)\$"
         ];
       };
     };

@@ -14,6 +14,8 @@
     ../../graphic/waybar/default.nix
 
     ../global.nix
+
+    ./wlogout_icons
   ];
 
   gtk = {
@@ -45,6 +47,73 @@
     ];
   };
 
+  programs.wlogout = {
+    enable = true;
+    layout = [
+      {
+        label = "lock";
+        action = "swaylock";
+        text = "Lock";
+        keybind = "l";
+      }
+
+      {
+        label = "logout";
+        action = "loginctl terminate-user $USER";
+        text = "Logout";
+        keybind = "e";
+      }
+
+      {
+        label = "shutdown";
+        action = "systemctl poweroff";
+        text = "Shutdown";
+        keybind = "s";
+      }
+
+      {
+        label = "reboot";
+        action = "systemctl reboot";
+        text = "Reboot";
+        keybind = "r";
+      }
+    ];
+    style = ''
+      window {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      button {
+        color: #abb2bf;
+        margin: 5px;
+      }
+
+      #lock {
+        background-image: url("/home/donny/Pictures/wlogout_icons/lock.png");
+      }
+
+      #logout {
+        background-image: url("/home/donny/Pictures/wlogout_icons/logout.png");
+      }
+
+      #suspend {
+        background-image: url("/home/donny/Pictures/wlogout_icons/suspend.png");
+      }
+
+      #hibernate {
+        background-image: url("/home/donny/Pictures/wlogout_icons/hibernate.png");
+      }
+
+      #shutdown {
+        background-image: url("/home/donny/Pictures/wlogout_icons/shutdown.png");
+      }
+
+      #reboot {
+        background-image: url("/home/donny/Pictures/wlogout_icons/reboot.png");
+      }
+    '';
+  };
+
   modules = {
     # Terminal
     alacritty = {
@@ -66,7 +135,7 @@
       '';
       theme = pkgs.vimPlugins.onedark-nvim;
       themeConfiguration = ''
-        require("onedark").setup { style = "darker" }
+            require("onedark").setup { style = "darker" }
         require("onedark").load()
       '';
     };
