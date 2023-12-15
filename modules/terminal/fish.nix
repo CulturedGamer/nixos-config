@@ -31,6 +31,7 @@ in
         lapupd = "nix flake update && sudo nixos-rebuild switch --flake /etc/nixos#laptop && git add . && git commit -m 'nix flake update' && git push";
         lg = "lazygit";
         nb = "nix build";
+        ndev = "nix develop";
         nluaconf = "cd /etc/nixos/modules/terminal/neovim";
         ndev = "nix develop";
         nr = "nix run";
