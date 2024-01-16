@@ -135,7 +135,7 @@
       '';
       theme = pkgs.vimPlugins.onedark-nvim;
       themeConfiguration = ''
-            require("onedark").setup { style = "darker" }
+        require("onedark").setup { style = "darker" }
         require("onedark").load()
       '';
     };

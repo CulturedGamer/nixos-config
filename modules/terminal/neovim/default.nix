@@ -16,7 +16,7 @@ let
   };
 
   harpoon2 = pkgs.vimUtils.buildVimPlugin {
-    name = "fm-nvim";
+    name = "harpoon";
     src = pkgs.fetchFromGitHub {
       owner = "ThePrimeagen";
       repo = "harpoon";
@@ -77,6 +77,10 @@ in
       source = ./plugins;
       recursive = true;
     };
+    home.file.".config/nvim/lua/ftplugin" = {
+      source = ./ftplugin;
+      recursive = true;
+    };
 
     # language servers
     home.packages = with pkgs; [
@@ -104,8 +108,9 @@ in
         comment-nvim
         fm-nvim
         gitsigns-nvim
-        harpoon2
+        harpoon
         lf-vim
+        neodev-nvim
         neorg
         nvim-autopairs
         nvim-web-devicons

@@ -1,5 +1,4 @@
-local options = { noremap = true, silent  = true }
-local ui = require("harpoon.ui")
+local options = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -15,8 +14,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", options)
 vim.keymap.set("n", "to", ":tabnew<CR>", options)
 vim.keymap.set("n", "tl", ":bnext<CR>", options)
 vim.keymap.set("n", "th", ":bprev<CR>", options)
-vim.keymap.set("n", "<leader>l", function() ui.nav_next() end, options)
-vim.keymap.set("n", "<leader>h", function() ui.nav_prev() end, options)
 vim.keymap.set("n", "th", ":bprev<CR>", options)
 vim.keymap.set("n", "td", ":bd<CR>", options)
 vim.keymap.set("n", "<leader>e", ":Lf<CR>", options)
@@ -24,6 +21,3 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
 vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
 vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
-
-vim.keymap.set("n", "<leader>cc", "<cmd>!nix build<cr>", options)
-vim.keymap.set("n", "<leader>cv", "<cmd>!nix run<cr>", options)

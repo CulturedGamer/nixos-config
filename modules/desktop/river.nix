@@ -65,7 +65,11 @@ in
         in
         {
           text = ''
+            riverctl spawn 'wlr-randr --output HDMI-A-1 --pos -2525,0'
+            riverctl spawn 'dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway'
+            riverctl spawn /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
             riverctl spawn waybar
+            riverctl spawn "gsettings set org.gnome.desktop.interface gtk-theme 'gruvbox-dark-gtk'"
             riverctl spawn '${cfg.wallpaperCommand}'
 
             riverctl map normal Super Return spawn alacritty
