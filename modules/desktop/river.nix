@@ -145,8 +145,11 @@ in
             riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled
 
             riverctl map normal Super R spawn 'rofi -show drun'
+            riverctl map normal Super P spawn rofimoji
             riverctl map normal Super+Control I spawn 'bookmark-type'
+            riverctl map normal Super I spawn 'grim -g $(slurp)'
             riverctl map normal Super S spawn firefox
+            riverctl map normal Super+Shift S spawn 'firefox -p'
 
             riverctl map normal Super grave toggle-focused-tags ${scratch_tag}
             riverctl map normal Super C set-view-tags ${scratch_tag}
